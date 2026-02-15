@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muitas pessoas acreditam que viajar ficou impossível… mas o que descobri pode mudar isso</title>
+    <meta name="description" content="Até o próximo dia 14, companhias como Latam e Gol estão divulgando promoções com voos a partir de R$290. Saiba como encontrar estas e outras oportunidades.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #dc2626;
+            --secondary-color: #2563eb;
+            --accent-color: #f59e0b;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f8fafc;
+            --border-color: #e5e7eb;
+            --success-color: #16a34a;
+            --urgent-color: #dc2626;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background: #ffffff;
+        }
+
+        /* BREAKING NEWS HEADER */
+        .breaking-header {
+            background: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(220, 38, 38, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .breaking-header .label {
+            background: white;
+            color: var(--primary-color);
+            padding: 0.25rem 0.75rem;
+            font-weight: 800;
+            font-size: 0.875rem;
+            border-radius: 3px;
+            margin-right: 0.75rem;
+        }
+
+        .breaking-header .text {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        /* ARTICLE CONTAINER */
+        .article-container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+            background: white;
+        }
+
+        /* ARTICLE HEADER */
+        .article-header {
+            margin-bottom: 3rem;
+        }
+
+        .article-meta {
+            font-size: 0.875rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .article-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
+
+        .article-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            font-weight: 500;
+            margin-bottom: 2rem;
+            line-height: 1.4;
+        }
+
+        .author-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: var(--bg-light);
+            border-radius: 12px;
+            margin-bottom: 2rem;
+        }
+
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+        .author-details h4 {
+            font-size: 1.125rem;
+            color: var(--text-dark);
+            margin-bottom: 0.25rem;
+        }
+
+        .author-details p {
+            color: var(--text-light);
+            font-size: 0.875rem;
+        }
+
+        /* FEATURED IMAGE */
+        .featured-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        /* ARTICLE CONTENT */
+        .article-content {
+            font-size: 1.125rem;
+            line-height: 1.8;
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .article-content h2 {
+            font-size: 1.875rem;
+            font-weight: 700;
+            margin: 3rem 0 1.5rem;
+            color: var(--text-dark);
+        }
+
+        .article-content h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 2.5rem 0 1rem;
+            color: var(--text-dark);
+        }
+
+        .article-content ul, .article-content ol {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        .article-content li {
+            margin-bottom: 0.75rem;
+        }
+
+        .article-content blockquote {
+            background: var(--bg-light);
+            border-left: 4px solid var(--primary-color);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        .article-content strong {
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .article-content em {
+            font-style: italic;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        /* URGENT BOXES */
+        .urgent-box {
+            background: linear-gradient(135deg, var(--urgent-color) 0%, #ef4444 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2.5rem 0;
+            box-shadow: 0 6px 25px rgba(220, 38, 38, 0.4);
+            text-align: center;
+        }
+
+        .urgent-box h4 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .urgent-box h4::before {
+            content: "🚨 ";
+        }
+
+        .urgent-box p {
+            font-size: 1.125rem;
+            margin-bottom: 0;
+        }
+
+        /* REVEAL BOXES */
+        .reveal-box {
+            background: linear-gradient(135deg, #f0f9ff 0%, #dbeafe 100%);
+            border: 2px solid var(--secondary-color);
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2.5rem 0;
+        }
+
+        .reveal-box h4 {
+            color: var(--secondary-color);
+            font-size: 1.375rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .reveal-box h4::before {
+            content: "💡 ";
+        }
+
+        /* PRICE COMPARISON */
+        .price-comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .price-card {
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .price-card.before {
+            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+            border: 2px solid #dc2626;
+        }
+
+        .price-card.after {
+            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+            border: 2px solid #16a34a;
+        }
+
+        .price-card h5 {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .price-card .price {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .price-card.before .price {
+            color: #dc2626;
+        }
+
+        .price-card.after .price {
+            color: #16a34a;
+        }
+
+        .price-card .description {
+            font-size: 0.875rem;
+            opacity: 0.8;
+        }
+
+        /* VIDEO CONTAINER */
+        .video-container {
+            background: #000;
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 2.5rem 0;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+        }
+
+        .video-placeholder {
+            background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.25rem;
+            text-align: center;
+        }
+
+        .video-placeholder::before {
+            content: "▶️ ";
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        /* CTA SECTIONS */
+        .cta-section {
+            background: linear-gradient(135deg, var(--success-color) 0%, #10b981 100%);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 3rem 0;
+            box-shadow: 0 8px 30px rgba(22, 163, 74, 0.4);
+        }
+
+        .cta-section h4 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .cta-section p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            background: white;
+            color: var(--success-color);
+            padding: 1.25rem 3rem;
+            border: none;
+            border-radius: 40px;
+            font-weight: 800;
+            font-size: 1.25rem;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            text-transform: uppercase;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+        }
+
+        /* WARNING BOX */
+        .warning-box {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border: 2px solid var(--accent-color);
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2.5rem 0;
+        }
+
+        .warning-box h4 {
+            color: #92400e;
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .warning-box h4::before {
+            content: "⚠️ ";
+        }
+
+        .warning-box p {
+            color: #92400e;
+            margin-bottom: 0;
+        }
+
+        /* IMAGE WITH CAPTION */
+        .image-container {
+            margin: 2.5rem 0;
+        }
+
+        .image-container img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .image-caption {
+            text-align: center;
+            font-size: 0.875rem;
+            color: var(--text-light);
+            margin-top: 1rem;
+            font-style: italic;
+        }
+
+        /* FINAL URGENCY */
+        .final-urgency {
+            background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 3rem 0 0;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+        }
+
+        .final-urgency h4 {
+            font-size: 2.25rem;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+            color: #fbbf24;
+        }
+
+        .final-urgency p {
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .final-urgency .cta-button {
+            background: var(--primary-color);
+            color: white;
+            font-size: 1.5rem;
+            padding: 1.5rem 4rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .article-title {
+                font-size: 2rem;
+            }
+
+            .article-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .article-content {
+                font-size: 1rem;
+            }
+
+            .featured-image {
+                height: 250px;
+            }
+
+            .price-comparison {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .price-card {
+                padding: 1.5rem;
+            }
+
+            .cta-section {
+                padding: 2rem 1rem;
+            }
+
+            .cta-section h4 {
+                font-size: 1.5rem;
+            }
+
+            .final-urgency {
+                padding: 2rem 1rem;
+            }
+
+            .final-urgency h4 {
+                font-size: 1.75rem;
+            }
+
+            .final-urgency .cta-button {
+                font-size: 1.25rem;
+                padding: 1.25rem 2.5rem;
+            }
+
+            .breaking-header .text {
+                font-size: 0.875rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- BREAKING NEWS HEADER -->
+    <div class="breaking-header">
+        <span class="label">URGENTE</span>
+        <span class="text">Descoberta: Brasileiros encontram passagens 93% mais baratas usando método secreto • Liberado por tempo limitado</span>
+    </div>
+
+    <!-- ARTICLE -->
+    <article class="article-container">
+        <!-- HEADER -->
+        <header class="article-header">
+            <div class="article-meta">
+                Por Redação oficial São Paulo • 10/02/2026 19h55 • Atualizado há uma hora
+            </div>
+            
+            <h1 class="article-title">Muitas pessoas acreditam que viajar ficou impossível… mas o que descobri sobre as promoções da Latam e Gol pode mudar isso</h1>
+            
+            <p class="article-subtitle">Até o próximo dia 14, companhias como Latam e Gol estão divulgando promoções com voos a partir de R$290. Mas o que poucas pessoas sabem é que essas campanhas escondem algo muito maior sobre como as passagens aéreas realmente são vendidas.</p>
+
+            <div class="author-info">
+                <div class="author-avatar">LC</div>
+                <div class="author-details">
+                    <h4>Lari Colares</h4>
+                    <p>Especialista em Viagens Econômicas • 47 países visitados • Desenvolvedora do Sistema GPS</p>
+                </div>
+            </div>
+        </header>
+
+        <img src="assets/images/lari-colares-computer-discovery.jpg" alt="Lari Colares descobrindo método de passagens baratas" class="featured-image" loading="lazy">
+
+        <div class="article-content">
+            <p><strong>À primeira vista, isso parece apenas mais uma ação promocional entre tantas que surgem todos os meses.</strong></p>
+
+            <p>Mas o que poucas pessoas percebem é que essas campanhas costumam esconder algo muito maior e que quase ninguém conhece sobre como as passagens aéreas realmente são vendidas.</p>
+
+            <p><em>Porque, na prática, o maior motivo que faz brasileiros adiarem viagens não é falta de dinheiro.</em></p>
+
+            <p><strong>É falta de acesso às estratégias que realmente reduzem o custo das passagens.</strong></p>
+
+            <div class="urgent-box">
+                <h4>A verdade que mudou tudo</h4>
+                <p>O que descobri sobre os acordos comerciais entre companhias aéreas pode reduzir suas passagens em até 93% — mesmo sem promoções.</p>
+            </div>
+
+            <h2>A maioria das pessoas acredita que já está procurando passagens do jeito certo</h2>
+
+            <div class="image-container">
+                <img src="assets/images/woman-searching-flights-computer.jpg" alt="Mulher pesquisando passagens no computador" loading="lazy">
+                <div class="image-caption">Cenário comum: brasileiros pesquisando em buscadores tradicionais e pagando preços inflacionados</div>
+            </div>
+
+            <p>Hoje, quando alguém decide viajar, o caminho costuma ser sempre o mesmo.</p>
+
+            <p>Ela entra no Google Flights, Skyscanner, Decolar ou algum buscador parecido, compara preços e tenta encontrar o menor valor disponível.</p>
+
+            <p><strong>Esse comportamento parece lógico.</strong></p>
+
+            <p>Mas depois de analisar a lógica de oferta do mercado aéreo, ficou claro que esses buscadores mostram apenas uma parte das passagens que existem.</p>
+
+            <p><em>E é justamente aí que a maioria das pessoas acaba pagando mais caro do que precisaria.</em></p>
+
+            <p>Porque quanto mais caro fica as passagens, mais as companhias lucram. Então todas as companhias aéreas querem que você compre passagens com o maior valor possível.</p>
+
+            <div class="reveal-box">
+                <h4>O que descobri vai chocar você</h4>
+                <p>Existe um sistema paralelo de vendas que as companhias aéreas mantêm escondido do público geral. Nele, as mesmas passagens custam até 93% menos que nos buscadores tradicionais.</p>
+            </div>
+
+            <h2>O que poucas pessoas sabem sobre como as companhias aéreas realmente vendem assentos</h2>
+
+            <p>Além das tarifas comerciais, existe outro tipo de tarifa que é pouco conhecida.</p>
+
+            <p><strong>Ao longo dos anos, companhias aéreas criaram acordos comerciais entre si para compartilhar voos.</strong></p>
+
+            <p>Esses acordos são conhecidos internacionalmente como <em>sistemas de compartilhamento de rotas.</em></p>
+
+            <p>É como se a Latam tivesse acesso a uma pequena cota de assentos em voos operados por companhias parceiras como Delta, American Airlines ou Iberia graças aos acordos internacionais entre elas.</p>
+
+            <h3>Na prática, eles funcionam assim:</h3>
+
+            <p><strong>Imagine um avião com 100 assentos saindo de São Paulo para Nova York.</strong></p>
+
+            <p>Mesmo que o voo seja operado por uma única companhia, parte desses assentos pode estar reservada contratualmente para empresas parceiras.</p>
+
+            <p>Isso é feito para que nenhuma poltrona fique desocupada, afinal quanto mais pessoas voarem no avião mais receita a empresa tem.</p>
+
+            <p><em>Esses assentos funcionam como uma cota fixa dentro do avião.</em></p>
+
+            <p>Enquanto a maior parte das poltronas é vendida com preços variáveis que aumentam conforme a procura, essas poltronas podem seguir regras diferentes de precificação.</p>
+
+            <p><strong>E é exatamente aí que surge uma oportunidade que quase ninguém conhece.</strong></p>
+
+            <div class="urgent-box">
+                <h4>A descoberta que mudou minha vida</h4>
+                <p>Esses assentos podem existir com preços fixos e muito mais baixos. O mesmo voo que custa R$ 4.200 no Google Flights pode ser encontrado por R$ 680 nesses lotes especiais.</p>
+            </div>
+
+            <h2>Esses assentos podem existir com preços fixos e muito mais baixos</h2>
+
+            <p>Em alguns desses acordos comerciais, determinadas poltronas são liberadas com valores tabelados.</p>
+
+            <p><strong>Isso significa que o preço não sofre a mesma oscilação que acontece nas vendas tradicionais.</strong></p>
+
+            <p>Dependendo da rota, esses valores podem ser drasticamente menores do que os exibidos nos buscadores convencionais.</p>
+
+            <p><em>Existem casos em que passagens que aparecem por R$2.234 em sites tradicionais podem ser emitidas por R$927,83. O mesmo voo, na mesma classe, só com preços completamente diferentes.</em></p>
+
+            <div class="price-comparison">
+                <div class="price-card before">
+                    <h5>Google Flights</h5>
+                    <div class="price">R$ 2.234</div>
+                    <div class="description">São Paulo → Europa</div>
+                </div>
+                <div class="price-card after">
+                    <div class="price">R$ 928</div>
+                    <div class="description">Mesmo voo, Sistema GPS</div>
+                    <h5>Economia: 58%</h5>
+                </div>
+            </div>
+
+            <p>Para passagens nacionais a lógica é a mesma. Esse é o valor que você encontra em voo de São Paulo a Maceió no Google Flights, com 3 meses de antecedência:</p>
+
+            <div class="image-container">
+                <img src="assets/images/google-flights-sao-paulo-maceio-caro.jpg" alt="Print Google Flights mostrando passagem cara São Paulo-Maceió" loading="lazy">
+                <div class="image-caption">Google Flights: São Paulo → Maceió por R$ 847</div>
+            </div>
+
+            <p>Esse é o valor que poucas pessoas têm acesso:</p>
+
+            <div class="image-container">
+                <img src="assets/images/sistema-gps-sao-paulo-maceio-barato.jpg" alt="Print Sistema GPS mostrando mesma passagem 70% mais barata" loading="lazy">
+                <div class="image-caption">Sistema GPS: São Paulo → Maceió por R$ 247 (mesma data, mesmo voo)</div>
+            </div>
+
+            <p><strong>Em algumas situações, o custo pode ficar próximo apenas das taxas de embarque.</strong></p>
+
+            <p><em>O detalhe mais curioso é que essas opções normalmente não aparecem nos buscadores tradicionais.</em></p>
+
+            <p>A verdade é que você não precisa depender de promoções da Gol, Latam ou Azul pra viajar barato, basta saber encontrar as passagens com os lotes ultra econômicos.</p>
+
+            <div class="warning-box">
+                <h4>Por que isso é mantido em segredo?</h4>
+                <p>Companhias aéreas preferem vender pelos preços mais altos possíveis. Quanto menos pessoas souberem desses lotes especiais, melhor para o lucro delas.</p>
+            </div>
+
+            <h2>O problema é que acessar essas oportunidades exige conhecer as regras escondidas das tarifas comerciais</h2>
+
+            <p><strong>Esses assentos costumam estar ligados a:</strong></p>
+
+            <ul>
+                <li>Programas de fidelidade;</li>
+                <li>Clientes exclusivos;</li>
+                <li>Regras contratuais entre companhias;</li>
+                <li>Sistemas internos pouco divulgados ao público;</li>
+            </ul>
+
+            <p>Sem entender como esses acordos funcionam, a maioria das pessoas continua procurando passagens apenas onde elas são mais visíveis e não onde elas são mais baratas.</p>
+
+            <div class="reveal-box">
+                <h4>A solução que desenvolvi</h4>
+                <p>Depois de anos estudando esses sistemas, criei um método que democratiza o acesso a esses lotes ultra econômicos. É isso que vou mostrar para você hoje.</p>
+            </div>
+
+            <h2>Foi tentando entender esse cenário que surgiu um método para encontrar esses lotes escondidos</h2>
+
+            <div class="image-container">
+                <img src="assets/images/lari-colares-working-computer.jpg" alt="Lari Colares trabalhando no computador desenvolvendo o sistema" loading="lazy">
+                <div class="image-caption">Lari Colares desenvolvendo o Sistema GPS: anos de pesquisa resultaram em um método revolucionário</div>
+            </div>
+
+            <p>Depois de estudar por anos o funcionamento dos programas de milhas e dos acordos entre companhias aéreas, eu, Lari Colares, passei a reunir essas oportunidades em um único sistema.</p>
+
+            <p><strong>Esse sistema ficou conhecido como Sistema GPS de Passagens.</strong></p>
+
+            <p>Ele foi desenvolvido para identificar e filtrar lotes de assentos ultra econômicos que normalmente ficam escondidos nas regras internas das companhias.</p>
+
+            <p><em>Na prática, ele funciona como um radar que encontra oportunidades que dificilmente aparecem em buscadores tradicionais.</em></p>
+
+            <p>Ou seja, em 3 cliques você encontra o voo que deseja com descontos que chegam a até 93%, se comparado com os buscadores tradicionais.</p>
+
+            <p><strong>Dezenas de pessoas conseguiram realizar o sonho de conhecer um novo país, fazer uma viagem com a família porque é possível se planejar para fazer uma viagem sem gastar muito nas passagens aéreas.</strong></p>
+
+            <div class="urgent-box">
+                <h4>Resultados comprovados</h4>
+                <p>Mais de 15.000 brasileiros já usaram o Sistema GPS e economizaram coletivamente mais de R$ 36 milhões em passagens aéreas nos últimos 14 meses.</p>
+            </div>
+
+            <p><strong>Como foi o caso da Clara:</strong></p>
+
+            <div class="video-container">
+                <vturb-smartplayer id="vid-690025d366d9e593fced06a3" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"></vturb-smartplayer>
+                <script type="text/javascript"> 
+                    var s=document.createElement("script"); 
+                    s.src="https://scripts.converteai.net/e077b7ef-d315-4a12-b5e0-6928d31cc525/players/690025d366d9e593fced06a3/v4/player.js"; 
+                    s.async=!0; 
+                    document.head.appendChild(s); 
+                </script>
+            </div>
+
+            <h2>Por que isso pode mudar a forma como muitas famílias planejam viagens</h2>
+
+            <p><strong>A maior barreira para quem sonha em viajar não costuma ser só desejo.</strong></p>
+
+            <p><em>É a sensação de que viajar sempre vai comprometer o orçamento familiar.</em></p>
+
+            <p>Quando alguém percebe que existem formas estruturadas de reduzir drasticamente o custo das passagens, o planejamento financeiro passa a parecer viável.</p>
+
+            <p><strong>E é justamente isso que tem chamado atenção de milhares de brasileiros que começaram a estudar essas estratégias nos últimos anos.</strong></p>
+
+            <div class="cta-section">
+                <h4>🎯 Descoberta Liberada por Tempo Limitado</h4>
+                <p>Para mostrar exatamente como esses lotes são encontrados e como pessoas comuns estão conseguindo viajar pagando menos, gravei uma apresentação rápida e gratuita explicando todo o processo.</p>
+                <a href="#acesso-sistema" class="cta-button">Ver Apresentação Gratuita</a>
+            </div>
+
+            <h2>Veja como encontrar os lotes de passagens ultra econômicos em 3 cliques</h2>
+
+            <p><strong>Nessa apresentação, eu mostro:</strong></p>
+
+            <ul>
+                <li>• Como funcionam os acordos comerciais entre companhias aéreas</li>
+                <li>• Por que algumas passagens não aparecem em buscadores tradicionais</li>
+                <li>• Como identificar oportunidades de passagens ultra econômicas</li>
+                <li>• Como muitas pessoas estão usando essas estratégias para viabilizar viagens internacionais</li>
+            </ul>
+
+            <div class="reveal-box">
+                <h4>O que você vai descobrir na apresentação</h4>
+                <p>O método exato que uso para encontrar passagens até 93% mais baratas, demonstrado passo a passo na prática. Sem enrolação, sem teoria, só o sistema funcionando ao vivo.</p>
+            </div>
+
+            <p><strong>A apresentação está disponível gratuitamente por tempo limitado.</strong></p>
+
+            <div class="warning-box">
+                <h4>Última chance de acesso</h4>
+                <p>Esta apresentação pode sair do ar a qualquer momento. Se as companhias aéreas pressionarem pela remoção, como já aconteceu antes, não haverá aviso prévio.</p>
+            </div>
+
+            <p><em>Muitas famílias já descobriram que viajar não precisa ser um sonho distante. Com as estratégias certas, qualquer brasileiro pode conhecer o mundo sem comprometer o orçamento familiar.</em></p>
+
+            <p><strong>A diferença está em saber onde procurar.</strong></p>
+
+            <div class="image-container">
+                <img src="assets/images/familia-brasileira-europa-economizou.jpg" alt="Família brasileira que economizou com o Sistema GPS" loading="lazy">
+                <div class="image-caption">Família Santos: economizaram R$ 12.400 na viagem para Disney usando o Sistema GPS</div>
+            </div>
+
+            <p>Como disse Roberto Santos, pai de família que economizou R$ 12.400 em uma única viagem:</p>
+
+            <blockquote>
+                "Se soubéssemos disso antes, teríamos viajado muito mais ao longo da vida. O Sistema GPS não mudou só nossa forma de viajar, mudou nossa perspectiva sobre o que é possível."
+            </blockquote>
+
+            <p><strong>E você? Vai continuar pagando preço cheio ou vai descobrir como milhares de brasileiros estão viajando mais gastando menos?</strong></p>
+
+        </div>
+
+        <!-- FINAL CTA -->
+        <div class="final-urgency">
+            <h4>⚡ Últimas Horas de Acesso</h4>
+            <p>Esta pode ser sua única chance de descobrir o método que já ajudou mais de 15.000 brasileiros a economizar milhões em passagens aéreas.</p>
+            <p><strong>Não deixe essa oportunidade passar.</strong></p>
+            <a href="#acesso-sistema" class="cta-button">🚀 ACESSAR SISTEMA GPS AGORA</a>
+        </div>
+    </article>
+
+    <script>
+        // CTA functionality
+        document.querySelectorAll('a[href="#acesso-sistema"]').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                alert('🎯 Sistema GPS: Transforme sua forma de viajar! Apresentação disponível por tempo limitado.');
+            });
+        });
+
+        // Smooth scrolling for all links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ 
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

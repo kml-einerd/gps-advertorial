@@ -3,311 +3,863 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sistema GPS de Passagens - Descubra como viajar gastando até 93% menos">
-    <title>Sistema GPS de Passagens - Advertorial Oficial</title>
+    <title>GPS Viagens Brasil - Sistema Inteligente de Passagens Aéreas Baratas</title>
+    <meta name="description" content="Descubra como o Sistema GPS está revolucionando a forma como brasileiros compram passagens aéreas. Cases reais de economia de até 93% em viagens internacionais.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #dc2626;
+            --accent-color: #f59e0b;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f8fafc;
+            --border-color: #e5e7eb;
+            --success-color: #16a34a;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
+            color: var(--text-dark);
+            background: #ffffff;
         }
-        
-        .container {
+
+        /* HEADER */
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 2rem 1rem;
-            text-align: center;
+            padding: 0 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
         }
-        
-        .header {
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
             color: white;
-            margin-bottom: 3rem;
         }
-        
-        .header h1 {
-            font-size: 3rem;
+
+        .logo::before {
+            content: "🎯";
+            margin-right: 0.5rem;
+            font-size: 2rem;
+        }
+
+        .nav {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        .nav a:hover {
+            opacity: 0.8;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: rgba(255,255,255,0.2);
+            border-radius: 25px;
+            padding: 0.5rem 1rem;
+            min-width: 200px;
+        }
+
+        .search-box input {
+            background: none;
+            border: none;
+            color: white;
+            width: 100%;
+            outline: none;
+        }
+
+        .search-box input::placeholder {
+            color: rgba(255,255,255,0.7);
+        }
+
+        /* BREAKING NEWS BAR */
+        .breaking-news {
+            background: var(--secondary-color);
+            color: white;
+            padding: 0.75rem 0;
+            overflow: hidden;
+        }
+
+        .breaking-news-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .breaking-label {
+            background: white;
+            color: var(--secondary-color);
+            padding: 0.25rem 0.75rem;
             font-weight: bold;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            margin-right: 1rem;
+            border-radius: 3px;
+            font-size: 0.875rem;
+            white-space: nowrap;
         }
-        
-        .header p {
-            font-size: 1.3rem;
-            opacity: 0.9;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+
+        .breaking-text {
+            font-weight: 500;
+            animation: scroll-text 30s linear infinite;
         }
-        
-        .badge {
+
+        @keyframes scroll-text {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+
+        /* MAIN CONTENT */
+        .main-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 2rem;
+        }
+
+        .content-area {
+            background: white;
+        }
+
+        /* FEATURED ARTICLE */
+        .featured-article {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .featured-article img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .featured-content {
+            padding: 1.5rem;
+        }
+
+        .category-tag {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
             display: inline-block;
-            background: linear-gradient(45deg, #ffd700, #ffed4a);
-            color: #333;
-            padding: 0.8rem 1.5rem;
-            border-radius: 30px;
-            font-weight: bold;
-            margin: 1rem 0;
-            box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+            margin-bottom: 0.75rem;
         }
-        
-        .projects-grid {
+
+        .featured-title {
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 0.75rem;
+            color: var(--text-dark);
+        }
+
+        .featured-excerpt {
+            color: var(--text-light);
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--text-light);
+            font-size: 0.875rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 1rem;
+        }
+
+        .author {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .author-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+        }
+
+        /* ARTICLES GRID */
+        .articles-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
+            margin-bottom: 3rem;
         }
-        
-        .project-card {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 2rem;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+
+        .article-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
             transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid rgba(255, 255, 255, 0.3);
         }
-        
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
         }
-        
-        .project-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+
+        .article-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
         }
-        
-        .project-title {
-            font-size: 1.6rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-            color: #2d3748;
+
+        .article-card-content {
+            padding: 1.25rem;
         }
-        
-        .project-description {
-            color: #4a5568;
-            margin-bottom: 2rem;
-            line-height: 1.6;
+
+        .article-card .category-tag {
+            font-size: 0.7rem;
+            margin-bottom: 0.5rem;
         }
-        
-        .project-button {
-            display: inline-block;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 0.8rem 2rem;
-            border-radius: 30px;
+
+        .article-card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            line-height: 1.3;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .article-card-title a {
             text-decoration: none;
-            font-weight: bold;
-            transition: transform 0.2s;
-            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+            color: var(--text-dark);
+            transition: color 0.3s;
         }
-        
-        .project-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+
+        .article-card-title a:hover {
+            color: var(--primary-color);
         }
-        
-        .main-cta {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 3rem 2rem;
-            margin: 3rem 0;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: white;
-        }
-        
-        .main-cta h2 {
-            font-size: 2.5rem;
+
+        .article-card-excerpt {
+            color: var(--text-light);
+            font-size: 0.95rem;
             margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
         }
-        
-        .main-cta p {
-            font-size: 1.2rem;
+
+        .article-card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--text-light);
+            font-size: 0.8rem;
+            border-top: 1px solid #f1f5f9;
+            padding-top: 1rem;
+        }
+
+        /* SIDEBAR */
+        .sidebar {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 12px;
+            height: fit-content;
+        }
+
+        .sidebar-section {
             margin-bottom: 2rem;
-            opacity: 0.9;
         }
-        
-        .main-button {
-            display: inline-block;
-            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
-            color: white;
-            padding: 1.2rem 3rem;
-            border-radius: 50px;
+
+        .sidebar-section h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .sidebar-list {
+            list-style: none;
+        }
+
+        .sidebar-list li {
+            margin-bottom: 0.75rem;
+        }
+
+        .sidebar-list a {
             text-decoration: none;
-            font-size: 1.3rem;
-            font-weight: bold;
-            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
-            transition: transform 0.2s;
+            color: var(--text-light);
+            font-size: 0.95rem;
+            transition: color 0.3s;
         }
-        
-        .main-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.5);
+
+        .sidebar-list a:hover {
+            color: var(--primary-color);
         }
-        
-        .footer {
-            margin-top: 3rem;
-            padding: 2rem;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            color: white;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+        .popular-article {
+            display: flex;
             gap: 1rem;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .popular-article img {
+            width: 80px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        .popular-article-content h4 {
+            font-size: 0.95rem;
+            font-weight: 500;
+            line-height: 1.4;
+            margin-bottom: 0.25rem;
+        }
+
+        .popular-article-content h4 a {
+            text-decoration: none;
+            color: var(--text-dark);
+        }
+
+        .popular-article-content .meta {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        /* CTA SECTION */
+        .cta-section {
+            background: linear-gradient(135deg, var(--success-color) 0%, #10b981 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
             margin: 2rem 0;
         }
-        
-        .stat {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 1rem;
-            border-radius: 10px;
+
+        .cta-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
         }
-        
-        .stat-number {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #ffd700;
+
+        .cta-section p {
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
         }
-        
-        .stat-label {
-            font-size: 0.9rem;
-            opacity: 0.8;
+
+        .cta-button {
+            background: white;
+            color: var(--success-color);
+            padding: 0.875rem 2rem;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s;
+            text-decoration: none;
+            display: inline-block;
         }
-        
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+
+        /* PAGINATION */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            margin: 3rem 0;
+        }
+
+        .pagination a,
+        .pagination span {
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            text-decoration: none;
+            color: var(--text-dark);
+            transition: all 0.3s;
+        }
+
+        .pagination a:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .pagination .current {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* FOOTER */
+        .footer {
+            background: var(--text-dark);
+            color: white;
+            padding: 3rem 0 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section ul li a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            text-align: center;
+            color: #9ca3af;
+            font-size: 0.875rem;
+        }
+
+        /* RESPONSIVE */
         @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2.2rem;
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
             }
-            
-            .projects-grid {
+
+            .nav {
+                order: 3;
+                width: 100%;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+
+            .search-box {
+                min-width: 250px;
+            }
+
+            .main-container {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .sidebar {
+                order: -1;
+            }
+
+            .featured-title {
+                font-size: 1.5rem;
+            }
+
+            .articles-grid {
                 grid-template-columns: 1fr;
             }
-            
-            .stats {
-                grid-template-columns: repeat(2, 1fr);
+
+            .breaking-text {
+                animation: none;
+            }
+
+            .pagination {
+                flex-wrap: wrap;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .article-card-content,
+            .featured-content {
+                padding: 1rem;
+            }
+
+            .featured-title {
+                font-size: 1.25rem;
+            }
+
+            .cta-section {
+                padding: 1.5rem;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>🚀 Sistema GPS de Passagens</h1>
-            <p>Projeto Advertorial Completo - 4 Entregas</p>
-            <div class="badge">✨ 100% Concluído</div>
-        </div>
-        
-        <div class="stats">
-            <div class="stat">
-                <div class="stat-number">4</div>
-                <div class="stat-label">Entregas Completas</div>
-            </div>
-            <div class="stat">
-                <div class="stat-number">33</div>
-                <div class="stat-label">Prints Analisados</div>
-            </div>
-            <div class="stat">
-                <div class="stat-number">93%</div>
-                <div class="stat-label">Economia Máxima</div>
-            </div>
-            <div class="stat">
-                <div class="stat-number">15k</div>
-                <div class="stat-label">Palavras Escritas</div>
-            </div>
-        </div>
-        
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-icon">📰</div>
-                <h3 class="project-title">Advertorial Principal</h3>
-                <p class="project-description">
-                    Página jornalística profissional revelando a brecha legal que permite 
-                    passagens 93% mais baratas. Design editorial completo com casos reais.
-                </p>
-                <a href="advertorial/index.html" class="project-button">Ver Advertorial</a>
-            </div>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-container">
+            <a href="/" class="logo">GPS Viagens Brasil</a>
             
-            <div class="project-card">
-                <div class="project-icon">🌐</div>
-                <h3 class="project-title">Mini Blog Principal</h3>
-                <p class="project-description">
-                    Clone do estilo promocaorelampagopassagens.com com 6 artigos advertorials 
-                    disfarçados. Múltiplos ângulos de copy e estratégias.
-                </p>
-                <a href="blog-principal/index.html" class="project-button">Acessar Blog</a>
-            </div>
-            
-            <div class="project-card">
-                <div class="project-icon">📊</div>
-                <h3 class="project-title">Cases APP/GPS</h3>
-                <p class="project-description">
-                    Cases reais de usuários baseados em prints analisados. Vitória, Marcela, 
-                    Julio e outros com economias comprovadas de R$ 127.450.
-                </p>
-                <a href="blog-cases-app/index.html" class="project-button">Ver Cases</a>
-            </div>
-            
-            <div class="project-card">
-                <div class="project-icon">👑</div>
-                <h3 class="project-title">Clube VIP Cases</h3>
-                <p class="project-description">
-                    Depoimentos exclusivos de membros fundadores do Clube de Viagens. 
-                    Micaella, Lauren e casos premium com design luxo.
-                </p>
-                <a href="blog-cases-clube/index.html" class="project-button">Clube VIP</a>
+            <nav>
+                <ul class="nav">
+                    <li><a href="#passagens">Passagens Baratas</a></li>
+                    <li><a href="#sistema-gps">Sistema GPS</a></li>
+                    <li><a href="#cases">Cases</a></li>
+                    <li><a href="#clube">Clube VIP</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                </ul>
+            </nav>
+
+            <div class="search-box">
+                <input type="text" placeholder="Buscar destinos baratos...">
+                <span>🔍</span>
             </div>
         </div>
-        
-        <div class="main-cta">
-            <h2>🎯 Pronto para Conversão</h2>
-            <p>
-                Todos os 4 projetos estão finalizados e otimizados para máxima conversão. 
-                Design responsivo, copy persuasiva e CTAs estrategicamente posicionados.
-            </p>
-            <a href="#" class="main-button" onclick="alert('Redirecionamento para Sistema GPS configurado!')">
-                ATIVAR CAMPANHAS AGORA
-            </a>
-        </div>
-        
-        <div class="footer">
-            <h3>📋 Projeto Executado</h3>
-            <p><strong>Data:</strong> 15/02/2026</p>
-            <p><strong>Subagent:</strong> gps-advertorial-builder</p>
-            <p><strong>Repositório:</strong> <a href="https://github.com/kml-einerd/gps-advertorial" style="color: #ffd700;">github.com/kml-einerd/gps-advertorial</a></p>
-            <p><strong>Status:</strong> ✅ 100% Completo - Pronto para Deploy</p>
+    </header>
+
+    <!-- BREAKING NEWS BAR -->
+    <div class="breaking-news">
+        <div class="breaking-news-content">
+            <span class="breaking-label">URGENTE</span>
+            <div class="breaking-text">
+                🔥 ÚLTIMA DESCOBERTA: Brasileira revela método que obriga companhias aéreas a venderem passagens 93% mais baratas • Europa por R$ 700 ida e volta • Sistema liberado hoje para novos membros
+            </div>
         </div>
     </div>
-    
+
+    <!-- MAIN CONTENT -->
+    <div class="main-container">
+        <main class="content-area">
+            <!-- FEATURED ARTICLE -->
+            <article class="featured-article">
+                <img src="assets/images/featured-brasileira-descobre-brecha.jpg" alt="Brasileira descobre brecha nas companhias aéreas" loading="lazy">
+                <div class="featured-content">
+                    <span class="category-tag">Descoberta Exclusiva</span>
+                    <h1 class="featured-title">Brasileira descobre brecha que obriga companhias a venderem passagens 93% mais baratas</h1>
+                    <p class="featured-excerpt">Lari Colares, de 32 anos, desenvolveu um sistema que encontra "lotes ultra econômicos" escondidos nos sistemas das companhias aéreas. O método já ajudou mais de 15.000 brasileiros a economizar milhares em viagens internacionais.</p>
+                    <div class="article-meta">
+                        <div class="author">
+                            <div class="author-avatar">LC</div>
+                            <span>Por Lari Colares</span>
+                        </div>
+                        <time>Há 2 horas</time>
+                        <span>📍 São Paulo</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ARTICLES GRID -->
+            <div class="articles-grid">
+                <article class="article-card">
+                    <img src="assets/images/lari-47-paises.jpg" alt="Lari Colares viajou 47 países pagando menos que aluguel" loading="lazy">
+                    <div class="article-card-content">
+                        <span class="category-tag">Perfil</span>
+                        <h3 class="article-card-title">
+                            <a href="artigo-lari-47-paises.html">Lari Colares: a mulher que viajou 47 países pagando menos que aluguel</a>
+                        </h3>
+                        <p class="article-card-excerpt">Aos 32 anos, Lari já conhece quase 50 países e nunca pagou mais de R$ 800 em uma passagem internacional. Descubra o método por trás dessa façanha.</p>
+                        <div class="article-card-meta">
+                            <span>Por Redação GPS</span>
+                            <time>Ontem</time>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <img src="assets/images/google-flights-esconde.jpg" alt="Google Flights esconde melhores preços" loading="lazy">
+                    <div class="article-card-content">
+                        <span class="category-tag">Investigação</span>
+                        <h3 class="article-card-title">
+                            <a href="artigo-google-flights-esconde.html">Google Flights esconde os melhores preços — entenda por quê</a>
+                        </h3>
+                        <p class="article-card-excerpt">Análise exclusiva revela como algoritmos de busca privilegiam companhias que pagam mais comissão, ocultando passagens até 70% mais baratas.</p>
+                        <div class="article-card-meta">
+                            <span>Por João Silva</span>
+                            <time>2 dias atrás</time>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <img src="assets/images/europa-700-reais.jpg" alt="Europa por R$ 700 com Sistema GPS" loading="lazy">
+                    <div class="article-card-content">
+                        <span class="category-tag">Tutorial</span>
+                        <h3 class="article-card-title">
+                            <a href="artigo-europa-700-sistema-gps.html">Europa por R$ 700: como funciona o Sistema GPS de Passagens</a>
+                        </h3>
+                        <p class="article-card-excerpt">Passo a passo detalhado de como usar o sistema que está revolucionando a forma como brasileiros compram passagens aéreas.</p>
+                        <div class="article-card-meta">
+                            <span>Por Maria Santos</span>
+                            <time>3 dias atrás</time>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <img src="assets/images/verdade-sobre-milhas.jpg" alt="A verdade sobre programas de milhas" loading="lazy">
+                    <div class="article-card-content">
+                        <span class="category-tag">Análise</span>
+                        <h3 class="article-card-title">
+                            <a href="artigo-verdade-milhas.html">A verdade sobre milhas: por que você está perdendo dinheiro</a>
+                        </h3>
+                        <p class="article-card-excerpt">Especialista explica por que programas de fidelidade podem estar custando mais caro do que você imagina e apresenta alternativas mais eficientes.</p>
+                        <div class="article-card-meta">
+                            <span>Por Pedro Lima</span>
+                            <time>4 dias atrás</time>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <img src="assets/images/agentes-viagem-segredo.jpg" alt="Agentes de viagem encontram passagens 80% mais baratas" loading="lazy">
+                    <div class="article-card-content">
+                        <span class="category-tag">Bastidores</span>
+                        <h3 class="article-card-title">
+                            <a href="artigo-agentes-viagem-80-mais-baratas.html">Por que agentes de viagem acham passagens 80% mais baratas que você</a>
+                        </h3>
+                        <p class="article-card-excerpt">Ex-funcionária de agência revela os truques e sistemas profissionais que o público em geral não tem acesso.</p>
+                        <div class="article-card-meta">
+                            <span>Por Ana Costa</span>
+                            <time>5 dias atrás</time>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <img src="assets/images/familia-economizou-12400.jpg" alt="Família economizou R$ 12.400 em uma viagem" loading="lazy">
+                    <div class="article-card-content">
+                        <span class="category-tag">Case Real</span>
+                        <h3 class="article-card-title">
+                            <a href="artigo-familia-economizou-12400.html">Família paulista economizou R$ 12.400 em uma única viagem</a>
+                        </h3>
+                        <p class="article-card-excerpt">Os Santos queriam levar os três filhos para a Disney, mas o orçamento estava apertado. Veja como conseguiram realizar o sonho gastando 60% menos.</p>
+                        <div class="article-card-meta">
+                            <span>Por Carlos Mendes</span>
+                            <time>1 semana atrás</time>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- CTA SECTION -->
+            <div class="cta-section">
+                <h3>🎯 Descubra o Sistema GPS de Passagens</h3>
+                <p>Junte-se a mais de 15.000 brasileiros que já economizam até 93% em passagens aéreas. Sistema liberado por tempo limitado.</p>
+                <a href="#sistema-gps" class="cta-button">Acessar Sistema Gratuitamente</a>
+            </div>
+
+            <!-- PAGINATION -->
+            <div class="pagination">
+                <span class="current">1</span>
+                <a href="?page=2">2</a>
+                <a href="?page=3">3</a>
+                <a href="?page=4">4</a>
+                <span>...</span>
+                <a href="?page=247">247</a>
+                <a href="?page=2">»</a>
+            </div>
+        </main>
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-section">
+                <h3>📂 Categorias</h3>
+                <ul class="sidebar-list">
+                    <li><a href="categoria-passagens-baratas.html">✈️ Passagens Baratas</a></li>
+                    <li><a href="categoria-sistema-gps.html">🎯 Sistema GPS</a></li>
+                    <li><a href="categoria-cases-reais.html">📊 Cases Reais</a></li>
+                    <li><a href="categoria-dicas-viagem.html">💡 Dicas de Viagem</a></li>
+                    <li><a href="categoria-destinos.html">🌍 Destinos</a></li>
+                    <li><a href="categoria-milhas.html">🔄 Programas de Milhas</a></li>
+                    <li><a href="categoria-clube-vip.html">⭐ Clube VIP</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🔥 Mais Lidos</h3>
+                <div class="popular-article">
+                    <img src="assets/images/thumb-europa-700.jpg" alt="Europa R$ 700" loading="lazy">
+                    <div class="popular-article-content">
+                        <h4><a href="artigo-europa-700-sistema-gps.html">Como conseguir Europa por R$ 700 ida e volta</a></h4>
+                        <div class="meta">47.293 visualizações</div>
+                    </div>
+                </div>
+
+                <div class="popular-article">
+                    <img src="assets/images/thumb-milhas-armadilha.jpg" alt="Armadilha das milhas" loading="lazy">
+                    <div class="popular-article-content">
+                        <h4><a href="artigo-verdade-milhas.html">Por que milhas podem ser uma armadilha</a></h4>
+                        <div class="meta">31.847 visualizações</div>
+                    </div>
+                </div>
+
+                <div class="popular-article">
+                    <img src="assets/images/thumb-3-cliques.jpg" alt="Passagens em 3 cliques" loading="lazy">
+                    <div class="popular-article-content">
+                        <h4><a href="artigo-3-cliques-passagens-baratas.html">Passagens baratas em apenas 3 cliques</a></h4>
+                        <div class="meta">28.536 visualizações</div>
+                    </div>
+                </div>
+
+                <div class="popular-article">
+                    <img src="assets/images/thumb-clube-vip.jpg" alt="Clube VIP revelações" loading="lazy">
+                    <div class="popular-article-content">
+                        <h4><a href="artigo-clube-vip-revelacoes.html">Membros do Clube VIP revelam economias absurdas</a></h4>
+                        <div class="meta">25.194 visualizações</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🎁 Newsletter</h3>
+                <p style="color: #6b7280; font-size: 0.9rem; margin-bottom: 1rem;">Receba semanalmente as melhores ofertas de passagens e dicas exclusivas do Sistema GPS.</p>
+                <form style="display: flex; flex-direction: column; gap: 0.75rem;">
+                    <input type="email" placeholder="Seu melhor email" style="padding: 0.75rem; border: 1px solid #d1d5db; border-radius: 6px;">
+                    <button type="submit" style="background: #2563eb; color: white; padding: 0.75rem; border: none; border-radius: 6px; font-weight: 600; cursor: pointer;">📧 Cadastrar</button>
+                </form>
+            </div>
+        </aside>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>GPS Viagens Brasil</h4>
+                <p style="color: #9ca3af; margin-bottom: 1rem;">O sistema inteligente que revoluciona a forma como brasileiros compram passagens aéreas.</p>
+                <div style="display: flex; gap: 1rem;">
+                    <a href="#" style="color: #9ca3af;">📱 Instagram</a>
+                    <a href="#" style="color: #9ca3af;">📧 Telegram</a>
+                    <a href="#" style="color: #9ca3af;">🐦 Twitter</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Sistema GPS</h4>
+                <ul>
+                    <li><a href="#">Como Funciona</a></li>
+                    <li><a href="#">Depoimentos</a></li>
+                    <li><a href="#">Cases de Sucesso</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Suporte</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Conteúdo</h4>
+                <ul>
+                    <li><a href="#">Blog de Viagens</a></li>
+                    <li><a href="#">Destinos Baratos</a></li>
+                    <li><a href="#">Dicas de Viagem</a></li>
+                    <li><a href="#">Análises de Preços</a></li>
+                    <li><a href="#">Newsletter</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Sobre Nós</a></li>
+                    <li><a href="#">Trabalhe Conosco</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 GPS Viagens Brasil. Todos os direitos reservados. Sistema desenvolvido por Lari Colares.</p>
+        </div>
+    </footer>
+
     <script>
-        // Animações suaves
-        const cards = document.querySelectorAll('.project-card');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
                 }
             });
         });
-        
-        cards.forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            card.style.transition = 'opacity 0.6s, transform 0.6s';
-            observer.observe(card);
+
+        // Search functionality
+        document.querySelector('.search-box input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                const query = this.value.toLowerCase();
+                alert(`Buscando por: "${query}". Funcionalidade em desenvolvimento!`);
+            }
+        });
+
+        // Newsletter signup
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input[type="email"]').value;
+            if (email) {
+                alert('✅ Email cadastrado com sucesso! Você receberá nossas melhores ofertas.');
+                this.reset();
+            }
         });
     </script>
 </body>

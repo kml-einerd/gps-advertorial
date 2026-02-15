@@ -1,0 +1,10 @@
+Placeholder para imagens que serão geradas:
+
+1. sistema-interface.jpg - Screenshot da interface do Sistema GPS
+2. comparacao-precos.jpg - Comparação Google Flights vs Sistema GPS
+3. lari-computador.jpg - Lari trabalhando no computador
+
+Essas imagens podem ser criadas usando:
+- Canvas design skill
+- Gemini API (quando funcionar)
+- Outras ferramentas de geração de imagem

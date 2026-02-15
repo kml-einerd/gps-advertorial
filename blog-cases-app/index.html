@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cases reais de usuários que economizaram milhares com o Sistema GPS de Passagens">
+    <title>Cases GPS - Economias Reais de Usuários</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f1f3f4;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1e40af 0%, #3730a3 100%);
+            color: white;
+            padding: 1.5rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tagline {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        
+        .intro {
+            text-align: center;
+            margin-bottom: 3rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .intro h1 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+        
+        .intro p {
+            font-size: 1.1rem;
+            color: #6b7280;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ef4444;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+        
+        .cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+        }
+        
+        .case-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .case-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .case-header {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: white;
+            padding: 1.5rem;
+            position: relative;
+        }
+        
+        .case-header.success {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        }
+        
+        .case-header.warning {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+        }
+        
+        .case-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+        
+        .case-location {
+            opacity: 0.9;
+            font-size: 0.9rem;
+        }
+        
+        .savings-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        
+        .case-content {
+            padding: 1.5rem;
+        }
+        
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .user-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #6366f1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .user-details h4 {
+            margin-bottom: 0.2rem;
+            color: #1f2937;
+        }
+        
+        .user-details span {
+            font-size: 0.9rem;
+            color: #6b7280;
+        }
+        
+        .case-description {
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            color: #374151;
+        }
+        
+        .price-comparison {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f9fafb;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .price-item {
+            text-align: center;
+        }
+        
+        .price-label {
+            font-size: 0.8rem;
+            color: #6b7280;
+            margin-bottom: 0.3rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .price-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .price-value.old {
+            color: #dc2626;
+            text-decoration: line-through;
+        }
+        
+        .price-value.new {
+            color: #16a34a;
+        }
+        
+        .savings-arrow {
+            font-size: 1.5rem;
+            color: #16a34a;
+            margin: 0 1rem;
+        }
+        
+        .case-footer {
+            padding: 1rem 1.5rem;
+            background: #f8fafc;
+            border-top: 1px solid #e5e7eb;
+            font-size: 0.9rem;
+            color: #6b7280;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            border-radius: 12px;
+        }
+        
+        .cta-title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-subtitle {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #ef4444;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .cases-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .intro h1 {
+                font-size: 1.8rem;
+            }
+            
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">📊 GPS Cases</div>
+            <div class="tagline">Cases reais de usuários do Sistema GPS de Passagens</div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="intro">
+            <h1>Economias Reais Comprovadas</h1>
+            <p>
+                Conheça casos reais de pessoas que usaram o Sistema GPS de Passagens e economizaram 
+                milhares de reais em suas viagens. Todos os valores são verificados e comprovados.
+            </p>
+        </div>
+        
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-number">R$ 127.450</div>
+                <div class="stat-label">Economia total registrada</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">156</div>
+                <div class="stat-label">Usuários ativos</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">78%</div>
+                <div class="stat-label">Economia média</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">342</div>
+                <div class="stat-label">Passagens compradas</div>
+            </div>
+        </div>
+        
+        <div class="cases-grid">
+            <article class="case-card">
+                <div class="case-header success">
+                    <h3 class="case-title">Família viaja para Europa economizando R$ 12.400</h3>
+                    <div class="case-location">São Paulo → Paris + Amsterdã</div>
+                    <div class="savings-badge">85% economia</div>
+                </div>
+                <div class="case-content">
+                    <div class="user-info">
+                        <div class="user-avatar">VT</div>
+                        <div class="user-details">
+                            <h4>Vitória Tolentino</h4>
+                            <span>Publicitária, São Paulo</span>
+                        </div>
+                    </div>
+                    <div class="case-description">
+                        Cliente Azul Infinit descobriu como usar o Sistema GPS para encontrar lotes contratuais 
+                        ultra econômicos. Viajou com família (3 pessoas) para Europa usando estratégia de milhas 
+                        combinada com tarifas fixas.
+                    </div>
+                    <div class="price-comparison">
+                        <div class="price-item">
+                            <div class="price-label">Google Flights</div>
+                            <div class="price-value old">R$ 18.200</div>
+                        </div>
+                        <div class="savings-arrow">→</div>
+                        <div class="price-item">
+                            <div class="price-label">Sistema GPS</div>
+                            <div class="price-value new">R$ 5.800</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="case-footer">
+                    ✅ Verificado • Viagem realizada em outubro/2025
+                </div>
+            </article>
+            
+            <article class="case-card">
+                <div class="case-header success">
+                    <h3 class="case-title">Executiva consegue voo NYC por preço de econômica</h3>
+                    <div class="case-location">Rio de Janeiro → Nova York</div>
+                    <div class="savings-badge">82% economia</div>
+                </div>
+                <div class="case-content">
+                    <div class="user-info">
+                        <div class="user-avatar">MA</div>
+                        <div class="user-details">
+                            <h4>Marcela Adriana</h4>
+                            <span>Cliente Azul Infinit</span>
+                        </div>
+                    </div>
+                    <div class="case-description">
+                        Usando 220k pontos TudoAzul + Sistema GPS, conseguiu classe executiva em voo 
+                        internacional. Ferramentas como Seats.aero + Azul Pelo Mundo revelaram 
+                        disponibilidade escondida.
+                    </div>
+                    <div class="price-comparison">
+                        <div class="price-item">
+                            <div class="price-label">Executiva Normal</div>
+                            <div class="price-value old">R$ 8.400</div>
+                        </div>
+                        <div class="savings-arrow">→</div>
+                        <div class="price-item">
+                            <div class="price-label">Com GPS</div>
+                            <div class="price-value new">R$ 1.500</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="case-footer">
+                    ✅ Verificado • SMS comprovando estratégia
+                </div>
+            </article>
+            
+            <article class="case-card">
+                <div class="case-header success">
+                    <h3 class="case-title">Aposentado viaja o mundo gastando menos de R$ 2.000</h3>
+                    <div class="case-location">Múltiplos destinos internacionais</div>
+                    <div class="savings-badge">91% economia</div>
+                </div>
+                <div class="case-content">
+                    <div class="user-info">
+                        <div class="user-avatar">JM</div>
+                        <div class="user-details">
+                            <h4>Julio C. L. Medeiros</h4>
+                            <span>Aposentado, Rio Grande do Sul</span>
+                        </div>
+                    </div>
+                    <div class="case-description">
+                        Viajante experiente que já conheceu muitos países descobriu o Sistema GPS 
+                        e ficou impressionado com as possibilidades. Confirmou que sua "percepção 
+                        extra sensorial" sobre passagens baratas realmente funciona.
+                    </div>
+                    <div class="price-comparison">
+                        <div class="price-item">
+                            <div class="price-label">Método Anterior</div>
+                            <div class="price-value old">R$ 15.000+</div>
+                        </div>
+                        <div class="savings-arrow">→</div>
+                        <div class="price-item">
+                            <div class="price-label">Com GPS</div>
+                            <div class="price-value new">R$ 1.800</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="case-footer">
+                    ✅ Verificado • Depoimento em grupo oficial
+                </div>
+            </article>
+            
+            <article class="case-card">
+                <div class="case-header warning">
+                    <h3 class="case-title">Usuário encontra bug e consegue passagem quase gratuita</h3>
+                    <div class="case-location">São Paulo → Miami</div>
+                    <div class="savings-badge">96% economia</div>
+                </div>
+                <div class="case-content">
+                    <div class="user-info">
+                        <div class="user-avatar">FM</div>
+                        <div class="user-details">
+                            <h4>Fernando Moraes</h4>
+                            <span>Usuário Sistema GPS</span>
+                        </div>
+                    </div>
+                    <div class="case-description">
+                        Deu feedback sobre o app e descobriu uma funcionalidade que permite encontrar 
+                        erros de precificação nos sistemas das companhias. Conseguiu passagem por 
+                        valor próximo das taxas de embarque.
+                    </div>
+                    <div class="price-comparison">
+                        <div class="price-item">
+                            <div class="price-label">Valor Normal</div>
+                            <div class="price-value old">R$ 4.200</div>
+                        </div>
+                        <div class="savings-arrow">→</div>
+                        <div class="price-item">
+                            <div class="price-label">Preço Final</div>
+                            <div class="price-value new">R$ 180</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="case-footer">
+                    ⚠️ Caso excepcional • Disponibilidade limitada
+                </div>
+            </article>
+            
+            <article class="case-card">
+                <div class="case-header">
+                    <h3 class="case-title">Membros do grupo encontram passagens em tempo real</h3>
+                    <div class="case-location">Plantão de Viagens - Telegram</div>
+                    <div class="savings-badge">73% economia</div>
+                </div>
+                <div class="case-content">
+                    <div class="user-info">
+                        <div class="user-avatar">PV</div>
+                        <div class="user-details">
+                            <h4>Plantão de Viagens</h4>
+                            <span>1.603 membros ativos</span>
+                        </div>
+                    </div>
+                    <div class="case-description">
+                        Grupo colaborativo onde usuários compartilham achados em tempo real. 
+                        Sistema GPS permite que membros encontrem passagens Copa Airlines e 
+                        outras companhias com descontos excepcionais.
+                    </div>
+                    <div class="price-comparison">
+                        <div class="price-item">
+                            <div class="price-label">Busca Individual</div>
+                            <div class="price-value old">R$ 3.800</div>
+                        </div>
+                        <div class="savings-arrow">→</div>
+                        <div class="price-item">
+                            <div class="price-label">Grupo GPS</div>
+                            <div class="price-value new">R$ 1.020</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="case-footer">
+                    👥 Grupo ativo • 33 membros online no momento
+                </div>
+            </article>
+            
+            <article class="case-card">
+                <div class="case-header success">
+                    <h3 class="case-title">Primeira economia já cobre investimento no sistema</h3>
+                    <div class="case-location">São Paulo → Londres</div>
+                    <div class="savings-badge">76% economia</div>
+                </div>
+                <div class="case-content">
+                    <div class="user-info">
+                        <div class="user-avatar">CS</div>
+                        <div class="user-details">
+                            <h4>Carla Santos</h4>
+                            <span>Nova usuária</span>
+                        </div>
+                    </div>
+                    <div class="case-description">
+                        Na primeira semana usando o Sistema GPS, encontrou passagem para Londres 
+                        por R$ 1.100. Economia foi tão significativa que cobriu o investimento 
+                        no sistema e ainda sobrou para hotel.
+                    </div>
+                    <div class="price-comparison">
+                        <div class="price-item">
+                            <div class="price-label">Google Flights</div>
+                            <div class="price-value old">R$ 4.800</div>
+                        </div>
+                        <div class="savings-arrow">→</div>
+                        <div class="price-item">
+                            <div class="price-label">Sistema GPS</div>
+                            <div class="price-value new">R$ 1.100</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="case-footer">
+                    🎯 ROI imediato • Economia cobriu investimento
+                </div>
+            </article>
+        </div>
+        
+        <div class="cta-section">
+            <h3 class="cta-title">Seu Próximo Case Pode Estar Aqui</h3>
+            <p class="cta-subtitle">
+                Junte-se a centenas de pessoas que já economizaram milhares de reais 
+                usando o Sistema GPS de Passagens
+            </p>
+            
+            <a href="#" class="cta-button" id="cta-cases">
+                QUERO COMEÇAR A ECONOMIZAR AGORA
+            </a>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('cta-cases').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('Redirecionando para o Sistema GPS de Passagens...');
+            // window.location.href = 'link-do-sistema-gps';
+        });
+    </script>
+</body>
+</html>

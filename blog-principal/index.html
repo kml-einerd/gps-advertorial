@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubra as melhores promoções de passagens aéreas, dicas de viagens baratas e estratégias para economizar em suas próximas férias">
+    <title>Passagens em Promoção - Viaje Mais Gastando Menos</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.2s;
+        }
+        
+        .nav-menu a:hover {
+            opacity: 0.8;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+        
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .article-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .article-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(45deg, #f3f4f6, #e5e7eb);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #9ca3af;
+        }
+        
+        .article-content {
+            padding: 1.5rem;
+        }
+        
+        .article-category {
+            display: inline-block;
+            background: #3b82f6;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        .article-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+        }
+        
+        .article-title a {
+            color: #1f2937;
+            text-decoration: none;
+        }
+        
+        .article-title a:hover {
+            color: #3b82f6;
+        }
+        
+        .article-excerpt {
+            color: #6b7280;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+        
+        .article-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+            color: #9ca3af;
+            border-top: 1px solid #f3f4f6;
+            padding-top: 1rem;
+        }
+        
+        .sidebar {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            height: fit-content;
+            position: sticky;
+            top: 2rem;
+        }
+        
+        .sidebar h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+        
+        .hot-deals {
+            list-style: none;
+        }
+        
+        .hot-deals li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #f3f4f6;
+        }
+        
+        .hot-deals li:last-child {
+            border-bottom: none;
+        }
+        
+        .deal-destination {
+            font-weight: 600;
+            color: #1f2937;
+        }
+        
+        .deal-price {
+            color: #ef4444;
+            font-weight: bold;
+        }
+        
+        .cta-box {
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        .cta-box h3 {
+            margin-bottom: 1rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #ef4444;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+        
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+        
+        .footer {
+            background: #1f2937;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-menu {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="nav-container">
+            <a href="#" class="logo">✈️ Passagens em Promoção</a>
+            <ul class="nav-menu">
+                <li><a href="#nacionais">Nacionais</a></li>
+                <li><a href="#internacionais">Internacionais</a></li>
+                <li><a href="#dicas">Dicas</a></li>
+                <li><a href="#milhas">Milhas</a></li>
+            </ul>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <h1>Viaje Mais, Gaste Menos</h1>
+            <p>Descubra as melhores promoções de passagens aéreas e estratégias para economizar até 90% em suas viagens</p>
+        </div>
+    </section>
+    
+    <div class="container">
+        <div class="main-content">
+            <main>
+                <div class="articles-grid">
+                    <article class="article-card">
+                        <div class="article-image">🇪🇺</div>
+                        <div class="article-content">
+                            <span class="article-category">EUROPA</span>
+                            <h2 class="article-title">
+                                <a href="europa-700-reais.html">Como uma brasileira está viajando para a Europa gastando apenas R$ 700 por passagem</a>
+                            </h2>
+                            <p class="article-excerpt">
+                                Método revolucionário expõe brecha legal que permite comprar passagens internacionais por preço de custo. Companhias aéreas tentam esconder essa informação...
+                            </p>
+                            <div class="article-meta">
+                                <span>Por Redação</span>
+                                <span>Há 2 horas</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="article-card">
+                        <div class="article-image">🔍</div>
+                        <div class="article-content">
+                            <span class="article-category">INVESTIGAÇÃO</span>
+                            <h2 class="article-title">
+                                <a href="conspiração-agencias.html">Por que agências de viagem conseguem passagens 80% mais baratas? A resposta vai chocar você</a>
+                            </h2>
+                            <p class="article-excerpt">
+                                Investigação revela sistema secreto usado por profissionais do turismo para acessar tarifas ultra econômicas. Agora você também pode usar...
+                            </p>
+                            <div class="article-meta">
+                                <span>Por Investigação</span>
+                                <span>Há 4 horas</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="article-card">
+                        <div class="article-image">⚠️</div>
+                        <div class="article-content">
+                            <span class="article-category">ALERTA</span>
+                            <h2 class="article-title">
+                                <a href="empresas-escondem.html">URGENTE: Companhias aéreas são obrigadas por lei a vender 30% dos assentos com 90% de desconto</a>
+                            </h2>
+                            <p class="article-excerpt">
+                                Cláusula contratual obriga empresas a disponibilizar lotes ultra econômicos. Mas elas fazem de tudo para esconder essa informação do público...
+                            </p>
+                            <div class="article-meta">
+                                <span>Por Aviação Legal</span>
+                                <span>Há 6 horas</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="article-card">
+                        <div class="article-image">💰</div>
+                        <div class="article-content">
+                            <span class="article-category">ECONOMIA</span>
+                            <h2 class="article-title">
+                                <a href="familia-economiza-30mil.html">Família economiza R$ 30 mil em viagens usando técnica que agentes querem manter em segredo</a>
+                            </h2>
+                            <p class="article-excerpt">
+                                Pais de três filhos revelam como descobriram sistema que reduz passagens aéreas em até 85%. A mesma estratégia que profissionais usam há décadas...
+                            </p>
+                            <div class="article-meta">
+                                <span>Por Economia</span>
+                                <span>Há 8 horas</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="article-card">
+                        <div class="article-image">🚨</div>
+                        <div class="article-content">
+                            <span class="article-category">BREAKING</span>
+                            <h2 class="article-title">
+                                <a href="sistema-vazou.html">Sistema secreto de passagens "vaza" na internet e companhias aéreas entram em pânico</a>
+                            </h2>
+                            <p class="article-excerpt">
+                                Ferramenta profissional que era exclusiva de agências está sendo disponibilizada para o público. Indústria tenta barrar acesso antes que se espalhe...
+                            </p>
+                            <div class="article-meta">
+                                <span>Por Tech News</span>
+                                <span>Há 12 horas</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="article-card">
+                        <div class="article-image">✈️</div>
+                        <div class="article-content">
+                            <span class="article-category">TUTORIAL</span>
+                            <h2 class="article-title">
+                                <a href="tutorial-passagens-baratas.html">Tutorial COMPLETO: Como encontrar passagens 90% mais baratas em apenas 3 cliques</a>
+                            </h2>
+                            <p class="article-excerpt">
+                                Passo a passo detalhado para acessar os mesmos sistemas que agentes de viagem usam. Método funciona para destinos nacionais e internacionais...
+                            </p>
+                            <div class="article-meta">
+                                <span>Por Guia Prático</span>
+                                <span>Há 1 dia</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </main>
+            
+            <aside class="sidebar">
+                <h3>🔥 Promoções Relâmpago</h3>
+                <ul class="hot-deals">
+                    <li>
+                        <div class="deal-destination">São Paulo → Paris</div>
+                        <div class="deal-price">A partir de R$ 890</div>
+                    </li>
+                    <li>
+                        <div class="deal-destination">Rio → Nova York</div>
+                        <div class="deal-price">A partir de R$ 1.200</div>
+                    </li>
+                    <li>
+                        <div class="deal-destination">Brasília → Lisboa</div>
+                        <div class="deal-price">A partir de R$ 950</div>
+                    </li>
+                    <li>
+                        <div class="deal-destination">São Paulo → Miami</div>
+                        <div class="deal-price">A partir de R$ 1.100</div>
+                    </li>
+                </ul>
+                
+                <div class="cta-box">
+                    <h3>Acesso Exclusivo</h3>
+                    <p>Descubra como encontrar essas promoções antes que sumam</p>
+                    <a href="#" class="cta-button">QUERO ACESSO</a>
+                </div>
+            </aside>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Passagens em Promoção. Encontre as melhores ofertas de viagens.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Adiciona interatividade simples
+        document.querySelectorAll('.cta-button, .deal-destination').forEach(element => {
+            element.addEventListener('click', function(e) {
+                if (element.classList.contains('cta-button')) {
+                    e.preventDefault();
+                    alert('Redirecionando para o Sistema GPS de Passagens...');
+                    // window.location.href = 'sistema-gps-link';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

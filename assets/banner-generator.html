@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPS Banners Generator</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            background: #f0f0f0;
+        }
+        
+        .banner-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .banner {
+            width: 400px;
+            height: 400px;
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .banner:hover {
+            transform: scale(1.05);
+        }
+        
+        .banner-1 {
+            background: linear-gradient(135deg, #1e40af 0%, #3730a3 100%);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .banner-1 .hook {
+            font-size: 1.8rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .banner-1 .price-comparison {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        .banner-1 .old-price {
+            font-size: 2rem;
+            color: #ef4444;
+            text-decoration: line-through;
+            font-weight: bold;
+        }
+        
+        .banner-1 .arrow {
+            font-size: 2rem;
+            color: #ffd700;
+        }
+        
+        .banner-1 .new-price {
+            font-size: 2.5rem;
+            color: #22c55e;
+            font-weight: 900;
+        }
+        
+        .banner-1 .economy {
+            background: #ffd700;
+            color: #1e40af;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 900;
+            font-size: 1.1rem;
+            margin: 1rem 0;
+        }
+        
+        .banner-1 .brand {
+            font-size: 1rem;
+            font-weight: bold;
+            opacity: 0.9;
+            margin-top: 1rem;
+        }
+        
+        .banner-1 .urgency {
+            background: #ef4444;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-top: 1rem;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        
+        .banner-2 {
+            background: linear-gradient(45deg, #ef4444 0%, #dc2626 50%, #1e40af 100%);
+            color: white;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .banner-2 .hook {
+            font-size: 1.6rem;
+            font-weight: 900;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .banner-2 .middle {
+            text-align: center;
+        }
+        
+        .banner-2 .big-number {
+            font-size: 4rem;
+            font-weight: 900;
+            color: #ffd700;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.8);
+            margin: 0.5rem 0;
+        }
+        
+        .banner-2 .subtitle {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        
+        .banner-2 .cta {
+            background: #ffd700;
+            color: #1e40af;
+            padding: 0.8rem;
+            border-radius: 15px;
+            text-align: center;
+            font-weight: 900;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+        }
+        
+        .banner-3 {
+            background: white;
+            color: #1e40af;
+            padding: 2rem;
+            border: 3px solid #ef4444;
+        }
+        
+        .banner-3 .urgent-header {
+            background: #ef4444;
+            color: white;
+            margin: -2rem -2rem 1rem -2rem;
+            padding: 0.8rem;
+            text-align: center;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+        
+        .banner-3 .hook {
+            font-size: 1.5rem;
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: #1e40af;
+        }
+        
+        .banner-3 .benefit {
+            background: #f0fdf4;
+            padding: 1rem;
+            border-radius: 10px;
+            border-left: 4px solid #22c55e;
+            margin: 1rem 0;
+        }
+        
+        .banner-3 .benefit-text {
+            font-weight: bold;
+            color: #16a34a;
+        }
+        
+        .banner-3 .cta {
+            background: #1e40af;
+            color: white;
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 900;
+            margin-top: 1rem;
+        }
+        
+        .banner-4 {
+            background: linear-gradient(135deg, #0f0f0f 0%, #1e40af 100%);
+            color: white;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .banner-4::before {
+            content: '✈️';
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            font-size: 6rem;
+            opacity: 0.2;
+        }
+        
+        .banner-4 .warning {
+            background: #ffd700;
+            color: #000;
+            padding: 0.5rem;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .banner-4 .hook {
+            font-size: 1.4rem;
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+        
+        .banner-4 .stats {
+            background: rgba(255,255,255,0.1);
+            padding: 1rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+        }
+        
+        .banner-4 .stat-line {
+            display: flex;
+            justify-content: space-between;
+            margin: 0.5rem 0;
+        }
+        
+        .banner-4 .cta {
+            background: #ef4444;
+            color: white;
+            padding: 0.8rem;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 900;
+            margin-top: 1rem;
+        }
+        
+        .controls {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .download-btn {
+            background: #1e40af;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 0.5rem;
+        }
+        
+        .title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #1e40af;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">🎨 GPS Banners Generator - Baseado nas Sinapses do Agent Brain</h1>
+    
+    <div class="controls">
+        <button class="download-btn" onclick="downloadBanner(1)">Download Banner 1</button>
+        <button class="download-btn" onclick="downloadBanner(2)">Download Banner 2</button>
+        <button class="download-btn" onclick="downloadBanner(3)">Download Banner 3</button>
+        <button class="download-btn" onclick="downloadBanner(4)">Download Banner 4</button>
+    </div>
+    
+    <div class="banner-container">
+        <!-- Banner 1: Hook "Joga Google Flights no Lixo" -->
+        <div class="banner banner-1" id="banner-1">
+            <div class="hook">Joga seu Google Flights no Lixo</div>
+            <div class="price-comparison">
+                <span class="old-price">R$ 5.200</span>
+                <span class="arrow">→</span>
+                <span class="new-price">R$ 890</span>
+            </div>
+            <div class="economy">93% DE ECONOMIA</div>
+            <div class="brand">SISTEMA GPS PASSAGENS</div>
+            <div class="urgency">POR TEMPO LIMITADO</div>
+        </div>
+        
+        <!-- Banner 2: Hook "Nunca vi economia assim" -->
+        <div class="banner banner-2" id="banner-2">
+            <div class="hook">Por que ninguém tá falando sobre essas passagens de R$ 700?</div>
+            <div class="middle">
+                <div class="big-number">93%</div>
+                <div class="subtitle">DE DESCONTO</div>
+            </div>
+            <div class="cta">Descubra o Sistema GPS</div>
+        </div>
+        
+        <!-- Banner 3: Formato Urgente -->
+        <div class="banner banner-3" id="banner-3">
+            <div class="urgent-header">⚠️ URGENTE ⚠️</div>
+            <div class="hook">Sistema secreto que companhias querem esconder</div>
+            <div class="benefit">
+                <div class="benefit-text">✈️ Europa por R$ 890</div>
+            </div>
+            <div class="benefit">
+                <div class="benefit-text">🌎 EUA por R$ 1.200</div>
+            </div>
+            <div class="cta">ACESSO LIBERADO</div>
+        </div>
+        
+        <!-- Banner 4: Formato Análise Estratégica -->
+        <div class="banner banner-4" id="banner-4">
+            <div class="warning">⚠️ PODE SAIR DO AR</div>
+            <div class="hook">As agências não querem que você saiba disso</div>
+            <div class="stats">
+                <div class="stat-line">
+                    <span>156 usuários</span>
+                    <span>✓</span>
+                </div>
+                <div class="stat-line">
+                    <span>R$ 127.450 economizados</span>
+                    <span>✓</span>
+                </div>
+                <div class="stat-line">
+                    <span>78% economia média</span>
+                    <span>✓</span>
+                </div>
+            </div>
+            <div class="cta">QUERO ACESSAR</div>
+        </div>
+    </div>
+    
+    <script>
+        function downloadBanner(num) {
+            // Para converter HTML para imagem, pode usar html2canvas
+            const banner = document.getElementById(`banner-${num}`);
+            
+            // Simulação de download (em produção, usaria html2canvas)
+            alert(`Banner ${num} seria baixado aqui. 
+            
+Em produção, use:
+1. html2canvas para converter HTML → Canvas
+2. Canvas → PNG/JPG
+3. Download automático
+
+Este sistema permite gerar infinitos banners
+com base nas sinapses do Agent Brain!`);
+        }
+        
+        // Animações extras
+        setInterval(() => {
+            const banners = document.querySelectorAll('.banner');
+            banners.forEach((banner, index) => {
+                setTimeout(() => {
+                    banner.style.transform = 'scale(1.02)';
+                    setTimeout(() => {
+                        banner.style.transform = 'scale(1)';
+                    }, 200);
+                }, index * 100);
+            });
+        }, 5000);
+    </script>
+</body>
+</html>

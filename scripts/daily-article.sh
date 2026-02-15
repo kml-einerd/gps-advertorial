@@ -15,10 +15,10 @@ git commit -m "feat: daily article $(date +%Y-%m-%d)"
 
 # Faz push
 echo "⬆️ Fazendo push..."
-git push origin main
+git push origin master
 
 # Deploy no Cloudflare Pages
 echo "🌐 Fazendo deploy..."
-CLOUDFLARE_API_TOKEN=hsw_f2O5KHHo29Z1m8N_hhs-duFRh-9DkkjwEdE8 npx wrangler pages deploy . --project-name gps-advertorial --branch main
+CLOUDFLARE_API_TOKEN=hsw_f2O5KHHo29Z1m8N_hhs-duFRh-9DkkjwEdE8 npx wrangler pages deploy . --project-name gps-advertorial --branch master
 
 echo "✅ Deploy completo! Novo artigo disponível em https://gps-advertorial.pages.dev"

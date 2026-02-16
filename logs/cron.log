@@ -3,3 +3,29 @@
 📰 Título: Ex-comissária de bordo revela segredos sombrios das companhias aéreas
 ✅ Blog index atualizado com novo artigo
 📝 Commitando mudanças...
+[master 2a771d9] feat: daily article 2026-02-16
+ 3 files changed, 110 insertions(+)
+ create mode 100644 blog-principal/2026-02-16-insider-secrets.html
+ create mode 100644 logs/cron.log
+⬆️ Fazendo push...
+To https://github.com/kml-einerd/gps-advertorial.git
+   7f0d279..2a771d9  master -> master
+🌐 Fazendo deploy...
+
+ ⛅️ wrangler 4.65.0
+───────────────────
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mWarning: Your working directory is a git repo and has uncommitted changes[0m
+
+  To silence this warning, pass in --commit-dirty=true
+
+
+Uploading... (208/211)
+Uploading... (209/211)
+Uploading... (210/211)
+Uploading... (211/211)
+✨ Success! Uploaded 3 files (208 already uploaded) (0.58 sec)
+
+🌎 Deploying...
+✨ Deployment complete! Take a peek over at https://096da240.gps-advertorial.pages.dev
+✨ Deployment alias URL: https://master.gps-advertorial.pages.dev
+✅ Deploy completo! Novo artigo disponível em https://gps-advertorial.pages.dev

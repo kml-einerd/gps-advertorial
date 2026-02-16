@@ -3,496 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Como encontrar passagens baratas em 3 cliques — sem milhas, sem sorte, sem complicação - GPS Viagens Brasil</title>
+    <title>Como encontrar passagens baratas em 3 cliques — sem milhas, sem sorte, sem complicação — GPS Viagens Brasil</title>
     <meta name="description" content="Tutorial prático e simples: como qualquer pessoa pode encontrar passagens 70% mais baratas em apenas 3 cliques. Até minha mãe que mal sabe usar celular conseguiu.">
+    <meta property="og:title" content="Como encontrar passagens baratas em 3 cliques — sem milhas, sem sorte, sem complicação">
+    <meta property="og:description" content="Tutorial prático e simples: como qualquer pessoa pode encontrar passagens 70% mais baratas em apenas 3 cliques. Até minha mãe que mal sabe usar celular conseguiu.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://gps-advertorial.pages.dev/artigo-3-cliques.html">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="canonical" href="https://gps-advertorial.pages.dev/artigo-3-cliques.html">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --primary-color: #2563eb;
-            --secondary-color: #dc2626;
-            --accent-color: #f59e0b;
-            --text-dark: #1f2937;
-            --text-light: #6b7280;
-            --bg-light: #f8fafc;
-            --border-color: #e5e7eb;
-            --success-color: #16a34a;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            line-height: 1.7;
-            color: var(--text-dark);
-            background: #ffffff;
-        }
-
-        /* HEADER SIMPLES */
-        .header {
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-            padding: 1rem 0;
-            text-align: center;
-        }
-
-        .header a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
-
-        .header a::before {
-            content: "🎯";
-            margin-right: 0.5rem;
-        }
-
-        /* BREADCRUMB */
-        .breadcrumb {
-            background: var(--bg-light);
-            padding: 1rem 0;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .breadcrumb-container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 1rem;
-            font-size: 0.875rem;
-            color: var(--text-light);
-        }
-
-        .breadcrumb a {
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-
-        /* ARTICLE CONTAINER */
-        .article-container {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-
-        /* ARTICLE HEADER */
-        .article-header {
-            margin-bottom: 2rem;
-        }
-
-        .category-tag {
-            background: var(--secondary-color);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.875rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            display: inline-block;
-            margin-bottom: 1rem;
-        }
-
-        .article-title {
-            font-size: 2.5rem;
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 1rem;
-            color: var(--text-dark);
-        }
-
-        .article-subtitle {
-            font-size: 1.25rem;
-            color: var(--text-light);
-            font-weight: 400;
-            margin-bottom: 1.5rem;
-            line-height: 1.5;
-        }
-
-        .article-meta {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid var(--border-color);
-            font-size: 0.875rem;
-            color: var(--text-light);
-        }
-
-        .author {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-
-        .author-avatar {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: var(--primary-color);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 600;
-        }
-
-        /* FEATURED IMAGE */
-        .featured-image {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            border-radius: 12px;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-        }
-
-        /* ARTICLE CONTENT */
-        .article-content {
-            font-size: 1.125rem;
-            line-height: 1.8;
-        }
-
-        .article-content p {
-            margin-bottom: 1.5rem;
-        }
-
-        .article-content h2 {
-            font-size: 1.75rem;
-            font-weight: 700;
-            margin: 2.5rem 0 1rem;
-            color: var(--text-dark);
-        }
-
-        .article-content h3 {
-            font-size: 1.375rem;
-            font-weight: 600;
-            margin: 2rem 0 0.75rem;
-            color: var(--text-dark);
-        }
-
-        .article-content ul, .article-content ol {
-            margin: 1.5rem 0;
-            padding-left: 1.5rem;
-        }
-
-        .article-content li {
-            margin-bottom: 0.75rem;
-        }
-
-        .article-content blockquote {
-            background: var(--bg-light);
-            border-left: 4px solid var(--primary-color);
-            padding: 1.5rem;
-            margin: 2rem 0;
-            border-radius: 8px;
-            font-style: italic;
-            font-size: 1.1rem;
-        }
-
-        .article-content strong {
-            font-weight: 600;
-            color: var(--text-dark);
-        }
-
-        /* BREAKING NEWS STYLE BOXES */
-        .breaking-box {
-            background: linear-gradient(135deg, var(--secondary-color) 0%, #ef4444 100%);
-            color: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            margin: 2rem 0;
-            box-shadow: 0 4px 20px rgba(220, 38, 38, 0.3);
-        }
-
-        .breaking-box h4 {
-            font-size: 1.25rem;
-            margin-bottom: 0.75rem;
-            font-weight: 700;
-        }
-
-        .breaking-box::before {
-            content: "⚡ TUTORIAL: ";
-            font-weight: 800;
-        }
-
-        /* HIGHLIGHT BOXES */
-        .highlight-box {
-            background: linear-gradient(135deg, var(--accent-color) 0%, #f59e0b 100%);
-            color: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            margin: 2rem 0;
-            box-shadow: 0 4px 20px rgba(245, 158, 11, 0.3);
-        }
-
-        .highlight-box h4 {
-            font-size: 1.25rem;
-            margin-bottom: 0.75rem;
-            font-weight: 700;
-        }
-
-        /* STEP BOXES */
-        .step-box {
-            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-            color: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            margin: 2rem 0;
-            box-shadow: 0 4px 20px rgba(99, 102, 241, 0.3);
-        }
-
-        .step-box h4 {
-            font-size: 1.25rem;
-            margin-bottom: 0.75rem;
-            font-weight: 700;
-        }
-
-        .step-number {
-            background: rgba(255,255,255,0.2);
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            margin-right: 0.75rem;
-        }
-
-        /* IMAGE WITH CAPTION */
-        .image-container {
-            margin: 2rem 0;
-        }
-
-        .image-container img {
-            width: 100%;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-        }
-
-        .image-caption {
-            text-align: center;
-            font-size: 0.875rem;
-            color: var(--text-light);
-            margin-top: 0.75rem;
-            font-style: italic;
-        }
-
-        /* CTA BOXES */
-        .cta-box {
-            background: linear-gradient(135deg, var(--success-color) 0%, #10b981 100%);
-            color: white;
-            padding: 2rem;
-            border-radius: 12px;
-            text-align: center;
-            margin: 3rem 0;
-            box-shadow: 0 6px 25px rgba(22, 163, 74, 0.4);
-        }
-
-        .cta-box h4 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-
-        .cta-box p {
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-            opacity: 0.95;
-        }
-
-        .cta-button {
-            background: white;
-            color: var(--success-color);
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 30px;
-            font-weight: 700;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-        }
-
-        /* SOCIAL SHARE */
-        .social-share {
-            display: flex;
-            gap: 1rem;
-            margin: 3rem 0;
-            padding: 1.5rem;
-            background: var(--bg-light);
-            border-radius: 12px;
-            align-items: center;
-        }
-
-        .social-share span {
-            font-weight: 600;
-            color: var(--text-dark);
-        }
-
-        .social-share a {
-            padding: 0.75rem 1.5rem;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: transform 0.3s;
-        }
-
-        .social-share a:hover {
-            transform: translateY(-2px);
-        }
-
-        .share-whatsapp {
-            background: #25d366;
-            color: white;
-        }
-
-        .share-telegram {
-            background: #0088cc;
-            color: white;
-        }
-
-        .share-facebook {
-            background: #1877f2;
-            color: white;
-        }
-
-        /* RELATED ARTICLES */
-        .related-articles {
-            background: var(--bg-light);
-            padding: 2rem;
-            border-radius: 12px;
-            margin: 3rem 0;
-        }
-
-        .related-articles h3 {
-            margin-bottom: 1.5rem;
-            font-size: 1.5rem;
-            color: var(--text-dark);
-        }
-
-        .related-list {
-            list-style: none;
-        }
-
-        .related-list li {
-            margin-bottom: 1rem;
-        }
-
-        .related-list a {
-            color: var(--text-dark);
-            text-decoration: none;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            transition: color 0.3s;
-        }
-
-        .related-list a:hover {
-            color: var(--primary-color);
-        }
-
-        .related-list a::before {
-            content: "📖";
-            font-size: 1.2rem;
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-            .article-title {
-                font-size: 2rem;
-            }
-
-            .article-subtitle {
-                font-size: 1.1rem;
-            }
-
-            .article-content {
-                font-size: 1rem;
-            }
-
-            .article-meta {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 1rem;
-            }
-
-            .social-share {
-                flex-direction: column;
-                align-items: stretch;
-                text-align: center;
-            }
-
-            .social-share a {
-                justify-self: stretch;
-            }
-
-            .featured-image {
-                height: 250px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/design-system.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Como encontrar passagens baratas em 3 cliques — sem milhas, sem sorte, sem complicação",
+        "description": "Tutorial prático e simples: como qualquer pessoa pode encontrar passagens 70% mais baratas em apenas 3 cliques. Até minha mãe que mal sabe usar celular conseguiu.",
+        "author": {"@type": "Organization", "name": "GPS Viagens Brasil"},
+        "publisher": {"@type": "Organization", "name": "GPS Viagens Brasil"},
+        "datePublished": "2026-02-15",
+        "mainEntityOfPage": "https://gps-advertorial.pages.dev/artigo-3-cliques.html"
+    }
+    </script>
 </head>
 <body>
-    <!-- HEADER -->
-    <header class="header">
-        <a href="index.html">GPS Viagens Brasil</a>
-    </header>
 
-    <!-- BREADCRUMB -->
-    <div class="breadcrumb">
-        <div class="breadcrumb-container">
-            <a href="index.html">Início</a> > 
-            <a href="categoria-tutorial.html">Tutorial Prático</a> > 
-            Como encontrar passagens baratas em 3 cliques
-        </div>
+<header class="site-header">
+    <div class="header-inner">
+        <a href="/" class="site-logo">✈️ GPS <span>Viagens</span></a>
+        <button class="mobile-toggle" onclick="document.querySelector('.site-nav').classList.toggle('open')">☰</button>
+        <nav>
+            <ul class="site-nav">
+                <li><a href="/">Início</a></li>
+                <li><a href="/blog-principal/">Passagens</a></li>
+                <li><a href="/blog-cases-app/">Cases</a></li>
+                <li><a href="/blog-cases-clube/">Clube VIP</a></li>
+                <li><a href="/advertorial/">Sistema GPS</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+    <div class="breadcrumbs">
+        <a href="/">Início</a> <span class="sep">›</span>
+        <a href="/blog-principal/">Passagens</a> <span class="sep">›</span>
+        Como encontrar passagens baratas em 3 cliques — sem milhas, ...
     </div>
 
-    <!-- ARTICLE -->
-    <article class="article-container">
-        <header class="article-header">
-            <div class="category-tag">📱 Tutorial Prático</div>
-            <h1 class="article-title">Como encontrar passagens baratas em 3 cliques — sem milhas, sem sorte, sem complicação</h1>
-            <p class="article-subtitle">Tutorial passo a passo de como qualquer pessoa pode encontrar passagens 70% mais baratas em apenas 3 cliques. Tão simples que até minha mãe de 68 anos, que mal sabe usar celular, conseguiu.</p>
+    <div class="layout-with-sidebar">
+        <main class="main-content">
+            <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&h=340&fit=crop" alt="Como encontrar passagens baratas em 3 cliques — sem milhas, sem sorte, sem complicação" class="article-hero">
             
             <div class="article-meta">
-                <div class="author">
-                    <div class="author-avatar">LC</div>
-                    <div>
-                        <div><strong>Por Lari Colares</strong></div>
-                        <div>Criadora do Sistema GPS</div>
-                    </div>
-                </div>
-                <time datetime="2026-02-15">15 de Fevereiro, 2026</time>
-                <span>📍 São Paulo, SP</span>
-                <span>⏱️ 6 min de leitura</span>
+                <span class="category-badge passagens">Passagens</span>
+                <span class="author">Redação GPS Viagens</span>
+                <span>·</span>
+                <span>15 Fev 2026</span>
+                <span>·</span>
+                <span class="reading-time">6 min de leitura</span>
             </div>
-        </header>
 
-        <img src="assets/images/capas/economizar-viagem.jpg" alt="Tutorial simples para encontrar passagens baratas em 3 cliques" class="featured-image" loading="lazy">
+            <h1 style="font-size:2rem;font-weight:800;line-height:1.3;margin-bottom:1rem">Como encontrar passagens baratas em 3 cliques — sem milhas, sem sorte, sem complicação</h1>
 
-        <div class="article-content">
-            <p><strong>Cansei de ver gente reclamando que viajar é caro. Se você soubesse o que vou te ensinar agora, nunca mais pagaria preço cheio por passagem.</strong></p>
+            <div class="article-content">
+                <p><strong>Cansei de ver gente reclamando que viajar é caro. Se você soubesse o que vou te ensinar agora, nunca mais pagaria preço cheio por passagem.</strong></p>
 
             <p>É tão simples que parece mentira. <em>Literalmente 3 cliques e você encontra a mesma passagem por 70% menos.</em></p>
 
             <div class="breaking-box">
                 <h4>Testado por 15.000+ pessoas</h4>
                 <p>Este método já ajudou mais de <strong>15.000 brasileiros</strong> a economizar milhares em viagens. Funciona para qualquer destino, qualquer época.</p>
+    <div class="native-banner banner-wide banner-red">
+        <div class="native-banner-label">Conteúdo Patrocinado</div>
+        <a href="/advertorial/" class="native-banner-content">
+            <img class="native-banner-img" src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=240&h=160&fit=crop" alt="">
+            <div class="native-banner-text">
+                <h5>Passagens 93% OFF — Veja Como Essa Brasileira Consegue</h5>
+                <p>Método usado por mais de 12.000 viajantes para encontrar passagens com desconto real.</p>
+                <span class="nb-cta">Saiba mais →</span>
+            </div>
+        </a>
+    </div>
             </div>
 
             <p>Vou te mostrar exatamente o que fazer. <strong>Passo a passo, sem enrolação.</strong></p>
@@ -508,6 +99,17 @@
             Resultado dela no Sistema GPS: R$ 1.320</p>
 
             <p><em>"Lari, isso não pode estar certo. É barato demais!"</em></p>
+    <div class="native-banner banner-wide banner-blue">
+        <div class="native-banner-label">Conteúdo Patrocinado</div>
+        <a href="/advertorial/" class="native-banner-content">
+            <img class="native-banner-img" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=240&h=160&fit=crop" alt="">
+            <div class="native-banner-text">
+                <h5>Sistema GPS: 47 Países Com 1 Único Método</h5>
+                <p>Conheça o sistema que mudou a forma como brasileiros viajam pelo mundo.</p>
+                <span class="nb-cta">Saiba mais →</span>
+            </div>
+        </a>
+    </div>
 
             <blockquote>
                 "Se minha mãe conseguiu, qualquer pessoa consegue. Era esse o teste definitivo que eu precisava."
@@ -534,224 +136,129 @@
 
             <div class="image-container">
                 <img src="assets/images/lari-tutorial-3-cliques.jpg" alt="Interface do Sistema GPS mostrando o processo de 3 cliques" loading="lazy">
-                <div class="image-caption">Interface real do Sistema GPS: tão simples quanto parece</div>
+                <div class="image-caption">Interface real do Sistema GPS: tão simples quanto parece
             </div>
 
-            <h2>🎯 Por que é tão mais simples?</h2>
+            <!-- BANNER BEFORE FOOTER -->
+            
+    <div class="native-banner banner-wide banner-green">
+        <div class="native-banner-label">Conteúdo Patrocinado</div>
+        <a href="/advertorial/" class="native-banner-content">
+            <img class="native-banner-img" src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=240&h=160&fit=crop" alt="">
+            <div class="native-banner-text">
+                <h5>Família Economizou R$12.400 em Uma Única Viagem</h5>
+                <p>Descubra o método simples que transformou as férias dessa família brasileira.</p>
+                <span class="nb-cta">Saiba mais →</span>
+            </div>
+        </a>
+    </div>
 
-            <p>Todo mundo complica a busca de passagens. Apps com mil filtros, sites lentos, comparações manuais...</p>
+            
+    <section class="related-posts">
+        <h3>Leia Também</h3>
+        <div class="cards-grid">
+                <article class="card">
+                    <div class="card-thumb">
+                        <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&h=340&fit=crop" alt="Brasileira Descobre Brecha em Site de Passagens">
+                        <span class="category-badge passagens">Passagens</span>
+                    </div>
+                    <div class="card-body">
+                        <h3><a href="artigo-brasileira-descobre-brecha.html">Brasileira Descobre Brecha em Site de Passagens</a></h3>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-thumb">
+                        <img src="https://images.unsplash.com/photo-1517479149777-5f3b1511d5ad?w=600&h=340&fit=crop" alt="Família Economizou R$12.400 em Passagens">
+                        <span class="category-badge cases">Cases</span>
+                    </div>
+                    <div class="card-body">
+                        <h3><a href="artigo-familia-economizou-12400.html">Família Economizou R$12.400 em Passagens</a></h3>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-thumb">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=340&fit=crop" alt="O Que o Google Flights Esconde de Você">
+                        <span class="category-badge dicas">Dicas</span>
+                    </div>
+                    <div class="card-body">
+                        <h3><a href="artigo-google-flights-esconde.html">O Que o Google Flights Esconde de Você</a></h3>
+                    </div>
+                </article>
+        </div>
+    </section>
+        </main>
 
-            <p><strong>Eu fiz o contrário:</strong> criei algo mais simples que uma pesquisa no Google.</p>
+        <aside class="sidebar">
+            <div class="newsletter-box">
+                <h4>Newsletter GPS</h4>
+                <p>Receba promoções de passagens direto no e-mail. Grátis.</p>
+                <input type="email" placeholder="Seu melhor e-mail">
+                <button>Quero Receber →</button>
+            </div>
 
-            <p>O Sistema GPS automatizou tudo que é complicado:</p>
+            <div class="cta-banner">
+                <h4>Passagens até 93% OFF</h4>
+                <p>Descubra o sistema que milhares de brasileiros usam.</p>
+                <a href="/advertorial/">Ver Como Funciona →</a>
+            </div>
 
+            <div class="native-banner banner-sidebar banner-blue">
+                <div class="native-banner-label">Conteúdo Patrocinado</div>
+                <a href="/advertorial/" class="native-banner-content">
+                    <img class="native-banner-img" src="https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=600&h=340&fit=crop" alt="">
+                    <div class="native-banner-text">
+                        <h5>Sistema GPS: O método completo</h5>
+                        <p>Mais de 12.000 brasileiros já usam.</p>
+                        <span class="nb-cta">Conhecer →</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="sidebar-widget">
+                <h4>Mais Lidos</h4>
+                <ol class="popular-list">
+                    <li><span class="post-number">1</span><a href="artigo-brasileira-descobre-brecha.html">Brasileira Descobre Brecha</a></li>
+                    <li><span class="post-number">2</span><a href="artigo-familia-economizou-12400.html">Família Economizou R$12.400</a></li>
+                    <li><span class="post-number">3</span><a href="artigo-google-flights-esconde.html">Google Flights Esconde</a></li>
+                    <li><span class="post-number">4</span><a href="artigo-lari-47-paises.html">Lari 47 Países</a></li>
+                    <li><span class="post-number">5</span><a href="artigo-verdade-milhas.html">Verdade Sobre Milhas</a></li>
+                </ol>
+            </div>
+        </aside>
+    </div>
+</div>
+
+<footer class="site-footer">
+    <div class="footer-grid">
+        <div class="footer-col">
+            <h5>GPS Viagens</h5>
             <ul>
-                <li>✅ Busca em 40+ fontes simultaneamente</li>
-                <li>✅ Encontra lotes ultra econômicos escondidos</li>
-                <li>✅ Compara preços automaticamente</li>
-                <li>✅ Mostra só as melhores opções</li>
+                <li><a href="/advertorial/">Sobre o Sistema GPS</a></li>
+                <li><a href="/blog-cases-app/">Cases de Sucesso</a></li>
+                <li><a href="/blog-cases-clube/">Clube VIP</a></li>
             </ul>
-
-            <p><em>Você só precisa escolher onde quer ir. O sistema faz o resto.</em></p>
-
-            <h2>📱 Test drive com casos reais</h2>
-
-            <p>Deixa eu te mostrar como foi o teste da Dona Marlene na prática:</p>
-
-            <h3>Caso 1: São Paulo → Lisboa</h3>
-            <p><strong>Google Flights:</strong> R$ 4.200<br>
-            <strong>Site da TAP:</strong> R$ 3.850<br>
-            <strong>Sistema GPS:</strong> R$ 1.320<br>
-            <em>Economia: R$ 2.880 (69%)</em></p>
-
-            <h3>Caso 2: Rio → Miami</h3>
-            <p><strong>Kayak:</strong> R$ 3.600<br>
-            <strong>Expedia:</strong> R$ 3.200<br>
-            <strong>Sistema GPS:</strong> R$ 980<br>
-            <em>Economia: R$ 2.620 (73%)</em></p>
-
-            <p><strong>Tempo gasto:</strong> 2 minutos em cada busca.</p>
-
-            <div class="highlight-box">
-                <h4>💡 O segredo da simplicidade</h4>
-                <p>Quanto mais <em>simples</em> for para o usuário, mais <strong>complexo</strong> é o sistema por trás. Gastei 2 anos criando essa facilidade.</p>
-            </div>
-
-            <h2>🧠 "Mas como pode ser tão fácil?"</h2>
-
-            <p>Porque você não precisa entender <em>como</em> funciona para usar. Assim como você não precisa entender motores para dirigir.</p>
-
-            <p><strong>Por trás dos 3 cliques, o sistema:</strong></p>
-
+        </div>
+        <div class="footer-col">
+            <h5>Conteúdo</h5>
             <ul>
-                <li>Acessa sistemas profissionais (GDS)</li>
-                <li>Verifica lotes consolidados</li>
-                <li>Mapeia tarifas promocionais</li>
-                <li>Busca em rotas alternativas</li>
-                <li>Encontra acordos especiais</li>
+                <li><a href="/blog-principal/">Artigos Recentes</a></li>
+                <li><a href="/artigo-verdade-milhas.html">Milhas e Pontos</a></li>
+                <li><a href="/artigo-google-flights-esconde.html">Dicas</a></li>
             </ul>
-
-            <p>Mas pra você? <em>Só três cliques.</em></p>
-
-            <h2>👥 Reações de quem testou</h2>
-
-            <p><strong>João, contador, 45 anos:</strong><br>
-            <em>"Achei que era pegadinha. Fui testar Paris: Decolar R$ 4.800, GPS R$ 1.400. Comprei na hora."</em></p>
-
-            <p><strong>Amanda, estudante, 23 anos:</strong><br>
-            <em>"Uso desde setembro. Já fui 3 vezes pra Europa gastando menos que uma viagem nacional."</em></p>
-
-            <p><strong>Roberto, aposentado, 62 anos:</strong><br>
-            <em>"Minha netinha me ensinou. Agora viajo mais que quando trabalhava."</em></p>
-
-            <div class="breaking-box">
-                <h4>O teste definitivo</h4>
-                <p>Desafiei 100 pessoas a encontrarem passagens mais baratas usando Google Flights vs Sistema GPS. <strong>GPS venceu em 97% dos casos.</strong></p>
-            </div>
-
-            <h2>🚫 O que NÃO precisa fazer</h2>
-
-            <p>❌ <strong>Não precisa</strong> comparar 15 sites diferentes<br>
-            ❌ <strong>Não precisa</strong> esperar promoções<br>
-            ❌ <strong>Não precisa</strong> juntar milhas por anos<br>
-            ❌ <strong>Não precisa</strong> ser especialista em aviação<br>
-            ❌ <strong>Não precisa</strong> ficar catando datas flexíveis</p>
-
-            <p>✅ <strong>Só precisa</strong> saber onde quer ir e quando.</p>
-
-            <p><em>É literalmente isso.</em></p>
-
-            <div class="cta-box">
-                <h4>🎯 Quer testar agora mesmo?</h4>
-                <p>Que tal fazer seu próprio teste? Escolha um destino dos sonhos e veja a diferença.</p>
-                <a href="#sistema-gps" class="cta-button">📱 Quero testar os 3 cliques</a>
-            </div>
-
-            <h2>🔥 Por que funciona tão bem?</h2>
-
-            <p>O segredo está na <strong>tecnologia por trás</strong>. Enquanto você faz 3 cliques simples, o sistema executa centenas de buscas complexas.</p>
-
-            <p><strong>Em 30 segundos, o Sistema GPS:</strong></p>
-
+        </div>
+        <div class="footer-col">
+            <h5>Mais Populares</h5>
             <ul>
-                <li>Consulta 47 fontes diferentes</li>
-                <li>Executa 312 buscas simultâneas</li>
-                <li>Analisa 28.000+ combinações</li>
-                <li>Filtra os melhores preços</li>
-                <li>Apresenta só o que vale a pena</li>
-            </ul>
-
-            <p><em>Todo esse poder computacional traduzido em 3 cliques simples.</em></p>
-
-            <div class="image-container">
-                <img src="assets/images/lari-resultados-busca.jpg" alt="Resultados de busca do Sistema GPS comparado com sites tradicionais" loading="lazy">
-                <div class="image-caption">Comparação real: mesma busca em diferentes plataformas</div>
-            </div>
-
-            <h2>⏰ O fator tempo</h2>
-
-            <p>Sabe quanto tempo você gasta procurando passagem barata?</p>
-
-            <p><strong>Método tradicional:</strong><br>
-            • Google Flights: 15 min<br>
-            • Kayak: 12 min<br>
-            • Sites das companhias: 20 min<br>
-            • Comparar tudo: 30 min<br>
-            <em>Total: 1h17min</em></p>
-
-            <p><strong>Sistema GPS:</strong><br>
-            • 3 cliques: 2 minutos<br>
-            <em>Total: 2 minutos</em></p>
-
-            <p><strong>E ainda encontra preços 70% menores.</strong></p>
-
-            <h2>🎪 O momento "nossa, que fácil!"</h2>
-
-            <p>Todo mundo que testa tem o mesmo momento de surpresa.</p>
-
-            <p>Sabe quando você aprende um atalho no celular e pensa: <em>"Por que ninguém me ensinou isso antes?"</em></p>
-
-            <p><strong>É exatamente essa sensação.</strong></p>
-
-            <p>Carla, de Brasília, resumiu perfeitamente:</p>
-
-            <blockquote>
-                "É igual aprender a usar Waze. Parece obvio depois que você sabe, mas revoluciona sua vida."
-            </blockquote>
-
-            <h2>🚨 Última chamada para simplicidade</h2>
-
-            <p>Olha, eu poderia ter criado um sistema complexo com mil recursos.</p>
-
-            <p><strong>Mas escolhi o caminho mais difícil:</strong> tornar simples algo que sempre foi complicado.</p>
-
-            <p>O Sistema GPS está liberado para novos usuários apenas por mais <strong>48 horas</strong>.</p>
-
-            <div class="breaking-box">
-                <h4>Por que apenas 48 horas?</h4>
-                <p>Sistemas profissionais têm capacidade limitada. Não posso abrir para todo mundo de uma vez. <strong>É agora ou esperar a próxima abertura.</strong></p>
-            </div>
-
-            <h2>💭 Uma reflexão final</h2>
-
-            <p>Sempre me perguntam: <em>"Lari, por que você criou isso?"</em></p>
-
-            <p><strong>Resposta simples:</strong> porque cansei de ver brasileiro pagando 3x mais caro por passagem.</p>
-
-            <p>Se existe tecnologia para encontrar preços baixos, <em>por que só agentes e empresas deveriam ter acesso?</em></p>
-
-            <p>O Sistema GPS democratiza essa informação. <strong>3 cliques. Qualquer pessoa. Qualquer idade.</strong></p>
-
-            <p>Até minha mãe conseguiu. <em>Você também consegue.</em></p>
-        </div>
-
-        <!-- SOCIAL SHARE -->
-        <div class="social-share">
-            <span>Ensine para seus amigos:</span>
-            <a href="whatsapp://send?text=Tutorial INCRÍVEL: Como encontrar passagens 70% mais baratas em apenas 3 CLIQUES! https://gps-advertorial.pages.dev/artigo-3-cliques.html" class="share-whatsapp">📱 WhatsApp</a>
-            <a href="https://t.me/share/url?url=https://gps-advertorial.pages.dev/artigo-3-cliques.html&text=Passagens baratas em 3 cliques - tutorial prático" class="share-telegram">✈️ Telegram</a>
-            <a href="https://www.facebook.com/sharer/sharer.php?u=https://gps-advertorial.pages.dev/artigo-3-cliques.html" class="share-facebook">👥 Facebook</a>
-        </div>
-
-        <!-- RELATED ARTICLES -->
-        <div class="related-articles">
-            <h3>📚 Continue lendo</h3>
-            <ul class="related-list">
-                <li><a href="artigo-familia-economizou-12400.html">Família paulista economizou R$ 12.400 em uma única viagem usando este método</a></li>
-                <li><a href="artigo-google-flights-esconde.html">Google Flights esconde os melhores preços — entenda por quê</a></li>
-                <li><a href="artigo-clube-vip.html">Clube de Viagens VIP: membros revelam economias de até R$ 15.000</a></li>
+                <li><a href="/artigo-brasileira-descobre-brecha.html">Brecha em Passagens</a></li>
+                <li><a href="/artigo-familia-economizou-12400.html">Economia R$12.400</a></li>
+                <li><a href="/artigo-lari-47-paises.html">47 Países</a></li>
             </ul>
         </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 GPS Viagens Brasil. Todos os direitos reservados. Este site contém links de afiliados.</p>
+    </div>
+</footer>
 
-        <!-- FINAL CTA -->
-        <div class="cta-box">
-            <h4>🚀 Teste você mesmo os 3 cliques</h4>
-            <p>Veja como é fácil encontrar passagens 70% mais baratas. Tão simples que até sua avó consegue usar.</p>
-            <a href="#sistema-gps" class="cta-button">🎯 Quero fazer meu teste agora</a>
-        </div>
-    </article>
-
-    <script>
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                } else {
-                    // If no target found, simulate CTA action
-                    alert('🎯 Sistema GPS em desenvolvimento! Em breve você terá acesso completo.');
-                }
-            });
-        });
-
-        // Social share tracking (simulate)
-        document.querySelectorAll('.social-share a').forEach(link => {
-            link.addEventListener('click', function() {
-                console.log(`Compartilhado via: ${this.textContent}`);
-            });
-        });
-    </script>
 </body>
 </html>

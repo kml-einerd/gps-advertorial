@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://gps-advertorial.pages.dev/sitemap.xml

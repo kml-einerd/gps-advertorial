@@ -3,468 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Por que agentes de viagem encontram passagens 80% mais baratas que você - GPS Viagens Brasil</title>
+    <title>Por que agentes de viagem encontram passagens 80% mais baratas que você — GPS Viagens Brasil</title>
     <meta name="description" content="Descubra o segredo dos agentes profissionais: eles têm acesso aos sistemas GDS que você não conhece. É como entrar no depósito enquanto você compra na vitrine.">
+    <meta property="og:title" content="Por que agentes de viagem encontram passagens 80% mais baratas que você">
+    <meta property="og:description" content="Descubra o segredo dos agentes profissionais: eles têm acesso aos sistemas GDS que você não conhece. É como entrar no depósito enquanto você compra na vitrine.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://gps-advertorial.pages.dev/artigo-agentes-viagem.html">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="canonical" href="https://gps-advertorial.pages.dev/artigo-agentes-viagem.html">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --primary-color: #2563eb;
-            --secondary-color: #dc2626;
-            --accent-color: #f59e0b;
-            --text-dark: #1f2937;
-            --text-light: #6b7280;
-            --bg-light: #f8fafc;
-            --border-color: #e5e7eb;
-            --success-color: #16a34a;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            line-height: 1.7;
-            color: var(--text-dark);
-            background: #ffffff;
-        }
-
-        /* HEADER SIMPLES */
-        .header {
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-            padding: 1rem 0;
-            text-align: center;
-        }
-
-        .header a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
-
-        .header a::before {
-            content: "🎯";
-            margin-right: 0.5rem;
-        }
-
-        /* BREADCRUMB */
-        .breadcrumb {
-            background: var(--bg-light);
-            padding: 1rem 0;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .breadcrumb-container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 1rem;
-            font-size: 0.875rem;
-            color: var(--text-light);
-        }
-
-        .breadcrumb a {
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-
-        /* ARTICLE CONTAINER */
-        .article-container {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-
-        /* ARTICLE HEADER */
-        .article-header {
-            margin-bottom: 2rem;
-        }
-
-        .category-tag {
-            background: var(--secondary-color);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.875rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            display: inline-block;
-            margin-bottom: 1rem;
-        }
-
-        .article-title {
-            font-size: 2.5rem;
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 1rem;
-            color: var(--text-dark);
-        }
-
-        .article-subtitle {
-            font-size: 1.25rem;
-            color: var(--text-light);
-            font-weight: 400;
-            margin-bottom: 1.5rem;
-            line-height: 1.5;
-        }
-
-        .article-meta {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid var(--border-color);
-            font-size: 0.875rem;
-            color: var(--text-light);
-        }
-
-        .author {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-
-        .author-avatar {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: var(--primary-color);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 600;
-        }
-
-        /* FEATURED IMAGE */
-        .featured-image {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            border-radius: 12px;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-        }
-
-        /* ARTICLE CONTENT */
-        .article-content {
-            font-size: 1.125rem;
-            line-height: 1.8;
-        }
-
-        .article-content p {
-            margin-bottom: 1.5rem;
-        }
-
-        .article-content h2 {
-            font-size: 1.75rem;
-            font-weight: 700;
-            margin: 2.5rem 0 1rem;
-            color: var(--text-dark);
-        }
-
-        .article-content h3 {
-            font-size: 1.375rem;
-            font-weight: 600;
-            margin: 2rem 0 0.75rem;
-            color: var(--text-dark);
-        }
-
-        .article-content ul, .article-content ol {
-            margin: 1.5rem 0;
-            padding-left: 1.5rem;
-        }
-
-        .article-content li {
-            margin-bottom: 0.75rem;
-        }
-
-        .article-content blockquote {
-            background: var(--bg-light);
-            border-left: 4px solid var(--primary-color);
-            padding: 1.5rem;
-            margin: 2rem 0;
-            border-radius: 8px;
-            font-style: italic;
-            font-size: 1.1rem;
-        }
-
-        .article-content strong {
-            font-weight: 600;
-            color: var(--text-dark);
-        }
-
-        /* BREAKING NEWS STYLE BOXES */
-        .breaking-box {
-            background: linear-gradient(135deg, var(--secondary-color) 0%, #ef4444 100%);
-            color: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            margin: 2rem 0;
-            box-shadow: 0 4px 20px rgba(220, 38, 38, 0.3);
-        }
-
-        .breaking-box h4 {
-            font-size: 1.25rem;
-            margin-bottom: 0.75rem;
-            font-weight: 700;
-        }
-
-        .breaking-box::before {
-            content: "🚨 SEGREDO: ";
-            font-weight: 800;
-        }
-
-        /* HIGHLIGHT BOXES */
-        .highlight-box {
-            background: linear-gradient(135deg, var(--accent-color) 0%, #f59e0b 100%);
-            color: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            margin: 2rem 0;
-            box-shadow: 0 4px 20px rgba(245, 158, 11, 0.3);
-        }
-
-        .highlight-box h4 {
-            font-size: 1.25rem;
-            margin-bottom: 0.75rem;
-            font-weight: 700;
-        }
-
-        /* IMAGE WITH CAPTION */
-        .image-container {
-            margin: 2rem 0;
-        }
-
-        .image-container img {
-            width: 100%;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-        }
-
-        .image-caption {
-            text-align: center;
-            font-size: 0.875rem;
-            color: var(--text-light);
-            margin-top: 0.75rem;
-            font-style: italic;
-        }
-
-        /* CTA BOXES */
-        .cta-box {
-            background: linear-gradient(135deg, var(--success-color) 0%, #10b981 100%);
-            color: white;
-            padding: 2rem;
-            border-radius: 12px;
-            text-align: center;
-            margin: 3rem 0;
-            box-shadow: 0 6px 25px rgba(22, 163, 74, 0.4);
-        }
-
-        .cta-box h4 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-
-        .cta-box p {
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-            opacity: 0.95;
-        }
-
-        .cta-button {
-            background: white;
-            color: var(--success-color);
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 30px;
-            font-weight: 700;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-        }
-
-        /* SOCIAL SHARE */
-        .social-share {
-            display: flex;
-            gap: 1rem;
-            margin: 3rem 0;
-            padding: 1.5rem;
-            background: var(--bg-light);
-            border-radius: 12px;
-            align-items: center;
-        }
-
-        .social-share span {
-            font-weight: 600;
-            color: var(--text-dark);
-        }
-
-        .social-share a {
-            padding: 0.75rem 1.5rem;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: transform 0.3s;
-        }
-
-        .social-share a:hover {
-            transform: translateY(-2px);
-        }
-
-        .share-whatsapp {
-            background: #25d366;
-            color: white;
-        }
-
-        .share-telegram {
-            background: #0088cc;
-            color: white;
-        }
-
-        .share-facebook {
-            background: #1877f2;
-            color: white;
-        }
-
-        /* RELATED ARTICLES */
-        .related-articles {
-            background: var(--bg-light);
-            padding: 2rem;
-            border-radius: 12px;
-            margin: 3rem 0;
-        }
-
-        .related-articles h3 {
-            margin-bottom: 1.5rem;
-            font-size: 1.5rem;
-            color: var(--text-dark);
-        }
-
-        .related-list {
-            list-style: none;
-        }
-
-        .related-list li {
-            margin-bottom: 1rem;
-        }
-
-        .related-list a {
-            color: var(--text-dark);
-            text-decoration: none;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            transition: color 0.3s;
-        }
-
-        .related-list a:hover {
-            color: var(--primary-color);
-        }
-
-        .related-list a::before {
-            content: "📖";
-            font-size: 1.2rem;
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-            .article-title {
-                font-size: 2rem;
-            }
-
-            .article-subtitle {
-                font-size: 1.1rem;
-            }
-
-            .article-content {
-                font-size: 1rem;
-            }
-
-            .article-meta {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 1rem;
-            }
-
-            .social-share {
-                flex-direction: column;
-                align-items: stretch;
-                text-align: center;
-            }
-
-            .social-share a {
-                justify-self: stretch;
-            }
-
-            .featured-image {
-                height: 250px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/design-system.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Por que agentes de viagem encontram passagens 80% mais baratas que você",
+        "description": "Descubra o segredo dos agentes profissionais: eles têm acesso aos sistemas GDS que você não conhece. É como entrar no depósito enquanto você compra na vitrine.",
+        "author": {"@type": "Organization", "name": "GPS Viagens Brasil"},
+        "publisher": {"@type": "Organization", "name": "GPS Viagens Brasil"},
+        "datePublished": "2026-02-14",
+        "mainEntityOfPage": "https://gps-advertorial.pages.dev/artigo-agentes-viagem.html"
+    }
+    </script>
 </head>
 <body>
-    <!-- HEADER -->
-    <header class="header">
-        <a href="index.html">GPS Viagens Brasil</a>
-    </header>
 
-    <!-- BREADCRUMB -->
-    <div class="breadcrumb">
-        <div class="breadcrumb-container">
-            <a href="index.html">Início</a> > 
-            <a href="categoria-investigacao.html">Investigação</a> > 
-            Por que agentes de viagem encontram passagens mais baratas
-        </div>
+<header class="site-header">
+    <div class="header-inner">
+        <a href="/" class="site-logo">✈️ GPS <span>Viagens</span></a>
+        <button class="mobile-toggle" onclick="document.querySelector('.site-nav').classList.toggle('open')">☰</button>
+        <nav>
+            <ul class="site-nav">
+                <li><a href="/">Início</a></li>
+                <li><a href="/blog-principal/">Passagens</a></li>
+                <li><a href="/blog-cases-app/">Cases</a></li>
+                <li><a href="/blog-cases-clube/">Clube VIP</a></li>
+                <li><a href="/advertorial/">Sistema GPS</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+    <div class="breadcrumbs">
+        <a href="/">Início</a> <span class="sep">›</span>
+        <a href="/blog-principal/">Dicas</a> <span class="sep">›</span>
+        Por que agentes de viagem encontram passagens 80% mais barat...
     </div>
 
-    <!-- ARTICLE -->
-    <article class="article-container">
-        <header class="article-header">
-            <div class="category-tag">🔍 Investigação Exclusiva</div>
-            <h1 class="article-title">Por que agentes de viagem encontram passagens 80% mais baratas que você</h1>
-            <p class="article-subtitle">Investigação revela o segredo da indústria: agentes profissionais têm acesso aos sistemas GDS que companhias aéreas escondem do público. É como entrar no depósito da loja enquanto todos compram na vitrine.</p>
+    <div class="layout-with-sidebar">
+        <main class="main-content">
+            <img src="https://images.unsplash.com/photo-1517479149777-5f3b1511d5ad?w=600&h=340&fit=crop" alt="Por que agentes de viagem encontram passagens 80% mais baratas que você" class="article-hero">
             
             <div class="article-meta">
-                <div class="author">
-                    <div class="author-avatar">MC</div>
-                    <div>
-                        <div><strong>Por Marina Castro</strong></div>
-                        <div>Jornalista Investigativa</div>
-                    </div>
-                </div>
-                <time datetime="2026-02-15">15 de Fevereiro, 2026</time>
-                <span>📍 Rio de Janeiro, RJ</span>
-                <span>⏱️ 9 min de leitura</span>
+                <span class="category-badge dicas">Dicas</span>
+                <span class="author">Redação GPS Viagens</span>
+                <span>·</span>
+                <span>14 Fev 2026</span>
+                <span>·</span>
+                <span class="reading-time">6 min de leitura</span>
             </div>
-        </header>
 
-        <img src="assets/images/capas/viagem-classe-executiva.jpg" alt="Agente de viagem trabalhando com sistema profissional GDS" class="featured-image" loading="lazy">
+            <h1 style="font-size:2rem;font-weight:800;line-height:1.3;margin-bottom:1rem">Por que agentes de viagem encontram passagens 80% mais baratas que você</h1>
 
-        <div class="article-content">
-            <p><strong>Você já se perguntou por que uma agência de viagem consegue te oferecer o mesmo voo por R$ 1.200 enquanto você encontra R$ 2.800 no Google Flights?</strong></p>
+            <div class="article-content">
+                <p><strong>Você já se perguntou por que uma agência de viagem consegue te oferecer o mesmo voo por R$ 1.200 enquanto você encontra R$ 2.800 no Google Flights?</strong></p>
 
             <p>Durante 6 meses, infiltrei-me no mundo dos agentes profissionais. <em>O que descobri vai mudar completamente como você enxerga a compra de passagens.</em></p>
 
             <div class="breaking-box">
                 <h4>Os agentes têm uma porta dos fundos</h4>
                 <p>Eles usam sistemas chamados <strong>GDS (Global Distribution Systems)</strong> - a mesma tecnologia que as companhias aéreas usam internamente. É como ter acesso ao depósito enquanto você fica limitado à vitrine.</p>
+    <div class="native-banner banner-wide banner-blue">
+        <div class="native-banner-label">Conteúdo Patrocinado</div>
+        <a href="/advertorial/" class="native-banner-content">
+            <img class="native-banner-img" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=240&h=160&fit=crop" alt="">
+            <div class="native-banner-text">
+                <h5>Sistema GPS: 47 Países Com 1 Único Método</h5>
+                <p>Conheça o sistema que mudou a forma como brasileiros viajam pelo mundo.</p>
+                <span class="nb-cta">Saiba mais →</span>
+            </div>
+        </a>
+    </div>
             </div>
 
             <p>Júlia Santos trabalha como agente há 15 anos. Ela me contou algo que me deixou de queixo caído:</p>
@@ -485,6 +104,17 @@
 
             <p><strong>Nível 3 - Agentes profissionais:</strong><br>
             Acesso total aos sistemas GDS. <em>Aqui estão os verdadeiros preços baixos.</em></p>
+    <div class="native-banner banner-wide banner-green">
+        <div class="native-banner-label">Conteúdo Patrocinado</div>
+        <a href="/advertorial/" class="native-banner-content">
+            <img class="native-banner-img" src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=240&h=160&fit=crop" alt="">
+            <div class="native-banner-text">
+                <h5>Família Economizou R$12.400 em Uma Única Viagem</h5>
+                <p>Descubra o método simples que transformou as férias dessa família brasileira.</p>
+                <span class="nb-cta">Saiba mais →</span>
+            </div>
+        </a>
+    </div>
 
             <div class="highlight-box">
                 <h4>💰 Exemplo real dos três níveis</h4>
@@ -505,207 +135,129 @@
 
             <div class="image-container">
                 <img src="assets/images/lari-sistema-amadeus.jpg" alt="Interface do sistema Amadeus GDS usado por agentes profissionais" loading="lazy">
-                <div class="image-caption">Sistema Amadeus: uma das interfaces GDS que apenas agentes profissionais dominam</div>
+                <div class="image-caption">Sistema Amadeus: uma das interfaces GDS que apenas agentes profissionais dominam
             </div>
 
-            <h2>🏪 A analogia perfeita: depósito vs vitrine</h2>
+            <!-- BANNER BEFORE FOOTER -->
+            
+    <div class="native-banner banner-wide banner-gold">
+        <div class="native-banner-label">Conteúdo Patrocinado</div>
+        <a href="/advertorial/" class="native-banner-content">
+            <img class="native-banner-img" src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=240&h=160&fit=crop" alt="">
+            <div class="native-banner-text">
+                <h5>Clube VIP — Vagas Limitadas Para Fevereiro</h5>
+                <p>Membros recebem alertas exclusivos de passagens até 93% mais baratas. Últimas vagas.</p>
+                <span class="nb-cta">Saiba mais →</span>
+            </div>
+        </a>
+    </div>
 
-            <p>Imagine que passagens aéreas são produtos em uma loja:</p>
+            
+    <section class="related-posts">
+        <h3>Leia Também</h3>
+        <div class="cards-grid">
+                <article class="card">
+                    <div class="card-thumb">
+                        <img src="https://images.unsplash.com/photo-1517479149777-5f3b1511d5ad?w=600&h=340&fit=crop" alt="Família Economizou R$12.400 em Passagens">
+                        <span class="category-badge cases">Cases</span>
+                    </div>
+                    <div class="card-body">
+                        <h3><a href="artigo-familia-economizou-12400.html">Família Economizou R$12.400 em Passagens</a></h3>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-thumb">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=340&fit=crop" alt="O Que o Google Flights Esconde de Você">
+                        <span class="category-badge dicas">Dicas</span>
+                    </div>
+                    <div class="card-body">
+                        <h3><a href="artigo-google-flights-esconde.html">O Que o Google Flights Esconde de Você</a></h3>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-thumb">
+                        <img src="https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=600&h=340&fit=crop" alt="Como Lari Visitou 47 Países">
+                        <span class="category-badge passagens">Passagens</span>
+                    </div>
+                    <div class="card-body">
+                        <h3><a href="artigo-lari-47-paises.html">Como Lari Visitou 47 Países</a></h3>
+                    </div>
+                </article>
+        </div>
+    </section>
+        </main>
 
+        <aside class="sidebar">
+            <div class="newsletter-box">
+                <h4>Newsletter GPS</h4>
+                <p>Receba promoções de passagens direto no e-mail. Grátis.</p>
+                <input type="email" placeholder="Seu melhor e-mail">
+                <button>Quero Receber →</button>
+            </div>
+
+            <div class="cta-banner">
+                <h4>Passagens até 93% OFF</h4>
+                <p>Descubra o sistema que milhares de brasileiros usam.</p>
+                <a href="/advertorial/">Ver Como Funciona →</a>
+            </div>
+
+            <div class="native-banner banner-sidebar banner-blue">
+                <div class="native-banner-label">Conteúdo Patrocinado</div>
+                <a href="/advertorial/" class="native-banner-content">
+                    <img class="native-banner-img" src="https://images.unsplash.com/photo-1530521954074-e64f6810b32d?w=600&h=340&fit=crop" alt="">
+                    <div class="native-banner-text">
+                        <h5>Sistema GPS: O método completo</h5>
+                        <p>Mais de 12.000 brasileiros já usam.</p>
+                        <span class="nb-cta">Conhecer →</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="sidebar-widget">
+                <h4>Mais Lidos</h4>
+                <ol class="popular-list">
+                    <li><span class="post-number">1</span><a href="artigo-brasileira-descobre-brecha.html">Brasileira Descobre Brecha</a></li>
+                    <li><span class="post-number">2</span><a href="artigo-familia-economizou-12400.html">Família Economizou R$12.400</a></li>
+                    <li><span class="post-number">3</span><a href="artigo-google-flights-esconde.html">Google Flights Esconde</a></li>
+                    <li><span class="post-number">4</span><a href="artigo-lari-47-paises.html">Lari 47 Países</a></li>
+                    <li><span class="post-number">5</span><a href="artigo-verdade-milhas.html">Verdade Sobre Milhas</a></li>
+                </ol>
+            </div>
+        </aside>
+    </div>
+</div>
+
+<footer class="site-footer">
+    <div class="footer-grid">
+        <div class="footer-col">
+            <h5>GPS Viagens</h5>
             <ul>
-                <li><strong>Vitrine (sites públicos):</strong> Produtos com etiqueta de preço normal</li>
-                <li><strong>Depósito (sistemas GDS):</strong> Mesmos produtos com preços de atacado</li>
+                <li><a href="/advertorial/">Sobre o Sistema GPS</a></li>
+                <li><a href="/blog-cases-app/">Cases de Sucesso</a></li>
+                <li><a href="/blog-cases-clube/">Clube VIP</a></li>
             </ul>
-
-            <p>Você, consumidor comum, só tem acesso à vitrine. <strong>Agentes profissionais entram direto no depósito.</strong></p>
-
-            <p>É injusto? Claro que é. Mas é exatamente assim que funciona.</p>
-
-            <h2>📊 Os sistemas secretos revelados</h2>
-
-            <p>Existem três principais sistemas GDS no mundo:</p>
-
-            <p><strong>Amadeus:</strong> Usado por 40% dos agentes. Forte na Europa e América Latina.</p>
-
-            <p><strong>Sabre:</strong> Dominante nos EUA. Acesso às melhores tarifas americanas.</p>
-
-            <p><strong>Travelport:</strong> Popular na Ásia. Ótimo para voos transpacíficos.</p>
-
-            <p>Cada sistema tem <em>preços exclusivos</em> que não aparecem em lugar nenhum da internet pública.</p>
-
-            <div class="breaking-box">
-                <h4>Por que as companhias escondem isso?</h4>
-                <p>Simples: <strong>lucro máximo</strong>. Se todo mundo soubesse que pode pagar R$ 900 em vez de R$ 3.200, ninguém compraria pelo preço cheio.</p>
-            </div>
-
-            <h2>💡 O momento que tudo mudou</h2>
-
-            <p>No terceiro dia de "treinamento", finalmente consegui acesso ao sistema Amadeus. Primeira busca: São Paulo → Barcelona.</p>
-
-            <p><strong>Resultado chocante:</strong></p>
+        </div>
+        <div class="footer-col">
+            <h5>Conteúdo</h5>
             <ul>
-                <li>Google Flights: R$ 4.100</li>
-                <li>Site da LATAM: R$ 3.850</li>
-                <li>Sistema Amadeus: R$ 1.340</li>
+                <li><a href="/blog-principal/">Artigos Recentes</a></li>
+                <li><a href="/artigo-verdade-milhas.html">Milhas e Pontos</a></li>
+                <li><a href="/artigo-google-flights-esconde.html">Dicas</a></li>
             </ul>
-
-            <p>Era o mesmo voo. Mesmo avião. Mesmo assento. <em>Diferença de R$ 2.760.</em></p>
-
-            <blockquote>
-                "Naquele momento entendi por que milhões de brasileiros pagam muito mais caro do que deveriam. Simplesmente não sabem que esses preços existem."
-            </blockquote>
-
-            <h2>🎯 As estratégias que eles usam</h2>
-
-            <p>Aprendi 5 técnicas que agentes profissionais dominam:</p>
-
-            <h3>1. Busca por código de tarifa</h3>
-            <p>Cada passagem tem códigos internos (Y, B, H, Q...). Agentes sabem exatamente qual código buscar.</p>
-
-            <h3>2. Roteamento alternativo</h3>
-            <p>Em vez de buscar direto SP-Miami, eles procuram SP-Panamá-Miami. Muitas vezes sai 70% mais barato.</p>
-
-            <h3>3. Tarifas "married segment"</h3>
-            <p>Preços especiais que só aparecem quando você compra ida e volta juntas no sistema.</p>
-
-            <h3>4. Lotes consolidados</h3>
-            <p>Agentes compram blocos de assentos com desconto e repassam parte da economia.</p>
-
-            <h3>5. Tarifas privadas</h3>
-            <p>Acordos exclusivos entre companhias e agências específicas.</p>
-
-            <div class="cta-box">
-                <h4>🔓 E se você tivesse esse acesso?</h4>
-                <p>Imagine poder usar as mesmas técnicas e sistemas que agentes profissionais dominam.</p>
-                <a href="#sistema-gps" class="cta-button">📱 Descobrir como é possível</a>
-            </div>
-
-            <h2>🤔 "Mas por que não vou numa agência então?"</h2>
-
-            <p>Boa pergunta. Mas tem alguns problemas:</p>
-
+        </div>
+        <div class="footer-col">
+            <h5>Mais Populares</h5>
             <ul>
-                <li><strong>Taxa de conveniência:</strong> R$ 150 a R$ 300 por passagem</li>
-                <li><strong>Comissão embutida:</strong> Eles ganham em cima do seu desconto</li>
-                <li><strong>Dependência:</strong> Precisa ligar, explicar, esperar orçamento</li>
-                <li><strong>Limitação:</strong> Nem toda agência tem acesso aos melhores sistemas</li>
-            </ul>
-
-            <p><strong>E se existisse uma forma de ter o melhor dos dois mundos?</strong></p>
-
-            <p>Acesso aos preços profissionais, mas com a autonomia de pesquisar e comprar quando quiser?</p>
-
-            <div class="image-container">
-                <img src="assets/images/lari-comparacao-precos.jpg" alt="Comparação de preços entre sistemas públicos e GDS profissionais" loading="lazy">
-                <div class="image-caption">Diferenças reais de preço entre o que você vê e o que agentes acessam</div>
-            </div>
-
-            <h2>🚀 A revolução silenciosa</h2>
-
-            <p>Enquanto investigava, descobri algo ainda mais impressionante:</p>
-
-            <p><strong>Existe uma engenheira brasileira</strong> que conseguiu "democratizar" o acesso a esses sistemas profissionais.</p>
-
-            <p>Lari Colares desenvolveu uma tecnologia que simula o acesso aos GDS, encontrando os mesmos preços baixos que apenas agentes profissionais viam.</p>
-
-            <p>O resultado? <em>Mais de 15.000 brasileiros já estão usando e economizando milhares.</em></p>
-
-            <h2>📈 Cases que comprovam a diferença</h2>
-
-            <p><strong>Case 1 - Roberto, empresário paulista:</strong><br>
-            Precisava viajar para Londres urgente. Google Flights: R$ 5.200. Sistema GPS: R$ 1.480. Economia: R$ 3.720.</p>
-
-            <p><strong>Case 2 - Família Oliveira, Belo Horizonte:</strong><br>
-            Viagem dos sonhos para Disney (4 pessoas). Orçamento das agências: R$ 16.800. Sistema GPS: R$ 6.400. Economia: R$ 10.400.</p>
-
-            <p><strong>Case 3 - Carla, influencer:</strong><br>
-            Viaja constantemente para criar conteúdo. Economizou R$ 23.000 em um ano usando o sistema.</p>
-
-            <blockquote>
-                "Descobrir isso foi como encontrar uma porta secreta. Agora viajo o dobro pagando metade." - <strong>Carla Montenegro, 28 anos</strong>
-            </blockquote>
-
-            <h2>⚠️ O que a indústria não quer que você saiba</h2>
-
-            <p>Durante a investigação, conversei (off the record) com executivos de companhias aéreas.</p>
-
-            <p>Um deles foi direto: <em>"Claro que existem preços menores. Mas são estratégicos. Se todo mundo soubesse, não conseguiríamos sustentar a operação com os preços altos."</em></p>
-
-            <p><strong>Em outras palavras:</strong> a diferença de preço é proposital. É uma estratégia de segmentação de mercado.</p>
-
-            <div class="breaking-box">
-                <h4>Você está subsidiando os preços baixos dos outros</h4>
-                <p>Quando paga R$ 3.000 por uma passagem que vale R$ 900, está <strong>financiando os descontos</strong> que agentes e empresas conseguem.</p>
-            </div>
-
-            <h2>🔥 A mudança está acontecendo</h2>
-
-            <p>A boa notícia: essa realidade está mudando.</p>
-
-            <p>Tecnologias como o Sistema GPS estão democratizando o acesso aos preços reais. <em>Não é mais preciso ser agente para viajar barato.</em></p>
-
-            <p>A má notícia: <strong>nem todo mundo sabe que isso existe.</strong></p>
-
-            <p>Milhões de brasileiros continuam pagando 300% a mais por passagens, simplesmente por desconhecerem essa realidade.</p>
-
-            <h2>💭 Reflexão final</h2>
-
-            <p>Depois dessa investigação, nunca mais olhei para compra de passagens da mesma forma.</p>
-
-            <p>Cada vez que vejo alguém reclamando de preços altos, penso: <em>"Se você soubesse o que eu sei..."</em></p>
-
-            <p><strong>A informação existe. A tecnologia existe. Os preços baixos existem.</strong></p>
-
-            <p>A pergunta que fica é: você vai continuar pagando preço de vitrine ou quer ter acesso ao depósito?</p>
-        </div>
-
-        <!-- SOCIAL SHARE -->
-        <div class="social-share">
-            <span>Compartilhe esta investigação:</span>
-            <a href="whatsapp://send?text=Investigação CHOCANTE: Por que agentes encontram passagens 80% mais baratas! https://gps-advertorial.pages.dev/artigo-agentes-viagem.html" class="share-whatsapp">📱 WhatsApp</a>
-            <a href="https://t.me/share/url?url=https://gps-advertorial.pages.dev/artigo-agentes-viagem.html&text=Segredo dos agentes de viagem revelado" class="share-telegram">✈️ Telegram</a>
-            <a href="https://www.facebook.com/sharer/sharer.php?u=https://gps-advertorial.pages.dev/artigo-agentes-viagem.html" class="share-facebook">👥 Facebook</a>
-        </div>
-
-        <!-- RELATED ARTICLES -->
-        <div class="related-articles">
-            <h3>📚 Continue lendo</h3>
-            <ul class="related-list">
-                <li><a href="artigo-lotes-ultra-economicos.html">O segredo dos lotes ultra econômicos que companhias aéreas escondem</a></li>
-                <li><a href="artigo-lari-47-paises.html">Lari Colares: a mulher que viajou 47 países usando sistemas profissionais</a></li>
-                <li><a href="advertorial-sistema-gps.html">Sistema GPS: como ter acesso aos preços que só agentes conheciam</a></li>
+                <li><a href="/artigo-brasileira-descobre-brecha.html">Brecha em Passagens</a></li>
+                <li><a href="/artigo-familia-economizou-12400.html">Economia R$12.400</a></li>
+                <li><a href="/artigo-lari-47-paises.html">47 Países</a></li>
             </ul>
         </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 GPS Viagens Brasil. Todos os direitos reservados. Este site contém links de afiliados.</p>
+    </div>
+</footer>
 
-        <!-- FINAL CTA -->
-        <div class="cta-box">
-            <h4>🚀 Tenha o mesmo acesso que agentes profissionais</h4>
-            <p>Descubra como acessar os sistemas que encontram passagens 70-85% mais baratas.</p>
-            <a href="#sistema-gps" class="cta-button">🎯 Quero acesso aos preços reais</a>
-        </div>
-    </article>
-
-    <script>
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                } else {
-                    // If no target found, simulate CTA action
-                    alert('🎯 Sistema GPS em desenvolvimento! Em breve você terá acesso completo.');
-                }
-            });
-        });
-
-        // Social share tracking (simulate)
-        document.querySelectorAll('.social-share a').forEach(link => {
-            link.addEventListener('click', function() {
-                console.log(`Compartilhado via: ${this.textContent}`);
-            });
-        });
-    </script>
 </body>
 </html>

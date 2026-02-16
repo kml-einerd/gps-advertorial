@@ -3,468 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A verdade sobre milhas aéreas: por que você está perdendo dinheiro há anos - GPS Viagens Brasil</title>
+    <title>A verdade sobre milhas aéreas: por que você está perdendo dinheiro há anos — GPS Viagens Brasil</title>
     <meta name="description" content="Descubra por que milhas aéreas são uma das maiores pegadinhas das companhias. Disponibilidade ruim, taxas absurdas e demora de anos para conseguir uma viagem decente.">
+    <meta property="og:title" content="A verdade sobre milhas aéreas: por que você está perdendo dinheiro há anos">
+    <meta property="og:description" content="Descubra por que milhas aéreas são uma das maiores pegadinhas das companhias. Disponibilidade ruim, taxas absurdas e demora de anos para conseguir uma viagem decente.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://gps-advertorial.pages.dev/artigo-verdade-milhas.html">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="canonical" href="https://gps-advertorial.pages.dev/artigo-verdade-milhas.html">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --primary-color: #2563eb;
-            --secondary-color: #dc2626;
-            --accent-color: #f59e0b;
-            --text-dark: #1f2937;
-            --text-light: #6b7280;
-            --bg-light: #f8fafc;
-            --border-color: #e5e7eb;
-            --success-color: #16a34a;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            line-height: 1.7;
-            color: var(--text-dark);
-            background: #ffffff;
-        }
-
-        /* HEADER SIMPLES */
-        .header {
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-            padding: 1rem 0;
-            text-align: center;
-        }
-
-        .header a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
-
-        .header a::before {
-            content: "🎯";
-            margin-right: 0.5rem;
-        }
-
-        /* BREADCRUMB */
-        .breadcrumb {
-            background: var(--bg-light);
-            padding: 1rem 0;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .breadcrumb-container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 1rem;
-            font-size: 0.875rem;
-            color: var(--text-light);
-        }
-
-        .breadcrumb a {
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-
-        /* ARTICLE CONTAINER */
-        .article-container {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-
-        /* ARTICLE HEADER */
-        .article-header {
-            margin-bottom: 2rem;
-        }
-
-        .category-tag {
-            background: var(--secondary-color);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.875rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            display: inline-block;
-            margin-bottom: 1rem;
-        }
-
-        .article-title {
-            font-size: 2.5rem;
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 1rem;
-            color: var(--text-dark);
-        }
-
-        .article-subtitle {
-            font-size: 1.25rem;
-            color: var(--text-light);
-            font-weight: 400;
-            margin-bottom: 1.5rem;
-            line-height: 1.5;
-        }
-
-        .article-meta {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid var(--border-color);
-            font-size: 0.875rem;
-            color: var(--text-light);
-        }
-
-        .author {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-
-        .author-avatar {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: var(--primary-color);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 600;
-        }
-
-        /* FEATURED IMAGE */
-        .featured-image {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            border-radius: 12px;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-        }
-
-        /* ARTICLE CONTENT */
-        .article-content {
-            font-size: 1.125rem;
-            line-height: 1.8;
-        }
-
-        .article-content p {
-            margin-bottom: 1.5rem;
-        }
-
-        .article-content h2 {
-            font-size: 1.75rem;
-            font-weight: 700;
-            margin: 2.5rem 0 1rem;
-            color: var(--text-dark);
-        }
-
-        .article-content h3 {
-            font-size: 1.375rem;
-            font-weight: 600;
-            margin: 2rem 0 0.75rem;
-            color: var(--text-dark);
-        }
-
-        .article-content ul, .article-content ol {
-            margin: 1.5rem 0;
-            padding-left: 1.5rem;
-        }
-
-        .article-content li {
-            margin-bottom: 0.75rem;
-        }
-
-        .article-content blockquote {
-            background: var(--bg-light);
-            border-left: 4px solid var(--primary-color);
-            padding: 1.5rem;
-            margin: 2rem 0;
-            border-radius: 8px;
-            font-style: italic;
-            font-size: 1.1rem;
-        }
-
-        .article-content strong {
-            font-weight: 600;
-            color: var(--text-dark);
-        }
-
-        /* BREAKING NEWS STYLE BOXES */
-        .breaking-box {
-            background: linear-gradient(135deg, var(--secondary-color) 0%, #ef4444 100%);
-            color: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            margin: 2rem 0;
-            box-shadow: 0 4px 20px rgba(220, 38, 38, 0.3);
-        }
-
-        .breaking-box h4 {
-            font-size: 1.25rem;
-            margin-bottom: 0.75rem;
-            font-weight: 700;
-        }
-
-        .breaking-box::before {
-            content: "🚨 URGENTE: ";
-            font-weight: 800;
-        }
-
-        /* HIGHLIGHT BOXES */
-        .highlight-box {
-            background: linear-gradient(135deg, var(--accent-color) 0%, #f59e0b 100%);
-            color: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            margin: 2rem 0;
-            box-shadow: 0 4px 20px rgba(245, 158, 11, 0.3);
-        }
-
-        .highlight-box h4 {
-            font-size: 1.25rem;
-            margin-bottom: 0.75rem;
-            font-weight: 700;
-        }
-
-        /* IMAGE WITH CAPTION */
-        .image-container {
-            margin: 2rem 0;
-        }
-
-        .image-container img {
-            width: 100%;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-        }
-
-        .image-caption {
-            text-align: center;
-            font-size: 0.875rem;
-            color: var(--text-light);
-            margin-top: 0.75rem;
-            font-style: italic;
-        }
-
-        /* CTA BOXES */
-        .cta-box {
-            background: linear-gradient(135deg, var(--success-color) 0%, #10b981 100%);
-            color: white;
-            padding: 2rem;
-            border-radius: 12px;
-            text-align: center;
-            margin: 3rem 0;
-            box-shadow: 0 6px 25px rgba(22, 163, 74, 0.4);
-        }
-
-        .cta-box h4 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-
-        .cta-box p {
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-            opacity: 0.95;
-        }
-
-        .cta-button {
-            background: white;
-            color: var(--success-color);
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 30px;
-            font-weight: 700;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-        }
-
-        /* SOCIAL SHARE */
-        .social-share {
-            display: flex;
-            gap: 1rem;
-            margin: 3rem 0;
-            padding: 1.5rem;
-            background: var(--bg-light);
-            border-radius: 12px;
-            align-items: center;
-        }
-
-        .social-share span {
-            font-weight: 600;
-            color: var(--text-dark);
-        }
-
-        .social-share a {
-            padding: 0.75rem 1.5rem;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: transform 0.3s;
-        }
-
-        .social-share a:hover {
-            transform: translateY(-2px);
-        }
-
-        .share-whatsapp {
-            background: #25d366;
-            color: white;
-        }
-
-        .share-telegram {
-            background: #0088cc;
-            color: white;
-        }
-
-        .share-facebook {
-            background: #1877f2;
-            color: white;
-        }
-
-        /* RELATED ARTICLES */
-        .related-articles {
-            background: var(--bg-light);
-            padding: 2rem;
-            border-radius: 12px;
-            margin: 3rem 0;
-        }
-
-        .related-articles h3 {
-            margin-bottom: 1.5rem;
-            font-size: 1.5rem;
-            color: var(--text-dark);
-        }
-
-        .related-list {
-            list-style: none;
-        }
-
-        .related-list li {
-            margin-bottom: 1rem;
-        }
-
-        .related-list a {
-            color: var(--text-dark);
-            text-decoration: none;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            transition: color 0.3s;
-        }
-
-        .related-list a:hover {
-            color: var(--primary-color);
-        }
-
-        .related-list a::before {
-            content: "📖";
-            font-size: 1.2rem;
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-            .article-title {
-                font-size: 2rem;
-            }
-
-            .article-subtitle {
-                font-size: 1.1rem;
-            }
-
-            .article-content {
-                font-size: 1rem;
-            }
-
-            .article-meta {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 1rem;
-            }
-
-            .social-share {
-                flex-direction: column;
-                align-items: stretch;
-                text-align: center;
-            }
-
-            .social-share a {
-                justify-self: stretch;
-            }
-
-            .featured-image {
-                height: 250px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/design-system.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "A verdade sobre milhas aéreas: por que você está perdendo dinheiro há anos",
+        "description": "Descubra por que milhas aéreas são uma das maiores pegadinhas das companhias. Disponibilidade ruim, taxas absurdas e demora de anos para conseguir uma viagem decente.",
+        "author": {"@type": "Organization", "name": "GPS Viagens Brasil"},
+        "publisher": {"@type": "Organization", "name": "GPS Viagens Brasil"},
+        "datePublished": "2026-02-07",
+        "mainEntityOfPage": "https://gps-advertorial.pages.dev/artigo-verdade-milhas.html"
+    }
+    </script>
 </head>
 <body>
-    <!-- HEADER -->
-    <header class="header">
-        <a href="index.html">GPS Viagens Brasil</a>
-    </header>
 
-    <!-- BREADCRUMB -->
-    <div class="breadcrumb">
-        <div class="breadcrumb-container">
-            <a href="index.html">Início</a> > 
-            <a href="categoria-alertas.html">Alertas Importantes</a> > 
-            A verdade sobre milhas aéreas
-        </div>
+<header class="site-header">
+    <div class="header-inner">
+        <a href="/" class="site-logo">✈️ GPS <span>Viagens</span></a>
+        <button class="mobile-toggle" onclick="document.querySelector('.site-nav').classList.toggle('open')">☰</button>
+        <nav>
+            <ul class="site-nav">
+                <li><a href="/">Início</a></li>
+                <li><a href="/blog-principal/">Passagens</a></li>
+                <li><a href="/blog-cases-app/">Cases</a></li>
+                <li><a href="/blog-cases-clube/">Clube VIP</a></li>
+                <li><a href="/advertorial/">Sistema GPS</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+    <div class="breadcrumbs">
+        <a href="/">Início</a> <span class="sep">›</span>
+        <a href="/blog-principal/">Milhas</a> <span class="sep">›</span>
+        A verdade sobre milhas aéreas: por que você está perdendo di...
     </div>
 
-    <!-- ARTICLE -->
-    <article class="article-container">
-        <header class="article-header">
-            <div class="category-tag">⚠️ Alerta Importante</div>
-            <h1 class="article-title">A verdade sobre milhas aéreas: por que você está perdendo dinheiro há anos</h1>
-            <p class="article-subtitle">Investigação revela como os programas de fidelidade se tornaram a maior pegadinha das companhias aéreas. Disponibilidade ruim, taxas absurdas e estratégias para te fazer gastar mais.</p>
+    <div class="layout-with-sidebar">
+        <main class="main-content">
+            <img src="https://images.unsplash.com/photo-1544016768-982d1554f0b9?w=600&h=340&fit=crop" alt="A verdade sobre milhas aéreas: por que você está perdendo dinheiro há anos" class="article-hero">
             
             <div class="article-meta">
-                <div class="author">
-                    <div class="author-avatar">RA</div>
-                    <div>
-                        <div><strong>Por Rafael Andrade</strong></div>
-                        <div>Especialista em Programas de Fidelidade</div>
-                    </div>
-                </div>
-                <time datetime="2026-02-15">15 de Fevereiro, 2026</time>
-                <span>📍 São Paulo, SP</span>
-                <span>⏱️ 7 min de leitura</span>
+                <span class="category-badge milhas">Milhas</span>
+                <span class="author">Redação GPS Viagens</span>
+                <span>·</span>
+                <span>7 Fev 2026</span>
+                <span>·</span>
+                <span class="reading-time">6 min de leitura</span>
             </div>
-        </header>
 
-        <img src="assets/images/capas/milhas-aereas.jpg" alt="Cartões de milhas espalhados - a verdade por trás dos programas de fidelidade" class="featured-image" loading="lazy">
+            <h1 style="font-size:2rem;font-weight:800;line-height:1.3;margin-bottom:1rem">A verdade sobre milhas aéreas: por que você está perdendo dinheiro há anos</h1>
 
-        <div class="article-content">
-            <p><strong>Sabe aquele seu amigo que vive falando que "viaja de graça" com milhas? Ele está te enganando. E pior: provavelmente nem sabe disso.</strong></p>
+            <div class="article-content">
+                <p><strong>Sabe aquele seu amigo que vive falando que "viaja de graça" com milhas? Ele está te enganando. E pior: provavelmente nem sabe disso.</strong></p>
 
             <p>Durante 3 anos, analisei centenas de casos de pessoas que usam milhas aéreas. <em>O que descobri vai te deixar revoltado com as companhias aéreas.</em></p>
 
             <div class="breaking-box">
                 <h4>A matemática cruel das milhas</h4>
                 <p>Para viajar para Europa "de graça" com milhas, você precisa gastar em média <strong>R$ 28.000 em cartão de crédito</strong>. E isso assumindo que conseguirá disponibilidade.</p>
+    <div class="native-banner banner-wide banner-gold">
+        <div class="native-banner-label">Conteúdo Patrocinado</div>
+        <a href="/advertorial/" class="native-banner-content">
+            <img class="native-banner-img" src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=240&h=160&fit=crop" alt="">
+            <div class="native-banner-text">
+                <h5>Clube VIP — Vagas Limitadas Para Fevereiro</h5>
+                <p>Membros recebem alertas exclusivos de passagens até 93% mais baratas. Últimas vagas.</p>
+                <span class="nb-cta">Saiba mais →</span>
+            </div>
+        </a>
+    </div>
             </div>
 
             <p>A verdade é dura, mas precisa ser dita: <strong>programas de milhas são o maior golpe legalizado da aviação.</strong></p>
@@ -492,6 +111,17 @@
 
             <p><strong>Truque #2: Taxas escondidas</strong><br>
             Aquela passagem "gratuita" tem taxas de R$ 800 a R$ 2.400. Muitas vezes sai mais caro que comprar direto.</p>
+    <div class="native-banner banner-wide banner-purple">
+        <div class="native-banner-label">Conteúdo Patrocinado</div>
+        <a href="/advertorial/" class="native-banner-content">
+            <img class="native-banner-img" src="https://images.unsplash.com/photo-1436491865332-7a61a109db05?w=240&h=160&fit=crop" alt="">
+            <div class="native-banner-text">
+                <h5>Brasileira Descobre Brecha Em Site de Passagens</h5>
+                <p>Investigação revela como uma jovem de Minas usa tecnologia para viajar o mundo.</p>
+                <span class="nb-cta">Saiba mais →</span>
+            </div>
+        </a>
+    </div>
 
             <p><strong>Truque #3: Validade curta</strong><br>
             Suas milhas vencem. E quando você menos espera, perdeu anos de acúmulo.</p>
@@ -505,169 +135,129 @@
 
             <div class="image-container">
                 <img src="assets/images/lari-sistemas-comparacao.jpg" alt="Comparação de preços entre milhas e Sistema GPS" loading="lazy">
-                <div class="image-caption">Comparação real: milhas vs preços encontrados pelo Sistema GPS</div>
+                <div class="image-caption">Comparação real: milhas vs preços encontrados pelo Sistema GPS
             </div>
 
-            <h2>🤔 "Mas fulano viajou de graça mesmo!"</h2>
+            <!-- BANNER BEFORE FOOTER -->
+            
+    <div class="native-banner banner-wide banner-red">
+        <div class="native-banner-label">Conteúdo Patrocinado</div>
+        <a href="/advertorial/" class="native-banner-content">
+            <img class="native-banner-img" src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=240&h=160&fit=crop" alt="">
+            <div class="native-banner-text">
+                <h5>Passagens 93% OFF — Veja Como Essa Brasileira Consegue</h5>
+                <p>Método usado por mais de 12.000 viajantes para encontrar passagens com desconto real.</p>
+                <span class="nb-cta">Saiba mais →</span>
+            </div>
+        </a>
+    </div>
 
-            <p>Sim, algumas pessoas conseguem. Mas vamos fazer as contas direito?</p>
+            
+    <section class="related-posts">
+        <h3>Leia Também</h3>
+        <div class="cards-grid">
+                <article class="card">
+                    <div class="card-thumb">
+                        <img src="https://images.unsplash.com/photo-1544016768-982d1554f0b9?w=600&h=340&fit=crop" alt="Brasileira Descobre Brecha em Site de Passagens">
+                        <span class="category-badge passagens">Passagens</span>
+                    </div>
+                    <div class="card-body">
+                        <h3><a href="artigo-brasileira-descobre-brecha.html">Brasileira Descobre Brecha em Site de Passagens</a></h3>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-thumb">
+                        <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&h=340&fit=crop" alt="Família Economizou R$12.400 em Passagens">
+                        <span class="category-badge cases">Cases</span>
+                    </div>
+                    <div class="card-body">
+                        <h3><a href="artigo-familia-economizou-12400.html">Família Economizou R$12.400 em Passagens</a></h3>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-thumb">
+                        <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&h=340&fit=crop" alt="O Que o Google Flights Esconde de Você">
+                        <span class="category-badge dicas">Dicas</span>
+                    </div>
+                    <div class="card-body">
+                        <h3><a href="artigo-google-flights-esconde.html">O Que o Google Flights Esconde de Você</a></h3>
+                    </div>
+                </article>
+        </div>
+    </section>
+        </main>
 
-            <p>Para juntar 80.000 milhas (São Paulo → Europa), você precisa:</p>
-            <ul>
-                <li>Gastar <strong>R$ 26.700</strong> no cartão (3 milhas por real)</li>
-                <li>Pagar anuidade de <strong>R$ 800</strong></li>
-                <li>Ter sorte de encontrar disponibilidade</li>
-                <li>Ainda pagar <strong>R$ 1.200</strong> de taxas</li>
-            </ul>
-
-            <p><strong>Total investido: R$ 28.700 para uma passagem que custa R$ 2.800 no Sistema GPS.</strong></p>
-
-            <p>Onde está a economia mesmo?</p>
-
-            <h2>💡 A alternativa que realmente funciona</h2>
-
-            <p>Enquanto você fica refém das milhas, existe um grupo seleto de pessoas que descobriu uma forma muito melhor de viajar barato.</p>
-
-            <p>Não é magia. Não são milhas. É <strong>acesso aos mesmos sistemas que agentes profissionais usam</strong>.</p>
-
-            <div class="breaking-box">
-                <h4>Sistema GPS encontra os preços que companhias escondem</h4>
-                <p>Enquanto você junta milhas por anos, membros do Sistema GPS compram passagens 70% mais baratas <em>hoje mesmo</em>.</p>
+        <aside class="sidebar">
+            <div class="newsletter-box">
+                <h4>Newsletter GPS</h4>
+                <p>Receba promoções de passagens direto no e-mail. Grátis.</p>
+                <input type="email" placeholder="Seu melhor e-mail">
+                <button>Quero Receber →</button>
             </div>
 
-            <h2>📊 Milhas vs Sistema GPS — Comparação real</h2>
-
-            <p><strong>Rota: São Paulo → Londres</strong></p>
-
-            <p><em>Com milhas:</em></p>
-            <ul>
-                <li>60.000 pontos (R$ 20.000 gastos no cartão)</li>
-                <li>R$ 1.400 de taxas</li>
-                <li>2 anos juntando</li>
-                <li>Sem garantia de disponibilidade</li>
-                <li><strong>Total: R$ 21.400</strong></li>
-            </ul>
-
-            <p><em>Com Sistema GPS:</em></p>
-            <ul>
-                <li>Busca em tempo real</li>
-                <li>R$ 1.100 - passagem completa</li>
-                <li>Compra em 5 minutos</li>
-                <li>Disponibilidade garantida</li>
-                <li><strong>Total: R$ 1.100</strong></li>
-            </ul>
-
-            <blockquote>
-                "Depois de 3 anos juntando milhas e conseguindo viajar apenas 1 vez, descobri o Sistema GPS. Em 6 meses já fiz 4 viagens internacionais." - <strong>Carlos Mendes, São Paulo</strong>
-            </blockquote>
-
-            <h2>⚠️ Por que milhas continuam populares?</h2>
-
-            <p>Marketing. Puro e simples.</p>
-
-            <p>As companhias gastam milhões vendendo o sonho de "voar de graça". Bancos empurram cartões prometendo milhas como se fossem dinheiro.</p>
-
-            <p><strong>A verdade:</strong> milhas são uma moeda desvalorizada que você só pode usar onde eles querem, quando eles querem, pagando taxas absurdas.</p>
-
-            <div class="image-container">
-                <img src="assets/images/lari-apresentacao-sistema.jpg" alt="Apresentação do Sistema GPS mostrando economia real vs milhas" loading="lazy">
-                <div class="image-caption">Sistema GPS: economia real sem pegadinhas ou restrições</div>
+            <div class="cta-banner">
+                <h4>Passagens até 93% OFF</h4>
+                <p>Descubra o sistema que milhares de brasileiros usam.</p>
+                <a href="/advertorial/">Ver Como Funciona →</a>
             </div>
 
-            <h2>🚀 O método que está mudando tudo</h2>
-
-            <p>Enquanto as pessoas ficam presas no ciclo infinito das milhas, existe uma comunidade crescente que descobriu o Sistema GPS.</p>
-
-            <p><strong>São mais de 15.000 brasileiros</strong> que pararam de perder tempo com milhas e começaram a viajar pagando 60% a 85% menos.</p>
-
-            <h3>Como funciona o Sistema GPS:</h3>
-            <ol>
-                <li><strong>Acesso aos sistemas profissionais</strong> - os mesmos que agentes usam</li>
-                <li><strong>Busca em tempo real</strong> - encontra lotes ultra econômicos escondidos</li>
-                <li><strong>Sem restrições</strong> - viaja quando quiser, para onde quiser</li>
-                <li><strong>Sem taxas escondidas</strong> - o preço que vê é o preço que paga</li>
-            </ol>
-
-            <div class="cta-box">
-                <h4>💸 Pare de perder dinheiro com milhas</h4>
-                <p>Descubra como viajar mais pagando menos, sem pegadinhas e sem esperar anos para juntar pontos.</p>
-                <a href="#sistema-gps" class="cta-button">🎯 DESCOBRIR AGORA →</a>
+            <div class="native-banner banner-sidebar banner-blue">
+                <div class="native-banner-label">Conteúdo Patrocinado</div>
+                <a href="/advertorial/" class="native-banner-content">
+                    <img class="native-banner-img" src="https://images.unsplash.com/photo-1517479149777-5f3b1511d5ad?w=600&h=340&fit=crop" alt="">
+                    <div class="native-banner-text">
+                        <h5>Sistema GPS: O método completo</h5>
+                        <p>Mais de 12.000 brasileiros já usam.</p>
+                        <span class="nb-cta">Conhecer →</span>
+                    </div>
+                </a>
             </div>
 
-            <h2>🎭 A farsa das "viagens grátis"</h2>
+            <div class="sidebar-widget">
+                <h4>Mais Lidos</h4>
+                <ol class="popular-list">
+                    <li><span class="post-number">1</span><a href="artigo-brasileira-descobre-brecha.html">Brasileira Descobre Brecha</a></li>
+                    <li><span class="post-number">2</span><a href="artigo-familia-economizou-12400.html">Família Economizou R$12.400</a></li>
+                    <li><span class="post-number">3</span><a href="artigo-google-flights-esconde.html">Google Flights Esconde</a></li>
+                    <li><span class="post-number">4</span><a href="artigo-lari-47-paises.html">Lari 47 Países</a></li>
+                    <li><span class="post-number">5</span><a href="artigo-verdade-milhas.html">Verdade Sobre Milhas</a></li>
+                </ol>
+            </div>
+        </aside>
+    </div>
+</div>
 
-            <p>A próxima vez que alguém falar que viajou "de graça" com milhas, faça as contas:</p>
+<footer class="site-footer">
+    <div class="footer-grid">
+        <div class="footer-col">
+            <h5>GPS Viagens</h5>
             <ul>
-                <li>Quanto gastou no cartão para juntar as milhas?</li>
-                <li>Quanto pagou de anuidade?</li>
-                <li>Quanto pagou de taxas de embarque?</li>
-                <li>Quanto tempo levou para conseguir usar?</li>
-            </ul>
-
-            <p><strong>Você vai descobrir que "grátis" custou mais que comprar passagem normal.</strong></p>
-
-            <p>Não seja mais uma vítima do marketing das companhias aéreas. <em>Existe um jeito melhor.</em></p>
-
-            <h2>⏰ A escolha é sua</h2>
-
-            <p>Você pode continuar gastando anos juntando milhas, pagando anuidades, sofrendo com falta de disponibilidade...</p>
-
-            <p><strong>Ou pode se juntar aos 15.000 brasileiros</strong> que descobriram como viajar mais pagando menos, <em>começando hoje</em>.</p>
-
-            <blockquote>
-                "Juntava milhas há 5 anos. Com o Sistema GPS, em 2 meses consegui fazer mais viagens que em toda minha vida 'milhas'." - <strong>Fernanda Costa, Rio de Janeiro</strong>
-            </blockquote>
-
-            <p>O Sistema GPS não é sobre promessas. <strong>É sobre resultados reais.</strong></p>
-        </div>
-
-        <!-- SOCIAL SHARE -->
-        <div class="social-share">
-            <span>Alerte seus amigos:</span>
-            <a href="whatsapp://send?text=A verdade sobre milhas que ninguém te conta! Você está perdendo dinheiro há anos: https://gps-advertorial.pages.dev/artigo-verdade-milhas.html" class="share-whatsapp">📱 WhatsApp</a>
-            <a href="https://t.me/share/url?url=https://gps-advertorial.pages.dev/artigo-verdade-milhas.html&text=Por que milhas são pegadinha das companhias aéreas" class="share-telegram">✈️ Telegram</a>
-            <a href="https://www.facebook.com/sharer/sharer.php?u=https://gps-advertorial.pages.dev/artigo-verdade-milhas.html" class="share-facebook">👥 Facebook</a>
-        </div>
-
-        <!-- RELATED ARTICLES -->
-        <div class="related-articles">
-            <h3>📚 Continue lendo</h3>
-            <ul class="related-list">
-                <li><a href="artigo-brasileira-descobre-brecha.html">Brasileira descobre brecha que obriga companhias a venderem passagens 93% mais baratas</a></li>
-                <li><a href="artigo-google-flights-esconde.html">Google Flights esconde os melhores preços — entenda por quê</a></li>
-                <li><a href="artigo-3-cliques.html">Como encontrar passagens baratas em 3 cliques — sem milhas, sem sorte</a></li>
+                <li><a href="/advertorial/">Sobre o Sistema GPS</a></li>
+                <li><a href="/blog-cases-app/">Cases de Sucesso</a></li>
+                <li><a href="/blog-cases-clube/">Clube VIP</a></li>
             </ul>
         </div>
-
-        <!-- FINAL CTA -->
-        <div class="cta-box">
-            <h4>🚀 Chega de milhas. Hora de viajar de verdade.</h4>
-            <p>Descubra o sistema que está revolucionando a forma como brasileiros compram passagens aéreas.</p>
-            <a href="#sistema-gps" class="cta-button">🎯 Quero o Sistema GPS</a>
+        <div class="footer-col">
+            <h5>Conteúdo</h5>
+            <ul>
+                <li><a href="/blog-principal/">Artigos Recentes</a></li>
+                <li><a href="/artigo-verdade-milhas.html">Milhas e Pontos</a></li>
+                <li><a href="/artigo-google-flights-esconde.html">Dicas</a></li>
+            </ul>
         </div>
-    </article>
+        <div class="footer-col">
+            <h5>Mais Populares</h5>
+            <ul>
+                <li><a href="/artigo-brasileira-descobre-brecha.html">Brecha em Passagens</a></li>
+                <li><a href="/artigo-familia-economizou-12400.html">Economia R$12.400</a></li>
+                <li><a href="/artigo-lari-47-paises.html">47 Países</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 GPS Viagens Brasil. Todos os direitos reservados. Este site contém links de afiliados.</p>
+    </div>
+</footer>
 
-    <script>
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                } else {
-                    // If no target found, simulate CTA action
-                    alert('🎯 Sistema GPS em desenvolvimento! Em breve você terá acesso completo.');
-                }
-            });
-        });
-
-        // Social share tracking (simulate)
-        document.querySelectorAll('.social-share a').forEach(link => {
-            link.addEventListener('click', function() {
-                console.log(`Compartilhado via: ${this.textContent}`);
-            });
-        });
-    </script>
 </body>
 </html>

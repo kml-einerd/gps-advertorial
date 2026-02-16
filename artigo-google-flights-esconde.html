@@ -3,538 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Flights esconde os melhores preços — entenda por quê - GPS Viagens Brasil</title>
+    <title>Google Flights esconde os melhores preços — entenda por quê — GPS Viagens Brasil</title>
     <meta name="description" content="Análise exclusiva revela como algoritmos de busca privilegiam companhias que pagam mais comissão, ocultando passagens até 70% mais baratas do público.">
+    <meta property="og:title" content="Google Flights esconde os melhores preços — entenda por quê">
+    <meta property="og:description" content="Análise exclusiva revela como algoritmos de busca privilegiam companhias que pagam mais comissão, ocultando passagens até 70% mais baratas do público.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://gps-advertorial.pages.dev/artigo-google-flights-esconde.html">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="canonical" href="https://gps-advertorial.pages.dev/artigo-google-flights-esconde.html">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --primary-color: #2563eb;
-            --secondary-color: #dc2626;
-            --accent-color: #f59e0b;
-            --text-dark: #1f2937;
-            --text-light: #6b7280;
-            --bg-light: #f8fafc;
-            --border-color: #e5e7eb;
-            --success-color: #16a34a;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            line-height: 1.7;
-            color: var(--text-dark);
-            background: #ffffff;
-        }
-
-        .header {
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-            padding: 1rem 0;
-            text-align: center;
-        }
-
-        .header a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
-
-        .header a::before {
-            content: "🎯";
-            margin-right: 0.5rem;
-        }
-
-        .breadcrumb {
-            background: var(--bg-light);
-            padding: 1rem 0;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .breadcrumb-container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 1rem;
-            font-size: 0.875rem;
-            color: var(--text-light);
-        }
-
-        .breadcrumb a {
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-
-        .article-container {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-
-        .article-header {
-            margin-bottom: 2rem;
-        }
-
-        .category-tag {
-            background: var(--secondary-color);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.875rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            display: inline-block;
-            margin-bottom: 1rem;
-        }
-
-        .article-title {
-            font-size: 2.5rem;
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 1rem;
-            color: var(--text-dark);
-        }
-
-        .article-subtitle {
-            font-size: 1.25rem;
-            color: var(--text-light);
-            font-weight: 400;
-            margin-bottom: 1.5rem;
-            line-height: 1.5;
-        }
-
-        .article-meta {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid var(--border-color);
-            font-size: 0.875rem;
-            color: var(--text-light);
-        }
-
-        .author {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-
-        .author-avatar {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: var(--primary-color);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 600;
-        }
-
-        .featured-image {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            border-radius: 12px;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-        }
-
-        .article-content {
-            font-size: 1.125rem;
-            line-height: 1.8;
-        }
-
-        .article-content p {
-            margin-bottom: 1.5rem;
-        }
-
-        .article-content h2 {
-            font-size: 1.75rem;
-            font-weight: 700;
-            margin: 2.5rem 0 1rem;
-            color: var(--text-dark);
-        }
-
-        .article-content h3 {
-            font-size: 1.375rem;
-            font-weight: 600;
-            margin: 2rem 0 0.75rem;
-            color: var(--text-dark);
-        }
-
-        .article-content ul, .article-content ol {
-            margin: 1.5rem 0;
-            padding-left: 1.5rem;
-        }
-
-        .article-content li {
-            margin-bottom: 0.75rem;
-        }
-
-        .article-content blockquote {
-            background: var(--bg-light);
-            border-left: 4px solid var(--primary-color);
-            padding: 1.5rem;
-            margin: 2rem 0;
-            border-radius: 8px;
-            font-style: italic;
-            font-size: 1.1rem;
-        }
-
-        .article-content strong {
-            font-weight: 600;
-            color: var(--text-dark);
-        }
-
-        /* COMPARISON TABLE */
-        .comparison-table {
-            background: var(--bg-light);
-            border-radius: 12px;
-            overflow: hidden;
-            margin: 2rem 0;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-        }
-
-        .comparison-table h4 {
-            background: var(--text-dark);
-            color: white;
-            padding: 1rem;
-            text-align: center;
-            font-size: 1.25rem;
-            margin: 0;
-        }
-
-        .comparison-row {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .comparison-row:last-child {
-            border-bottom: none;
-        }
-
-        .comparison-cell {
-            padding: 1rem;
-            display: flex;
-            align-items: center;
-        }
-
-        .comparison-cell.header {
-            background: #f1f5f9;
-            font-weight: 600;
-            color: var(--text-dark);
-        }
-
-        .comparison-cell.google {
-            background: #fef3c7;
-            color: #92400e;
-            font-weight: 600;
-        }
-
-        .comparison-cell.gps {
-            background: #d1fae5;
-            color: #065f46;
-            font-weight: 600;
-        }
-
-        /* BREAKING NEWS STYLE BOXES */
-        .breaking-box {
-            background: linear-gradient(135deg, var(--secondary-color) 0%, #ef4444 100%);
-            color: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            margin: 2rem 0;
-            box-shadow: 0 4px 20px rgba(220, 38, 38, 0.3);
-        }
-
-        .breaking-box h4 {
-            font-size: 1.25rem;
-            margin-bottom: 0.75rem;
-            font-weight: 700;
-        }
-
-        .breaking-box::before {
-            content: "🚨 REVELADO: ";
-            font-weight: 800;
-        }
-
-        /* HIGHLIGHT BOXES */
-        .highlight-box {
-            background: linear-gradient(135deg, var(--accent-color) 0%, #f59e0b 100%);
-            color: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            margin: 2rem 0;
-            box-shadow: 0 4px 20px rgba(245, 158, 11, 0.3);
-        }
-
-        .highlight-box h4 {
-            font-size: 1.25rem;
-            margin-bottom: 0.75rem;
-            font-weight: 700;
-        }
-
-        /* EVIDENCE BOX */
-        .evidence-box {
-            background: #f8fafc;
-            border: 2px solid var(--primary-color);
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin: 2rem 0;
-        }
-
-        .evidence-box h4 {
-            color: var(--primary-color);
-            font-size: 1.25rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-
-        .evidence-box h4::before {
-            content: "🔍 ";
-        }
-
-        /* IMAGE WITH CAPTION */
-        .image-container {
-            margin: 2rem 0;
-        }
-
-        .image-container img {
-            width: 100%;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-        }
-
-        .image-caption {
-            text-align: center;
-            font-size: 0.875rem;
-            color: var(--text-light);
-            margin-top: 0.75rem;
-            font-style: italic;
-        }
-
-        /* CTA BOXES */
-        .cta-box {
-            background: linear-gradient(135deg, var(--success-color) 0%, #10b981 100%);
-            color: white;
-            padding: 2rem;
-            border-radius: 12px;
-            text-align: center;
-            margin: 3rem 0;
-            box-shadow: 0 6px 25px rgba(22, 163, 74, 0.4);
-        }
-
-        .cta-box h4 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-
-        .cta-box p {
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-            opacity: 0.95;
-        }
-
-        .cta-button {
-            background: white;
-            color: var(--success-color);
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 30px;
-            font-weight: 700;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-        }
-
-        /* SOCIAL SHARE */
-        .social-share {
-            display: flex;
-            gap: 1rem;
-            margin: 3rem 0;
-            padding: 1.5rem;
-            background: var(--bg-light);
-            border-radius: 12px;
-            align-items: center;
-        }
-
-        .social-share span {
-            font-weight: 600;
-            color: var(--text-dark);
-        }
-
-        .social-share a {
-            padding: 0.75rem 1.5rem;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: transform 0.3s;
-        }
-
-        .social-share a:hover {
-            transform: translateY(-2px);
-        }
-
-        .share-whatsapp {
-            background: #25d366;
-            color: white;
-        }
-
-        .share-telegram {
-            background: #0088cc;
-            color: white;
-        }
-
-        .share-facebook {
-            background: #1877f2;
-            color: white;
-        }
-
-        /* RELATED ARTICLES */
-        .related-articles {
-            background: var(--bg-light);
-            padding: 2rem;
-            border-radius: 12px;
-            margin: 3rem 0;
-        }
-
-        .related-articles h3 {
-            margin-bottom: 1.5rem;
-            font-size: 1.5rem;
-            color: var(--text-dark);
-        }
-
-        .related-list {
-            list-style: none;
-        }
-
-        .related-list li {
-            margin-bottom: 1rem;
-        }
-
-        .related-list a {
-            color: var(--text-dark);
-            text-decoration: none;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            transition: color 0.3s;
-        }
-
-        .related-list a:hover {
-            color: var(--primary-color);
-        }
-
-        .related-list a::before {
-            content: "📖";
-            font-size: 1.2rem;
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-            .article-title {
-                font-size: 2rem;
-            }
-
-            .article-subtitle {
-                font-size: 1.1rem;
-            }
-
-            .article-content {
-                font-size: 1rem;
-            }
-
-            .article-meta {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 1rem;
-            }
-
-            .social-share {
-                flex-direction: column;
-                align-items: stretch;
-                text-align: center;
-            }
-
-            .featured-image {
-                height: 250px;
-            }
-
-            .comparison-row {
-                grid-template-columns: 1fr;
-            }
-
-            .comparison-cell {
-                text-align: center;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/design-system.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Google Flights esconde os melhores preços — entenda por quê",
+        "description": "Análise exclusiva revela como algoritmos de busca privilegiam companhias que pagam mais comissão, ocultando passagens até 70% mais baratas do público.",
+        "author": {"@type": "Organization", "name": "GPS Viagens Brasil"},
+        "publisher": {"@type": "Organization", "name": "GPS Viagens Brasil"},
+        "datePublished": "2026-02-10",
+        "mainEntityOfPage": "https://gps-advertorial.pages.dev/artigo-google-flights-esconde.html"
+    }
+    </script>
 </head>
 <body>
-    <!-- HEADER -->
-    <header class="header">
-        <a href="index.html">GPS Viagens Brasil</a>
-    </header>
 
-    <!-- BREADCRUMB -->
-    <div class="breadcrumb">
-        <div class="breadcrumb-container">
-            <a href="index.html">Início</a> > 
-            <a href="categoria-investigacao.html">Investigação</a> > 
-            Google Flights esconde os melhores preços
-        </div>
+<header class="site-header">
+    <div class="header-inner">
+        <a href="/" class="site-logo">✈️ GPS <span>Viagens</span></a>
+        <button class="mobile-toggle" onclick="document.querySelector('.site-nav').classList.toggle('open')">☰</button>
+        <nav>
+            <ul class="site-nav">
+                <li><a href="/">Início</a></li>
+                <li><a href="/blog-principal/">Passagens</a></li>
+                <li><a href="/blog-cases-app/">Cases</a></li>
+                <li><a href="/blog-cases-clube/">Clube VIP</a></li>
+                <li><a href="/advertorial/">Sistema GPS</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+    <div class="breadcrumbs">
+        <a href="/">Início</a> <span class="sep">›</span>
+        <a href="/blog-principal/">Dicas</a> <span class="sep">›</span>
+        Google Flights esconde os melhores preços — entenda por quê...
     </div>
 
-    <!-- ARTICLE -->
-    <article class="article-container">
-        <header class="article-header">
-            <div class="category-tag">🔍 Investigação</div>
-            <h1 class="article-title">Google Flights esconde os melhores preços — entenda por quê</h1>
-            <p class="article-subtitle">Investigação de 6 meses revela como algoritmos de busca privilegiam companhias que pagam mais comissão, ocultando passagens até 70% mais baratas do público brasileiro.</p>
+    <div class="layout-with-sidebar">
+        <main class="main-content">
+            <img src="https://images.unsplash.com/photo-1436491865332-7a61a109db05?w=600&h=340&fit=crop" alt="Google Flights esconde os melhores preços — entenda por quê" class="article-hero">
             
             <div class="article-meta">
-                <div class="author">
-                    <div class="author-avatar">JS</div>
-                    <div>
-                        <div><strong>Por João Silva</strong></div>
-                        <div>Jornalista investigativo</div>
-                    </div>
-                </div>
-                <time datetime="2026-02-13">13 de Fevereiro, 2026</time>
-                <span>📍 Investigação</span>
-                <span>⏱️ 15 min de leitura</span>
+                <span class="category-badge dicas">Dicas</span>
+                <span class="author">Redação GPS Viagens</span>
+                <span>·</span>
+                <span>10 Fev 2026</span>
+                <span>·</span>
+                <span class="reading-time">6 min de leitura</span>
             </div>
-        </header>
 
-        <img src="assets/images/google-flights-investigation.jpg" alt="Investigação revela como Google Flights esconde melhores preços" class="featured-image" loading="lazy">
+            <h1 style="font-size:2rem;font-weight:800;line-height:1.3;margin-bottom:1rem">Google Flights esconde os melhores preços — entenda por quê</h1>
 
-        <div class="article-content">
-            <p><strong>Durante 6 meses, nossa equipe conduziu uma investigação detalhada sobre como funcionam os algoritmos de busca de passagens aéreas.</strong> O resultado é chocante: plataformas como Google Flights, Kayak e Decolar sistematicamente <em>escondem</em> as melhores ofertas do público.</p>
+            <div class="article-content">
+                <p><strong>Durante 6 meses, nossa equipe conduziu uma investigação detalhada sobre como funcionam os algoritmos de busca de passagens aéreas.</strong> O resultado é chocante: plataformas como Google Flights, Kayak e Decolar sistematicamente <em>escondem</em> as melhores ofertas do público.</p>
 
             <p>A descoberta veio após analisarmos mais de 10.000 buscas em 47 plataformas diferentes, comparando preços para os mesmos voos em datas idênticas.</p>
 
             <div class="breaking-box">
                 <h4>Diferenças de até R$ 3.200 para o mesmo voo</h4>
                 <p>São Paulo → Paris: R$ 3.800 no Google Flights vs R$ 600 em sistemas alternativos. <strong>Mesmo assento, mesma data, mesmo avião.</strong></p>
+    <div class="native-banner banner-wide banner-red">
+        <div class="native-banner-label">Conteúdo Patrocinado</div>
+        <a href="/advertorial/" class="native-banner-content">
+            <img class="native-banner-img" src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=240&h=160&fit=crop" alt="">
+            <div class="native-banner-text">
+                <h5>Passagens 93% OFF — Veja Como Essa Brasileira Consegue</h5>
+                <p>Método usado por mais de 12.000 viajantes para encontrar passagens com desconto real.</p>
+                <span class="nb-cta">Saiba mais →</span>
+            </div>
+        </a>
+    </div>
             </div>
 
             <h2>🎯 A metodologia da investigação</h2>
@@ -570,224 +119,129 @@
 
             <div class="image-container">
                 <img src="assets/images/prints/google-flights-algorithm.jpg" alt="Análise do algoritmo do Google Flights" loading="lazy">
-                <div class="image-caption">Código analisado revela como prioridade é dada por comissão, não por preço</div>
+                <div class="image-caption">Código analisado revela como prioridade é dada por comissão, não por preço
             </div>
 
-            <h2>🔬 Casos documentados</h2>
-
-            <p>Durante a investigação, documentamos casos extremos onde a manipulação fica evidente:</p>
-
-            <div class="comparison-table">
-                <h4>🛫 Comparação Real: São Paulo → Lisboa (Agosto 2026)</h4>
-                <div class="comparison-row">
-                    <div class="comparison-cell header">Plataforma</div>
-                    <div class="comparison-cell header">Google Flights</div>
-                    <div class="comparison-cell header">Sistema GPS</div>
-                </div>
-                <div class="comparison-row">
-                    <div class="comparison-cell">TAP Air Portugal</div>
-                    <div class="comparison-cell google">R$ 3.200</div>
-                    <div class="comparison-cell gps">R$ 850</div>
-                </div>
-                <div class="comparison-row">
-                    <div class="comparison-cell">LATAM</div>
-                    <div class="comparison-cell google">R$ 3.800</div>
-                    <div class="comparison-cell gps">R$ 920</div>
-                </div>
-                <div class="comparison-row">
-                    <div class="comparison-cell">Lufthansa</div>
-                    <div class="comparison-cell google">R$ 4.100</div>
-                    <div class="comparison-cell gps">R$ 780</div>
-                </div>
-                <div class="comparison-row">
-                    <div class="comparison-cell"><strong>Economia média</strong></div>
-                    <div class="comparison-cell google"><strong>-</strong></div>
-                    <div class="comparison-cell gps"><strong>73%</strong></div>
-                </div>
+            <!-- BANNER BEFORE FOOTER -->
+            
+    <div class="native-banner banner-wide banner-green">
+        <div class="native-banner-label">Conteúdo Patrocinado</div>
+        <a href="/advertorial/" class="native-banner-content">
+            <img class="native-banner-img" src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=240&h=160&fit=crop" alt="">
+            <div class="native-banner-text">
+                <h5>Família Economizou R$12.400 em Uma Única Viagem</h5>
+                <p>Descubra o método simples que transformou as férias dessa família brasileira.</p>
+                <span class="nb-cta">Saiba mais →</span>
             </div>
+        </a>
+    </div>
 
-            <p><strong>Caso mais extremo documentado:</strong> São Paulo → Tóquio em outubro de 2025. Google Flights mostrava R$ 5.200 como "melhor preço". O mesmo voo estava disponível por R$ 1.100 em sistemas B2B.</p>
-
-            <div class="highlight-box">
-                <h4>🎯 Por que isso acontece?</h4>
-                <p>Companhias aéreas <strong>segmentam</strong> seus preços. Reservam os lotes mais baratos para agentes de viagem profissionais, que movimentam maior volume. O público geral fica com os "restos" mais caros.</p>
-            </div>
-
-            <h2>🕵️ A descoberta dos "lotes fantasma"</h2>
-
-            <p>A parte mais surpreendente da investigação foi descobrir os <strong>"lotes fantasma"</strong> — assentos com preços ultra baixos que existem, mas são propositalmente escondidos.</p>
-
-            <blockquote>
-                "Encontramos voos com disponibilidade para 200+ assentos, mas apenas 20 apareciam nas buscas públicas. Os outros 180 eram reservados para canais específicos." - <strong>Carlos Mendoza</strong>
-            </blockquote>
-
-            <p>Estes lotes são liberados em:</p>
-            <ul>
-                <li><strong>Sistemas GDS profissionais</strong> (Amadeus, Sabre, Travelport)</li>
-                <li><strong>Plataformas B2B</strong> para agentes de viagem</li>
-                <li><strong>Sites das companhias</strong> em horários específicos</li>
-                <li><strong>Sistemas de consolidadoras</strong> (mayoristas)</li>
-            </ul>
-
-            <div class="evidence-box">
-                <h4>Documentação técnica</h4>
-                <p>Obtivemos logs de sistemas GDS que comprovam: <strong>67% dos assentos disponíveis</strong> para uma busca típica São Paulo-Europa <strong>nunca aparecem</strong> em plataformas como Google Flights.</p>
-            </div>
-
-            <h2>⚖️ Aspectos legais questionáveis</h2>
-
-            <p>Consultamos especialistas em direito do consumidor sobre essas práticas. A advogada <strong>Dra. Marina Santos</strong>, especialista em aviação civil, é categórica:</p>
-
-            <blockquote>
-                "Existe uma questão de transparência. Se uma plataforma se apresenta como 'comparador neutro' mas privilegia resultados por comissão, isso pode configurar propaganda enganosa."
-            </blockquote>
-
-            <p>O <strong>Código de Defesa do Consumidor brasileiro</strong> estabelece que o consumidor tem direito à informação adequada e clara sobre produtos e serviços.</p>
-
-            <h3>🏛️ Precedentes internacionais:</h3>
-            <ul>
-                <li><strong>União Europeia (2019):</strong> Google multado em €1,49 bilhão por práticas anticompetitivas</li>
-                <li><strong>Estados Unidos (2021):</strong> Kayak processado por "manipulação de resultados"</li>
-                <li><strong>Reino Unido (2022):</strong> Skyscanner obrigado a sinalizar resultados patrocinados</li>
-            </ul>
-
-            <div class="breaking-box">
-                <h4>Brasil pode ser o próximo</h4>
-                <p>O Ministério Público está analisando representação sobre práticas anticompetitivas no setor de buscas de passagens aéreas.</p>
-            </div>
-
-            <h2>🎭 O teatro da "transparência"</h2>
-
-            <p>Plataformas como Google Flights se defendem alegando "transparência". Mas nossa análise revela um teatro bem montado:</p>
-
-            <ul>
-                <li><strong>Disclaimer escondido:</strong> Texto sobre "parceiros comerciais" em fonte 8px no rodapé</li>
-                <li><strong>Pseudo-aleatoriedade:</strong> Ordem dos resultados muda levemente para simular "neutralidade"</li>
-                <li><strong>Filtros enganosos:</strong> "Menor preço" não mostra realmente o menor preço disponível</li>
-                <li><strong>Urgência artificial:</strong> "Apenas 3 assentos restantes" quando há 47 disponíveis</li>
-            </ul>
-
-            <div class="image-container">
-                <img src="assets/images/prints/google-flights-disclaimer.jpg" alt="Disclaimer escondido do Google Flights" loading="lazy">
-                <div class="image-caption">O famoso disclaimer que ninguém lê: "Resultados podem ser influenciados por acordos comerciais"</div>
-            </div>
-
-            <h2>🔄 A solução existe: Sistema GPS</h2>
-
-            <p>Durante nossa investigação, descobrimos que <strong>Lari Colares</strong> havia desenvolvido uma solução para este problema: o <strong>Sistema GPS de Passagens</strong>.</p>
-
-            <p>O sistema funciona fazendo buscas nos mesmos canais que agentes profissionais usam, democratizando o acesso aos "lotes fantasma".</p>
-
-            <div class="cta-box">
-                <h4>🎯 Acesse os preços que Google esconde</h4>
-                <p>Descubra o sistema que encontra passagens até 70% mais baratas que Google Flights, Kayak e similares.</p>
-                <a href="#sistema-gps" class="cta-button">🔍 Descobrir Sistema GPS</a>
-            </div>
-
-            <h2>📈 O impacto nos consumidores</h2>
-
-            <p>Nossa investigação estima que <strong>brasileiros gastam R$ 2,1 bilhões a mais por ano</strong> devido a essas práticas de ocultação de preços.</p>
-
-            <p>Considerando que:</p>
-            <ul>
-                <li>8,3 milhões de brasileiros viajaram para o exterior em 2025</li>
-                <li>Gasto médio de R$ 3.200 em passagens por viagem</li>
-                <li>Sobreprecificação média de 68%</li>
-            </ul>
-
-            <p><strong>Cada brasileiro perde em média R$ 2.176 por viagem internacional</strong> por não ter acesso aos preços reais.</p>
-
-            <div class="highlight-box">
-                <h4>💡 Democratização é possível</h4>
-                <p>Sistemas como o GPS de Passagens provam que é possível dar ao consumidor final o mesmo acesso que agentes profissionais têm. A diferença é gritante.</p>
-            </div>
-
-            <h2>🔮 O futuro do setor</h2>
-
-            <p>Especialistas preveem mudanças significativas nos próximos anos:</p>
-
-            <ol>
-                <li><strong>Regulamentação mais rígida:</strong> Obrigatoriedade de transparência sobre comissões</li>
-                <li><strong>Novos players:</strong> Plataformas focadas em neutralidade real</li>
-                <li><strong>Tecnologia blockchain:</strong> Sistemas descentralizados de busca</li>
-                <li><strong>IA democratizada:</strong> Algoritmos que privilegiam o consumidor, não o lucro</li>
-            </ol>
-
-            <blockquote>
-                "Estamos no final de uma era onde o consumidor era mantido na ignorância. A informação está se democratizando, e isso é irreversível." - <strong>Dr. Roberto Figueiredo, especialista em aviação civil</strong>
-            </blockquote>
-
-            <h2>⚡ Como se proteger hoje</h2>
-
-            <p>Enquanto as mudanças regulatórias não vêm, consumidores podem se proteger:</p>
-
-            <ul>
-                <li>✅ <strong>Nunca</strong> compre na primeira busca</li>
-                <li>✅ Compare em <strong>múltiplas plataformas</strong>, incluindo sites das companhias</li>
-                <li>✅ Use <strong>VPN</strong> para simular diferentes localizações</li>
-                <li>✅ Busque em <strong>horários diferentes</strong> (madrugada tem preços melhores)</li>
-                <li>✅ Aprenda a usar <strong>sistemas profissionais</strong> como o GPS</li>
-            </ul>
-
-            <div class="breaking-box">
-                <h4>Ação coletiva em andamento</h4>
-                <p>Escritório de advocacia especializado está coletando casos para possível ação coletiva contra plataformas que ocultam preços de consumidores brasileiros.</p>
-            </div>
-
-            <h2>📋 Conclusões da investigação</h2>
-
-            <p>Após 6 meses de investigação intensiva, chegamos a conclusões preocupantes:</p>
-
-            <ol>
-                <li><strong>Manipulação sistemática:</strong> Não é "falha", é estratégia comercial deliberada</li>
-                <li><strong>Prejuízo bilionário:</strong> Consumidores brasileiros perdem R$ 2,1 bi/ano</li>
-                <li><strong>Alternativas existem:</strong> Sistemas como o GPS provam que democratização é possível</li>
-                <li><strong>Mudança é necessária:</strong> Setor precisa de regulamentação urgente</li>
-            </ol>
-
-            <p><strong>A mensagem final é clara:</strong> você tem direito aos melhores preços. Não aceite pagar mais por ignorância do sistema.</p>
-
-            <blockquote>
-                "Informação é poder. E no setor de viagens, informação é literalmente dinheiro no seu bolso." - <strong>Conclusão da investigação</strong>
-            </blockquote>
-
+            
+    <section class="related-posts">
+        <h3>Leia Também</h3>
+        <div class="cards-grid">
+                <article class="card">
+                    <div class="card-thumb">
+                        <img src="https://images.unsplash.com/photo-1436491865332-7a61a109db05?w=600&h=340&fit=crop" alt="Passagens Baratas em 3 Cliques">
+                        <span class="category-badge passagens">Passagens</span>
+                    </div>
+                    <div class="card-body">
+                        <h3><a href="artigo-3-cliques.html">Passagens Baratas em 3 Cliques</a></h3>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-thumb">
+                        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600&h=340&fit=crop" alt="Lotes Ultra Econômicos">
+                        <span class="category-badge passagens">Passagens</span>
+                    </div>
+                    <div class="card-body">
+                        <h3><a href="artigo-lotes-ultra-economicos.html">Lotes Ultra Econômicos</a></h3>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-thumb">
+                        <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600&h=340&fit=crop" alt="Clube VIP de Viagens">
+                        <span class="category-badge clube">Clube</span>
+                    </div>
+                    <div class="card-body">
+                        <h3><a href="artigo-clube-vip.html">Clube VIP de Viagens</a></h3>
+                    </div>
+                </article>
         </div>
+    </section>
+        </main>
 
-        <!-- SOCIAL SHARE -->
-        <div class="social-share">
-            <span>Exponha esta investigação:</span>
-            <a href="whatsapp://send?text=INVESTIGAÇÃO CHOCANTE: Google Flights esconde passagens 70% mais baratas! https://gps-viagens.com/artigo-google-flights-esconde" class="share-whatsapp">📱 WhatsApp</a>
-            <a href="https://t.me/share/url?url=https://gps-viagens.com/artigo-google-flights-esconde&text=Descoberta: como plataformas escondem preços reais de passagens" class="share-telegram">✈️ Telegram</a>
-            <a href="https://www.facebook.com/sharer/sharer.php?u=https://gps-viagens.com/artigo-google-flights-esconde" class="share-facebook">👥 Facebook</a>
-        </div>
+        <aside class="sidebar">
+            <div class="newsletter-box">
+                <h4>Newsletter GPS</h4>
+                <p>Receba promoções de passagens direto no e-mail. Grátis.</p>
+                <input type="email" placeholder="Seu melhor e-mail">
+                <button>Quero Receber →</button>
+            </div>
 
-        <!-- RELATED ARTICLES -->
-        <div class="related-articles">
-            <h3>📚 Continue investigando</h3>
-            <ul class="related-list">
-                <li><a href="artigo-brasileira-descobre-brecha.html">Brasileira descobre brecha que obriga companhias a venderem passagens 93% mais baratas</a></li>
-                <li><a href="artigo-agentes-viagem-80-mais-baratas.html">Por que agentes de viagem acham passagens 80% mais baratas</a></li>
-                <li><a href="artigo-europa-700-sistema-gps.html">Europa por R$ 700: como funciona o Sistema GPS</a></li>
-                <li><a href="artigo-lari-47-paises.html">Lari Colares: a mulher que viajou 47 países pagando menos que aluguel</a></li>
-                <li><a href="artigo-verdade-milhas.html">A verdade sobre milhas: por que você está perdendo dinheiro</a></li>
+            <div class="cta-banner">
+                <h4>Passagens até 93% OFF</h4>
+                <p>Descubra o sistema que milhares de brasileiros usam.</p>
+                <a href="/advertorial/">Ver Como Funciona →</a>
+            </div>
+
+            <div class="native-banner banner-sidebar banner-blue">
+                <div class="native-banner-label">Conteúdo Patrocinado</div>
+                <a href="/advertorial/" class="native-banner-content">
+                    <img class="native-banner-img" src="https://images.unsplash.com/photo-1544016768-982d1554f0b9?w=600&h=340&fit=crop" alt="">
+                    <div class="native-banner-text">
+                        <h5>Sistema GPS: O método completo</h5>
+                        <p>Mais de 12.000 brasileiros já usam.</p>
+                        <span class="nb-cta">Conhecer →</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="sidebar-widget">
+                <h4>Mais Lidos</h4>
+                <ol class="popular-list">
+                    <li><span class="post-number">1</span><a href="artigo-brasileira-descobre-brecha.html">Brasileira Descobre Brecha</a></li>
+                    <li><span class="post-number">2</span><a href="artigo-familia-economizou-12400.html">Família Economizou R$12.400</a></li>
+                    <li><span class="post-number">3</span><a href="artigo-google-flights-esconde.html">Google Flights Esconde</a></li>
+                    <li><span class="post-number">4</span><a href="artigo-lari-47-paises.html">Lari 47 Países</a></li>
+                    <li><span class="post-number">5</span><a href="artigo-verdade-milhas.html">Verdade Sobre Milhas</a></li>
+                </ol>
+            </div>
+        </aside>
+    </div>
+</div>
+
+<footer class="site-footer">
+    <div class="footer-grid">
+        <div class="footer-col">
+            <h5>GPS Viagens</h5>
+            <ul>
+                <li><a href="/advertorial/">Sobre o Sistema GPS</a></li>
+                <li><a href="/blog-cases-app/">Cases de Sucesso</a></li>
+                <li><a href="/blog-cases-clube/">Clube VIP</a></li>
             </ul>
         </div>
-
-        <!-- FINAL CTA -->
-        <div class="cta-box">
-            <h4>🔓 Liberte-se dos preços manipulados</h4>
-            <p>Tenha acesso aos mesmos sistemas que agentes profissionais usam para encontrar passagens até 70% mais baratas.</p>
-            <a href="#sistema-gps" class="cta-button">🎯 Acessar Sistema GPS Agora</a>
+        <div class="footer-col">
+            <h5>Conteúdo</h5>
+            <ul>
+                <li><a href="/blog-principal/">Artigos Recentes</a></li>
+                <li><a href="/artigo-verdade-milhas.html">Milhas e Pontos</a></li>
+                <li><a href="/artigo-google-flights-esconde.html">Dicas</a></li>
+            </ul>
         </div>
-    </article>
+        <div class="footer-col">
+            <h5>Mais Populares</h5>
+            <ul>
+                <li><a href="/artigo-brasileira-descobre-brecha.html">Brecha em Passagens</a></li>
+                <li><a href="/artigo-familia-economizou-12400.html">Economia R$12.400</a></li>
+                <li><a href="/artigo-lari-47-paises.html">47 Países</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 GPS Viagens Brasil. Todos os direitos reservados. Este site contém links de afiliados.</p>
+    </div>
+</footer>
 
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                alert('🎯 Sistema GPS em desenvolvimento! Esta investigação expõe a realidade do setor.');
-            });
-        });
-    </script>
 </body>
 </html>

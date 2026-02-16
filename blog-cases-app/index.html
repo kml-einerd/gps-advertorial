@@ -3,375 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cases Reais APP & GPS: 33 Provas de Como Usuários Economizam Milhares - GPS Viagens Brasil</title>
-    <meta name="description" content="33 prints reais de usuários do Sistema GPS e APP mostrando economias de até 93% em passagens aéreas. Cases verificados com provas da comunidade de 4.627 membros.">
-    <link rel="canonical" href="https://gps-advertorial.pages.dev/blog-cases-app/">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <title>Cases de Sucesso — Usuários do Sistema GPS — GPS Viagens Brasil</title>
+    <meta name="description" content="Veja como brasileiros reais economizaram milhares de reais em passagens aéreas com o Sistema GPS.">
+    <meta property="og:title" content="Cases de Sucesso — Usuários do Sistema GPS">
+    <meta property="og:description" content="Veja como brasileiros reais economizaram milhares de reais em passagens aéreas com o Sistema GPS.">
+    <meta property="og:type" content="article">
+    <link rel="stylesheet" href="../assets/design-system.css">
     <style>
-        :root {
-            --primary-color: #2563eb;
-            --secondary-color: #dc2626;
-            --accent-color: #f59e0b;
-            --text-dark: #1f2937;
-            --text-light: #6b7280;
-            --bg-light: #f8fafc;
-            --border-color: #e5e7eb;
-            --success-color: #16a34a;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            line-height: 1.7;
-            color: var(--text-dark);
-            background: #ffffff;
-        }
-
-        /* HEADER SIMPLES */
-        .header {
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-            padding: 1rem 0;
-            text-align: center;
-        }
-
-        .header a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
-
-        /* BREADCRUMB */
-        .breadcrumb {
-            background: var(--bg-light);
-            padding: 0.75rem 0;
-            font-size: 0.9rem;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .breadcrumb-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
-
-        .breadcrumb a {
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-
-        .breadcrumb a:hover {
-            text-decoration: underline;
-        }
-
-        /* HERO SECTION */
-        .hero-section {
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-            color: white;
-            padding: 3rem 0;
-            text-align: center;
-        }
-
-        .hero-content {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
-
-        .hero-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            line-height: 1.2;
-        }
-
-        .hero-subtitle {
-            font-size: 1.2rem;
-            opacity: 0.95;
-            margin-bottom: 2rem;
-        }
-
-        .hero-stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .stat-card {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 1.5rem;
-            border-radius: 12px;
-            backdrop-filter: blur(10px);
-        }
-
-        .stat-number {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            font-size: 0.9rem;
-            opacity: 0.9;
-        }
-
-        /* MAIN CONTAINER */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
-
-        .section {
-            padding: 3rem 0;
-        }
-
-        .section-title {
-            font-size: 2rem;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 1rem;
-            color: var(--text-dark);
-        }
-
-        .section-subtitle {
-            font-size: 1.1rem;
-            text-align: center;
-            color: var(--text-light);
-            margin-bottom: 3rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* CASES GRID */
-        .cases-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .case-card {
-            background: white;
-            border-radius: 16px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid var(--border-color);
-        }
-
-        .case-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-        }
-
-        .case-header {
-            background: linear-gradient(135deg, var(--primary-color) 0%, #1e40af 100%);
-            color: white;
-            padding: 1.5rem;
-            position: relative;
-        }
-
-        .case-header.app {
-            background: linear-gradient(135deg, #059669 0%, #047857 100%);
-        }
-
-        .case-header.gps {
-            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
-        }
-
-        .case-header.telegram {
-            background: linear-gradient(135deg, #0088cc 0%, #006ba1 100%);
-        }
-
-        .case-category {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
-
-        .case-title {
-            font-size: 1.3rem;
-            font-weight: 700;
-            line-height: 1.3;
-            margin-bottom: 0.5rem;
-        }
-
-        .case-subtitle {
-            font-size: 0.95rem;
-            opacity: 0.9;
-        }
-
-        .case-content {
-            padding: 1.5rem;
-        }
-
-        .case-image-container {
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
-
-        .case-image {
-            max-width: 100%;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            margin-bottom: 0.5rem;
-        }
-
-        .case-image.mobile {
-            max-width: 280px;
-        }
-
-        .case-image-caption {
-            font-size: 0.8rem;
-            color: var(--text-light);
-            font-style: italic;
-        }
-
-        .case-description {
-            font-size: 1rem;
-            line-height: 1.6;
-            color: var(--text-dark);
-            margin-bottom: 1.5rem;
-        }
-
-        .case-highlight {
-            background: linear-gradient(135deg, #fef3cd 0%, #fde68a 100%);
-            border-left: 4px solid var(--accent-color);
-            padding: 1rem;
-            border-radius: 8px;
-            margin: 1rem 0;
-            font-weight: 500;
-        }
-
-        .case-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 1rem;
-        }
-
-        .case-tag {
-            background: var(--bg-light);
-            color: var(--primary-color);
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
-
-        /* CTA SECTIONS */
-        .cta-section {
-            background: linear-gradient(135deg, var(--secondary-color) 0%, #991b1b 100%);
-            color: white;
-            padding: 3rem 2rem;
-            text-align: center;
-            border-radius: 16px;
-            margin: 3rem 0;
-        }
-
-        .cta-title {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-
-        .cta-subtitle {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-            opacity: 0.95;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: white;
-            color: var(--secondary-color);
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: 700;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
-        }
-
-        /* FOOTER */
-        .footer {
-            background: var(--text-dark);
-            color: white;
-            padding: 3rem 0 2rem;
-            text-align: center;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-links a {
-            color: white;
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
-
-        .footer-links a:hover {
-            color: var(--primary-color);
-        }
-
-        .footer-copy {
-            font-size: 0.8rem;
-            opacity: 0.7;
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-            .hero-title {
-                font-size: 2rem;
-            }
-
-            .cases-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .hero-stats {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .case-image.mobile {
-                max-width: 240px;
-            }
-        }
+        /* Legacy compat for case pages */
+        .case-card { background: var(--bg); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow); margin-bottom: 2rem; }
+        .case-header { padding: 1.25rem; }
+        .case-content { padding: 1.5rem; }
+        .case-image { max-width: 100%; height: auto; border-radius: var(--radius); box-shadow: var(--shadow-sm); margin-bottom: .5rem; }
+        .case-image.mobile { max-width: 280px; margin: 0 auto; }
+        .case-image-container { margin-bottom: 1.5rem; text-align: center; }
+        .case-image-caption { font-size: .75rem; color: var(--text-muted); font-style: italic; }
+        .case-description { font-size: 1rem; line-height: 1.6; color: var(--text-secondary); margin-bottom: 1rem; }
+        .case-highlight { background: #fef3cd; border-left: 4px solid var(--accent); padding: 1rem; border-radius: var(--radius); margin: 1rem 0; font-weight: 500; }
+        .case-tags { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1rem; }
+        .case-tag { background: var(--bg-gray); color: var(--primary); padding: .3rem .8rem; border-radius: 20px; font-size: .8rem; font-weight: 500; }
+        .case-title { font-size: 1.3rem; font-weight: 700; line-height: 1.3; margin-bottom: .5rem; }
+        .case-subtitle { font-size: .95rem; color: var(--text-light); }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin: 2rem 0; }
+        .stat-card { background: var(--bg); border-radius: var(--radius); padding: 1.25rem; text-align: center; box-shadow: var(--shadow-sm); }
+        .stat-value { font-size: 1.5rem; font-weight: 800; color: var(--primary); }
+        .stat-label { font-size: .8rem; color: var(--text-muted); margin-top: .25rem; }
+        .cta-section { background: linear-gradient(135deg, var(--cta-red) 0%, #991b1b 100%); color: white; padding: 3rem 2rem; text-align: center; border-radius: var(--radius-lg); margin: 2rem 0; }
+        .cta-title { font-size: 1.8rem; font-weight: 700; margin-bottom: 1rem; }
+        .cta-subtitle { font-size: 1.1rem; margin-bottom: 2rem; opacity: .95; }
+        .cta-button { display: inline-block; background: var(--accent); color: var(--text); padding: .75rem 2rem; border-radius: var(--radius); font-weight: 700; text-decoration: none; }
+        .member-card { background: var(--bg); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow); margin-bottom: 2rem; padding: 1.5rem; border-left: 4px solid var(--success); }
+        .hero { padding: 3rem 2rem; text-align: center; color: var(--text); }
+        .hero h1 { font-size: 2rem; font-weight: 800; margin-bottom: .75rem; }
+        .hero-subtitle { font-size: 1.1rem; color: var(--text-light); }
+        .section-header { margin: 2rem 0 1rem; }
+        .section-header h2 { font-size: 1.5rem; font-weight: 700; }
     </style>
 </head>
 <body>
+
+<header class="site-header">
+    <div class="header-inner">
+        <a href="/" class="site-logo">✈️ GPS <span>Viagens</span></a>
+        <button class="mobile-toggle" onclick="document.querySelector('.site-nav').classList.toggle('open')">☰</button>
+        <nav><ul class="site-nav">
+            <li><a href="/">Início</a></li>
+            <li><a href="/blog-principal/">Passagens</a></li>
+            <li><a href="/blog-cases-app/" class='active'>Cases</a></li>
+            <li><a href="/blog-cases-clube/" >Clube VIP</a></li>
+            <li><a href="/advertorial/">Sistema GPS</a></li>
+        </ul></nav>
+    </div>
+</header>
+
+<div class="container">
+    <div class="breadcrumbs">
+        <a href="/">Início</a> <span class="sep">›</span> Cases de Sucesso
+    </div>
+
+    <div class="layout-with-sidebar">
+        <main class="main-content">
+            
     <!-- HEADER -->
-    <header class="header">
-        <a href="../index.html">GPS Viagens Brasil</a>
-    </header>
+    
 
     <!-- BREADCRUMB -->
     <div class="breadcrumb">
@@ -811,20 +505,66 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-links">
-                <a href="../index.html">Início</a>
-                <a href="../artigo-brasileira-descobre-brecha.html">Descoberta</a>
-                <a href="../blog-cases-clube/">Cases Clube VIP</a>
-                <a href="#contato">Contato</a>
-                <a href="#privacidade">Privacidade</a>
+    
+
+            
+            <!-- NATIVE BANNER -->
+            <div class="native-banner banner-wide banner-green" style="margin-top:2rem">
+                <div class="native-banner-label">Conteúdo Patrocinado</div>
+                <a href="/advertorial/" class="native-banner-content">
+                    <img class="native-banner-img" src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=240&h=160&fit=crop" alt="">
+                    <div class="native-banner-text">
+                        <h5>Família Economizou R$12.400 em Uma Viagem</h5>
+                        <p>Método simples que transformou as férias dessa família.</p>
+                        <span class="nb-cta">Ver como →</span>
+                    </div>
+                </a>
             </div>
-            <div class="footer-copy">
-                © 2026 GPS Viagens Brasil. Todos os prints são reais e verificados. 
-                Resultados individuais podem variar.
+        </main>
+
+        <aside class="sidebar">
+            <div class="cta-banner">
+                <h4>Passagens até 93% OFF</h4>
+                <p>Descubra o Sistema GPS.</p>
+                <a href="/advertorial/">Ver Como Funciona →</a>
             </div>
-        </div>
-    </footer>
+            <div class="newsletter-box">
+                <h4>Newsletter GPS</h4>
+                <p>Promoções direto no e-mail.</p>
+                <input type="email" placeholder="Seu e-mail">
+                <button>Quero Receber →</button>
+            </div>
+            <div class="native-banner banner-sidebar banner-gold">
+                <div class="native-banner-label">Conteúdo Patrocinado</div>
+                <a href="/advertorial/" class="native-banner-content">
+                    <img class="native-banner-img" src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=300&h=200&fit=crop" alt="">
+                    <div class="native-banner-text">
+                        <h5>Clube VIP — Últimas Vagas</h5>
+                        <p>Alertas exclusivos de passagens.</p>
+                        <span class="nb-cta">Entrar →</span>
+                    </div>
+                </a>
+            </div>
+            <div class="sidebar-widget">
+                <h4>Mais Lidos</h4>
+                <ol class="popular-list">
+                    <li><span class="post-number">1</span><a href="/artigo-brasileira-descobre-brecha.html">Brasileira Descobre Brecha</a></li>
+                    <li><span class="post-number">2</span><a href="/artigo-familia-economizou-12400.html">Família Economizou R$12.400</a></li>
+                    <li><span class="post-number">3</span><a href="/artigo-lari-47-paises.html">Lari 47 Países</a></li>
+                </ol>
+            </div>
+        </aside>
+    </div>
+</div>
+
+<footer class="site-footer">
+    <div class="footer-grid">
+        <div class="footer-col"><h5>GPS Viagens</h5><ul><li><a href="/advertorial/">Sistema GPS</a></li><li><a href="/blog-cases-app/">Cases</a></li><li><a href="/blog-cases-clube/">Clube VIP</a></li></ul></div>
+        <div class="footer-col"><h5>Conteúdo</h5><ul><li><a href="/blog-principal/">Artigos</a></li><li><a href="/artigo-verdade-milhas.html">Milhas</a></li></ul></div>
+        <div class="footer-col"><h5>Populares</h5><ul><li><a href="/artigo-brasileira-descobre-brecha.html">Brecha Passagens</a></li><li><a href="/artigo-familia-economizou-12400.html">Economia R$12.400</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 GPS Viagens Brasil. Todos os direitos reservados.</p></div>
+</footer>
+
 </body>
 </html>

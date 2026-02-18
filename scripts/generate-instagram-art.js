@@ -7,7 +7,7 @@
 const { execSync } = require('child_process');
 const path = require('path');
 
-const GEMINI_API_KEY = 'AIzaSyAPJ59MMxWbpkRYnj8Lgb5acyJp5jAwCVc';
+const GEMINI_API_KEY = 'AIzaSyDohUXvZi6fSxbVUhJc51eRUSKKsj5lGJA';
 const SCRIPT_PATH = '/home/agdev/.openclaw/workspace/skills/nano-banana-pro/scripts/generate_image.py';
 
 // Templates de prompts para diferentes tipos de arte Instagram

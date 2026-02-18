@@ -14,7 +14,7 @@
 
 #### ✅ Gemini 3 Nano Banana Pro Integrado
 - **Skill analisada:** `/home/agdev/.openclaw/workspace/skills/nano-banana-pro/SKILL.md`
-- **API Key configurada:** `AIzaSyCOe0LWTfBPRzIzF56zonP4T4JrWhLQeFA`
+- **API Key configurada:** `[REDACTED-USE-ENV-VAR]`
 - **Abordagem:** Sistema HTML/CSS para geração rápida e iteração
 
 #### ✅ Banners Focados em Conversão e CTR

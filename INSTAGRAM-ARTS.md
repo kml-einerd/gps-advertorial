@@ -41,7 +41,7 @@ node scripts/generate-instagram-art.js all
 ### 🔧 Configuração Técnica
 
 - **Modelo:** gemini-3-pro-image-preview
-- **API Key:** AIzaSyAPJ59MMxWbpkRYnj8Lgb5acyJp5jAwCVc
+- **API Key:** [REDACTED-USE-ENV-VAR]
 - **Resolução:** 1K (1080x1080 otimizado para Instagram)
 - **Formato:** PNG com alta qualidade
 - **Localização:** `assets/images/insta-*.png`

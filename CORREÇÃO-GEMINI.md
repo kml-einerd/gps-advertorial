@@ -14,7 +14,7 @@
 - **Modelo:** `gemini-3-pro-image-preview`
 - **Função:** Geração de imagens  
 - **Context:** 65k input / 32k output
-- **API Key:** AIzaSyCOe0LWTfBPRzIzF56zonP4T4JrWhLQeFA
+- **API Key:** [REDACTED-USE-ENV-VAR]
 - **Status:** ✅ **FUNCIONANDO CORRETAMENTE**
 
 ### 📋 Modelos Disponíveis Gemini 3
@@ -47,7 +47,7 @@
 
 ### Configuração API Usada
 ```python
-api_key = 'AIzaSyCOe0LWTfBPRzIzF56zonP4T4JrWhLQeFA'
+api_key = '[REDACTED-USE-ENV-VAR]'
 model = 'gemini-3-pro-image-preview'  # MODELO CORRETO
 url = f'https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent'
 ```

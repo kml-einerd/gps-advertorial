@@ -34,3 +34,39 @@ Uploading... (211/211)
 📰 Título: Influencer expõe como rico fica mais rico: passagens de R$ 8 mil por R$ 300
 ✅ Blog index atualizado com novo artigo
 📝 Commitando mudanças...
+[master ba79b76] feat: daily article 2026-02-17
+ 3 files changed, 110 insertions(+)
+ create mode 100644 blog-principal/2026-02-17-luxury-secrets.html
+⬆️ Fazendo push...
+To https://github.com/kml-einerd/gps-advertorial.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/kml-einerd/gps-advertorial.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+🌐 Fazendo deploy...
+
+ ⛅️ wrangler 4.65.0
+───────────────────
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mWarning: Your working directory is a git repo and has uncommitted changes[0m
+
+  To silence this warning, pass in --commit-dirty=true
+
+
+Uploading... (210/213)
+Uploading... (211/213)
+Uploading... (212/213)
+Uploading... (213/213)
+✨ Success! Uploaded 3 files (210 already uploaded) (0.48 sec)
+
+🌎 Deploying...
+✨ Deployment complete! Take a peek over at https://b1ddc5ad.gps-advertorial.pages.dev
+✨ Deployment alias URL: https://master.gps-advertorial.pages.dev
+✅ Deploy completo! Novo artigo disponível em https://gps-advertorial.pages.dev
+🚀 Gerando artigo diário...
+✅ Artigo gerado: 2026-02-18-luxury-secrets.html
+📰 Título: Influencer expõe como rico fica mais rico: passagens de R$ 8 mil por R$ 300
+✅ Blog index atualizado com novo artigo
+📝 Commitando mudanças...

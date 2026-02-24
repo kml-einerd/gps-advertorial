@@ -254,3 +254,33 @@ Uploading... (222/222)
 📰 Título: Mãe de 3 filhos viaja pelo mundo gastando menos que uma ida ao shopping
 ✅ Blog index atualizado com novo artigo
 📝 Commitando mudanças...
+[master c883df2] feat: daily article 2026-02-23
+ 3 files changed, 141 insertions(+)
+ create mode 100644 blog-principal/2026-02-23-family-travel.html
+⬆️ Fazendo push...
+remote: Permission to kml-einerd/gps-advertorial.git denied to dis-nowork.
+fatal: unable to access 'https://github.com/kml-einerd/gps-advertorial.git/': The requested URL returned error: 403
+🌐 Fazendo deploy...
+
+ ⛅️ wrangler 4.65.0 (update available 4.67.0)
+─────────────────────────────────────────────
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mWarning: Your working directory is a git repo and has uncommitted changes[0m
+
+  To silence this warning, pass in --commit-dirty=true
+
+
+Uploading... (220/223)
+Uploading... (221/223)
+Uploading... (222/223)
+Uploading... (223/223)
+✨ Success! Uploaded 3 files (220 already uploaded) (0.86 sec)
+
+🌎 Deploying...
+✨ Deployment complete! Take a peek over at https://02eec3ad.gps-advertorial.pages.dev
+✨ Deployment alias URL: https://master.gps-advertorial.pages.dev
+✅ Deploy completo! Novo artigo disponível em https://gps-advertorial.pages.dev
+🚀 Gerando artigo diário...
+✅ Artigo gerado: 2026-02-24-regional-success.html
+📰 Título: Nordestina viaja para 15 países e gasta menos que uma viagem para SP
+✅ Blog index atualizado com novo artigo
+📝 Commitando mudanças...

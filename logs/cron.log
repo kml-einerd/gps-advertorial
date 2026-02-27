@@ -357,3 +357,39 @@ Uploading... (226/226)
 📰 Título: Ex-comissária de bordo revela segredos sombrios das companhias aéreas
 ✅ Blog index atualizado com novo artigo
 📝 Commitando mudanças...
+[master 12c9dfc] feat: daily article 2026-02-26
+ 3 files changed, 142 insertions(+)
+ create mode 100644 blog-principal/2026-02-26-insider-secrets.html
+⬆️ Fazendo push...
+To https://github.com/kml-einerd/gps-advertorial.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/kml-einerd/gps-advertorial.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+🌐 Fazendo deploy...
+
+ ⛅️ wrangler 4.65.0 (update available 4.68.1)
+─────────────────────────────────────────────
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mWarning: Your working directory is a git repo and has uncommitted changes[0m
+
+  To silence this warning, pass in --commit-dirty=true
+
+
+Uploading... (224/227)
+Uploading... (225/227)
+Uploading... (226/227)
+Uploading... (227/227)
+✨ Success! Uploaded 3 files (224 already uploaded) (0.76 sec)
+
+🌎 Deploying...
+✨ Deployment complete! Take a peek over at https://b43c7a80.gps-advertorial.pages.dev
+✨ Deployment alias URL: https://master.gps-advertorial.pages.dev
+✅ Deploy completo! Novo artigo disponível em https://gps-advertorial.pages.dev
+🚀 Gerando artigo diário...
+✅ Artigo gerado: 2026-02-27-student-hack.html
+📰 Título: Estudante universitária 'hackeia' sistema e viaja por preço de passagem municipal
+✅ Blog index atualizado com novo artigo
+📝 Commitando mudanças...

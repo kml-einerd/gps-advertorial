@@ -2500,3 +2500,39 @@ Uploading... (285/285)
 📰 Título: Ex-comissária de bordo revela segredos sombrios das companhias aéreas
 ✅ Blog index atualizado com novo artigo
 📝 Commitando mudanças...
+[master 532cd2c] feat: daily article 2026-04-26
+ 3 files changed, 142 insertions(+)
+ create mode 100644 blog-principal/2026-04-26-insider-secrets.html
+⬆️ Fazendo push...
+To https://github.com/kml-einerd/gps-advertorial.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/kml-einerd/gps-advertorial.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+🌐 Fazendo deploy...
+
+ ⛅️ wrangler 4.85.0
+───────────────────
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mWarning: Your working directory is a git repo and has uncommitted changes[0m
+
+  To silence this warning, pass in --commit-dirty=true
+
+
+Uploading... (283/286)
+Uploading... (284/286)
+Uploading... (285/286)
+Uploading... (286/286)
+✨ Success! Uploaded 3 files (283 already uploaded) (1.07 sec)
+
+🌎 Deploying...
+✨ Deployment complete! Take a peek over at https://f9623441.gps-advertorial.pages.dev
+✨ Deployment alias URL: https://master.gps-advertorial.pages.dev
+✅ Deploy completo! Novo artigo disponível em https://gps-advertorial.pages.dev
+🚀 Gerando artigo diário...
+✅ Artigo gerado: 2026-04-27-senior-travel.html
+📰 Título: Aposentado de 65 anos quebra recorde: 12 países em 6 meses com R$ 3.000
+✅ Blog index atualizado com novo artigo
+📝 Commitando mudanças...

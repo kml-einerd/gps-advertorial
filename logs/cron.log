@@ -2755,3 +2755,35 @@ fatal: unable to access 'https://github.com/kml-einerd/gps-advertorial.git/': Co
 📰 Título: Estudante universitária 'hackeia' sistema e viaja por preço de passagem municipal
 ✅ Blog index atualizado com novo artigo
 📝 Commitando mudanças...
+[master 9fb54d1] feat: daily article 2026-05-03
+ 3 files changed, 137 insertions(+)
+ create mode 100644 blog-principal/2026-05-03-student-hack.html
+⬆️ Fazendo push...
+fatal: unable to access 'https://github.com/kml-einerd/gps-advertorial.git/': Could not resolve host: github.com
+🌐 Fazendo deploy...
+
+ ⛅️ wrangler 4.87.0
+───────────────────
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mA fetch request failed, likely due to a connectivity issue.[0m
+
+  
+  Common causes:
+    - No internet connection or network connectivity problems
+    - Firewall or VPN blocking the request
+    - Network proxy configuration issues
+  
+  Please check your network connection and try again.
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mfetch failed[0m
+
+
+[32mIf you think this is a bug then please create an issue at https://github.com/cloudflare/workers-sdk/issues/new/choose[0m
+🪵  Logs were written to "/home/agdev/.config/.wrangler/logs/wrangler-2026-05-03_09-01-13_750.log"
+✅ Deploy completo! Novo artigo disponível em https://gps-advertorial.pages.dev
+🚀 Gerando artigo diário...
+✅ Artigo gerado: 2026-05-04-family-travel.html
+📰 Título: Mãe de 3 filhos viaja pelo mundo gastando menos que uma ida ao shopping
+✅ Blog index atualizado com novo artigo
+📝 Commitando mudanças...

@@ -3605,3 +3605,40 @@ npm notice
 📰 Título: Aposentado de 65 anos quebra recorde: 12 países em 6 meses com R$ 3.000
 ✅ Blog index atualizado com novo artigo
 📝 Commitando mudanças...
+[master 91b0821] feat: daily article 2026-05-26
+ 3 files changed, 147 insertions(+)
+ create mode 100644 blog-principal/2026-05-26-senior-travel.html
+⬆️ Fazendo push...
+To https://github.com/kml-einerd/gps-advertorial.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/kml-einerd/gps-advertorial.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+🌐 Fazendo deploy...
+
+ ⛅️ wrangler 4.94.0
+───────────────────
+Cloudflare agent skills are available for: Claude Code, Cursor, OpenCode, Codex. Run wrangler in an interactive terminal to install them, or use `--install-skills` to install without prompting.
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mWarning: Your working directory is a git repo and has uncommitted changes[0m
+
+  To silence this warning, pass in --commit-dirty=true
+
+
+Uploading... (313/316)
+Uploading... (314/316)
+Uploading... (315/316)
+Uploading... (316/316)
+✨ Success! Uploaded 3 files (313 already uploaded) (0.83 sec)
+
+🌎 Deploying...
+✨ Deployment complete! Take a peek over at https://1623c8e4.gps-advertorial.pages.dev
+✨ Deployment alias URL: https://master.gps-advertorial.pages.dev
+✅ Deploy completo! Novo artigo disponível em https://gps-advertorial.pages.dev
+🚀 Gerando artigo diário...
+✅ Artigo gerado: 2026-05-27-luxury-secrets.html
+📰 Título: Influencer expõe como rico fica mais rico: passagens de R$ 8 mil por R$ 300
+✅ Blog index atualizado com novo artigo
+📝 Commitando mudanças...

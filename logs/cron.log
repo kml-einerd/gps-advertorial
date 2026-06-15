@@ -4306,3 +4306,39 @@ Uploading... (334/334)
 📰 Título: Mãe de 3 filhos viaja pelo mundo gastando menos que uma ida ao shopping
 ✅ Blog index atualizado com novo artigo
 📝 Commitando mudanças...
+[master 73ca98e] feat: daily article 2026-06-14
+ 3 files changed, 141 insertions(+)
+ create mode 100644 blog-principal/2026-06-14-family-travel.html
+⬆️ Fazendo push...
+To https://github.com/kml-einerd/gps-advertorial.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/kml-einerd/gps-advertorial.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+🌐 Fazendo deploy...
+
+ ⛅️ wrangler 4.100.0
+────────────────────
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mWarning: Your working directory is a git repo and has uncommitted changes[0m
+
+  To silence this warning, pass in --commit-dirty=true
+
+
+Uploading... (332/335)
+Uploading... (333/335)
+Uploading... (334/335)
+Uploading... (335/335)
+✨ Success! Uploaded 3 files (332 already uploaded) (1.03 sec)
+
+🌎 Deploying...
+✨ Deployment complete! Take a peek over at https://4ddac5bd.gps-advertorial.pages.dev
+✨ Deployment alias URL: https://master.gps-advertorial.pages.dev
+✅ Deploy completo! Novo artigo disponível em https://gps-advertorial.pages.dev
+🚀 Gerando artigo diário...
+✅ Artigo gerado: 2026-06-15-regional-success.html
+📰 Título: Nordestina viaja para 15 países e gasta menos que uma viagem para SP
+✅ Blog index atualizado com novo artigo
+📝 Commitando mudanças...

@@ -5847,3 +5847,39 @@ Uploading... (376/376)
 📰 Título: Nordestina viaja para 15 países e gasta menos que uma viagem para SP
 ✅ Blog index atualizado com novo artigo
 📝 Commitando mudanças...
+[master 1f9ac09] feat: daily article 2026-07-26
+ 3 files changed, 141 insertions(+)
+ create mode 100644 blog-principal/2026-07-26-regional-success.html
+⬆️ Fazendo push...
+To https://github.com/kml-einerd/gps-advertorial.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/kml-einerd/gps-advertorial.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+🌐 Fazendo deploy...
+
+ ⛅️ wrangler 4.114.0
+────────────────────
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mWarning: Your working directory is a git repo and has uncommitted changes[0m
+
+  To silence this warning, pass in --commit-dirty=true
+
+
+Uploading... (374/377)
+Uploading... (375/377)
+Uploading... (376/377)
+Uploading... (377/377)
+✨ Success! Uploaded 3 files (374 already uploaded) (1.03 sec)
+
+🌎 Deploying...
+✨ Deployment complete! Take a peek over at https://1b881286.gps-advertorial.pages.dev
+✨ Deployment alias URL: https://master.gps-advertorial.pages.dev
+✅ Deploy completo! Novo artigo disponível em https://gps-advertorial.pages.dev
+🚀 Gerando artigo diário...
+✅ Artigo gerado: 2026-07-27-insider-secrets.html
+📰 Título: Ex-comissária de bordo revela segredos sombrios das companhias aéreas
+✅ Blog index atualizado com novo artigo
+📝 Commitando mudanças...

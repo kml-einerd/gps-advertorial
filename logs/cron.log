@@ -6475,3 +6475,40 @@ npm notice
 📰 Título: Estudante universitária 'hackeia' sistema e viaja por preço de passagem municipal
 ✅ Blog index atualizado com novo artigo
 📝 Commitando mudanças...
+[master 53dd5fc] feat: daily article 2026-08-12
+ 3 files changed, 147 insertions(+)
+ create mode 100644 blog-principal/2026-08-12-student-hack.html
+⬆️ Fazendo push...
+To https://github.com/kml-einerd/gps-advertorial.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/kml-einerd/gps-advertorial.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+🌐 Fazendo deploy...
+npm warn exec The following package was not found and will be installed: wrangler@4.121.0
+
+ ⛅️ wrangler 4.121.0
+────────────────────
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mWarning: Your working directory is a git repo and has uncommitted changes[0m
+
+  To silence this warning, pass in --commit-dirty=true
+
+
+Uploading... (391/394)
+Uploading... (392/394)
+Uploading... (393/394)
+Uploading... (394/394)
+✨ Success! Uploaded 3 files (391 already uploaded) (0.82 sec)
+
+🌎 Deploying...
+✨ Deployment complete! Take a peek over at https://68079558.gps-advertorial.pages.dev
+✨ Deployment alias URL: https://master.gps-advertorial.pages.dev
+✅ Deploy completo! Novo artigo disponível em https://gps-advertorial.pages.dev
+🚀 Gerando artigo diário...
+✅ Artigo gerado: 2026-08-13-student-hack.html
+📰 Título: Estudante universitária 'hackeia' sistema e viaja por preço de passagem municipal
+✅ Blog index atualizado com novo artigo
+📝 Commitando mudanças...

@@ -6694,3 +6694,44 @@ Uploading... (399/399)
 📰 Título: Influencer expõe como rico fica mais rico: passagens de R$ 8 mil por R$ 300
 ✅ Blog index atualizado com novo artigo
 📝 Commitando mudanças...
+[master e1c01e2] feat: daily article 2026-08-18
+ 3 files changed, 141 insertions(+)
+ create mode 100644 blog-principal/2026-08-18-luxury-secrets.html
+⬆️ Fazendo push...
+To https://github.com/kml-einerd/gps-advertorial.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/kml-einerd/gps-advertorial.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+🌐 Fazendo deploy...
+
+ ⛅️ wrangler 4.123.0
+────────────────────
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mWarning: Your working directory is a git repo and has uncommitted changes[0m
+
+  To silence this warning, pass in --commit-dirty=true
+
+
+Uploading... (397/400)
+Uploading... (398/400)
+Uploading... (399/400)
+Uploading... (400/400)
+✨ Success! Uploaded 3 files (397 already uploaded) (0.63 sec)
+
+🌎 Deploying...
+✨ Deployment complete! Take a peek over at https://f3b7e1a4.gps-advertorial.pages.dev
+✨ Deployment alias URL: https://master.gps-advertorial.pages.dev
+npm notice
+npm notice New major version of npm available! 10.9.4 -> 12.0.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.0.2
+npm notice To update run: npm install -g npm@12.0.2
+npm notice
+✅ Deploy completo! Novo artigo disponível em https://gps-advertorial.pages.dev
+🚀 Gerando artigo diário...
+✅ Artigo gerado: 2026-08-19-insider-secrets.html
+📰 Título: Ex-comissária de bordo revela segredos sombrios das companhias aéreas
+✅ Blog index atualizado com novo artigo
+📝 Commitando mudanças...

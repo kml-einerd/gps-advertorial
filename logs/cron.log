@@ -7136,3 +7136,39 @@ Uploading... (411/411)
 📰 Título: Nordestina viaja para 15 países e gasta menos que uma viagem para SP
 ✅ Blog index atualizado com novo artigo
 📝 Commitando mudanças...
+[master 1251f08] feat: daily article 2026-08-30
+ 3 files changed, 142 insertions(+)
+ create mode 100644 blog-principal/2026-08-30-regional-success.html
+⬆️ Fazendo push...
+To https://github.com/kml-einerd/gps-advertorial.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/kml-einerd/gps-advertorial.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+🌐 Fazendo deploy...
+
+ ⛅️ wrangler 4.127.1
+────────────────────
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mWarning: Your working directory is a git repo and has uncommitted changes[0m
+
+  To silence this warning, pass in --commit-dirty=true
+
+
+Uploading... (409/412)
+Uploading... (410/412)
+Uploading... (411/412)
+Uploading... (412/412)
+✨ Success! Uploaded 3 files (409 already uploaded) (4.92 sec)
+
+🌎 Deploying...
+✨ Deployment complete! Take a peek over at https://eb7fa91b.gps-advertorial.pages.dev
+✨ Deployment alias URL: https://master.gps-advertorial.pages.dev
+✅ Deploy completo! Novo artigo disponível em https://gps-advertorial.pages.dev
+🚀 Gerando artigo diário...
+✅ Artigo gerado: 2026-08-31-senior-travel.html
+📰 Título: Aposentado de 65 anos quebra recorde: 12 países em 6 meses com R$ 3.000
+✅ Blog index atualizado com novo artigo
+📝 Commitando mudanças...

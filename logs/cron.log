@@ -7244,3 +7244,45 @@ Uploading... (414/414)
 📰 Título: Mãe de 3 filhos viaja pelo mundo gastando menos que uma ida ao shopping
 ✅ Blog index atualizado com novo artigo
 📝 Commitando mudanças...
+[master fe40fc3] feat: daily article 2026-09-02
+ 3 files changed, 141 insertions(+)
+ create mode 100644 blog-principal/2026-09-02-family-travel.html
+⬆️ Fazendo push...
+To https://github.com/kml-einerd/gps-advertorial.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/kml-einerd/gps-advertorial.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+🌐 Fazendo deploy...
+npm warn exec The following package was not found and will be installed: wrangler@4.128.0
+
+ ⛅️ wrangler 4.128.0
+────────────────────
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mWarning: Your working directory is a git repo and has uncommitted changes[0m
+
+  To silence this warning, pass in --commit-dirty=true
+
+
+Uploading... (412/415)
+Uploading... (413/415)
+Uploading... (414/415)
+Uploading... (415/415)
+✨ Success! Uploaded 3 files (412 already uploaded) (0.90 sec)
+
+🌎 Deploying...
+✨ Deployment complete! Take a peek over at https://1b01d525.gps-advertorial.pages.dev
+✨ Deployment alias URL: https://master.gps-advertorial.pages.dev
+npm notice
+npm notice New major version of npm available! 10.9.8 -> 12.0.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.0.2
+npm notice To update run: npm install -g npm@12.0.2
+npm notice
+✅ Deploy completo! Novo artigo disponível em https://gps-advertorial.pages.dev
+🚀 Gerando artigo diário...
+✅ Artigo gerado: 2026-09-03-insider-secrets.html
+📰 Título: Ex-comissária de bordo revela segredos sombrios das companhias aéreas
+✅ Blog index atualizado com novo artigo
+📝 Commitando mudanças...

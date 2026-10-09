@@ -8637,3 +8637,46 @@ Uploading... (450/450)
 📰 Título: Aposentado de 65 anos quebra recorde: 12 países em 6 meses com R$ 3.000
 ✅ Blog index atualizado com novo artigo
 📝 Commitando mudanças...
+[master 40f0f41] feat: daily article 2026-10-08
+ 3 files changed, 144 insertions(+)
+ create mode 100644 blog-principal/2026-10-08-senior-travel.html
+⬆️ Fazendo push...
+To https://github.com/kml-einerd/gps-advertorial.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/kml-einerd/gps-advertorial.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+🌐 Fazendo deploy...
+npm notice run npx
+npm notice run 'wrangler' pages deploy . --project-name gps-advertorial --branch master
+
+ ⛅️ wrangler 4.148.0
+────────────────────
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mWarning: Your working directory is a git repo and has uncommitted changes[0m
+
+  To silence this warning, pass in --commit-dirty=true
+
+
+Uploading... (448/451)
+Uploading... (449/451)
+Uploading... (450/451)
+Uploading... (451/451)
+✨ Success! Uploaded 3 files (448 already uploaded) (1.02 sec)
+
+🌎 Deploying...
+✨ Deployment complete! Take a peek over at https://4d922880.gps-advertorial.pages.dev
+✨ Deployment alias URL: https://master.gps-advertorial.pages.dev
+npm notice
+npm notice New minor version of npm available! 12.0.2 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+✅ Deploy completo! Novo artigo disponível em https://gps-advertorial.pages.dev
+🚀 Gerando artigo diário...
+✅ Artigo gerado: 2026-10-09-student-hack.html
+📰 Título: Estudante universitária 'hackeia' sistema e viaja por preço de passagem municipal
+✅ Blog index atualizado com novo artigo
+📝 Commitando mudanças...

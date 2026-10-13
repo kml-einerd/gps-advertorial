@@ -8794,3 +8794,40 @@ Uploading... (454/454)
 📰 Título: Mãe de 3 filhos viaja pelo mundo gastando menos que uma ida ao shopping
 ✅ Blog index atualizado com novo artigo
 📝 Commitando mudanças...
+[master 3630576] feat: daily article 2026-10-12
+ 3 files changed, 142 insertions(+)
+ create mode 100644 blog-principal/2026-10-12-family-travel.html
+⬆️ Fazendo push...
+To https://github.com/kml-einerd/gps-advertorial.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/kml-einerd/gps-advertorial.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+🌐 Fazendo deploy...
+npm notice run npx
+npm notice run 'wrangler' pages deploy . --project-name gps-advertorial --branch master
+
+ ⛅️ wrangler 4.149.0
+────────────────────
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mWarning: Your working directory is a git repo and has uncommitted changes[0m
+
+  To silence this warning, pass in --commit-dirty=true
+
+
+Uploading... (452/455)
+Uploading... (453/455)
+Uploading... (454/455)
+Uploading... (455/455)
+✨ Success! Uploaded 3 files (452 already uploaded) (1.36 sec)
+
+🌎 Deploying...
+✨ Deployment complete! Take a peek over at https://43db61d5.gps-advertorial.pages.dev
+✨ Deployment alias URL: https://master.gps-advertorial.pages.dev
+✅ Deploy completo! Novo artigo disponível em https://gps-advertorial.pages.dev
+🚀 Gerando artigo diário...
+✅ Artigo gerado: 2026-10-13-family-travel.html
+📰 Título: Mãe de 3 filhos viaja pelo mundo gastando menos que uma ida ao shopping
+✅ Blog index atualizado com novo artigo
+📝 Commitando mudanças...
